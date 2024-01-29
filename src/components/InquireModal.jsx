@@ -8,6 +8,7 @@ import InqureModalBg from "../assets/Modal/inquireBg.png"
 
 const InquireModal = ({showInquireModal, closeInquireModal}) => {
     const {t} = useTranslation();
+
     function isMobile() {
         return window.innerWidth <= 768;
     }
@@ -16,15 +17,16 @@ const InquireModal = ({showInquireModal, closeInquireModal}) => {
 
     const modalStyles = {
         content: {
-            height: '539px',
+            height: 'fit-content',
             margin: 'auto',
             overflow:"hidden",
             display: 'flex',
             padding:0,
             border:"none",
-            width: "100w !important",
+            width: "fit-content",
             zIndex: 1000,
-            inset:isMobile()?"10px":"40px"
+            inset:isMobile()?"10px":"40px",
+            backgroundColor: 'transparent'
         },
         overlay: {
             backgroundColor: 'rgba(0, 0, 0, 0.5)' ,
@@ -32,8 +34,9 @@ const InquireModal = ({showInquireModal, closeInquireModal}) => {
         }
     };
 
+
     return(<Modal  isOpen={showInquireModal} style={modalStyles} onRequestClose={closeInquireModal}>
-        <div className="inq-modal-content"
+        <div className="inq-modal-content slide-fwd-center"
         style={{backgroundImage: `url('${InqureModalBg}')`}}>
             <div className="logo">
                 <svg xmlns="http://www.w3.org/2000/svg" width="71" height="28" viewBox="0 0 71 28" fill="none">
@@ -132,7 +135,6 @@ const InquireModal = ({showInquireModal, closeInquireModal}) => {
                     </div>
                 </div>
             }
-
 
             <div className="close" onClick={() => {
                 setInquire(false)

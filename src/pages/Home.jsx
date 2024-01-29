@@ -48,6 +48,7 @@ import DynamicTruncatedText from "../components/DynamicTruncatedText.jsx";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import InquireModal from "../components/InquireModal.jsx";
+import MailModal from "../components/MailModal.jsx";
 
 const Home = ({ openModal }) => {
     const [activeKind, setActiveKind] = useState(null);
@@ -158,17 +159,39 @@ const Home = ({ openModal }) => {
     const [modalContent, setModalContent] = useState("")
 
     const [showInquireModal, setShowInquireModal] = useState(false);
+    const [showMailModal, setShowMailModal] = useState(false);
 
     const handleTypeClick = (kind) => {
         setActiveKind((prevActiveKind) => (prevActiveKind === kind ? null : kind));
     };
+
     const closeModal = () => {
         setShowModal(false)
     }
-
+    function isModalMobile() {
+        return window.innerWidth <= 840;
+    }
     const closeInquireModal = () => {
         setShowInquireModal(false)
+        setShowMailModal(true);
     }
+    const closeMailModal = () => {
+        setShowMailModal(false)
+    }
+
+    useEffect(() => {
+        const hasVisitedBefore = localStorage.getItem('hasVisitedBefore');
+
+        const timer = setTimeout(() => {
+            if (!hasVisitedBefore && !isModalMobile()) {
+                setShowInquireModal(true);
+                localStorage.setItem('hasVisitedBefore', 'true');
+            }
+        }, 1000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
 
     function isMobile() {
         return window.innerWidth <= 768;
@@ -462,7 +485,7 @@ const Home = ({ openModal }) => {
                     <div className="image"><img src={collection3} /></div>
                     <div className="content">
                         <div className="collection-info">
-                            <div className="tittle" >
+                            <div className="tittle"  >
                                 {t("sel_3")}
                             </div>
                             <div style={{
@@ -953,7 +976,9 @@ const Home = ({ openModal }) => {
                 </div>
             </div>
         </div>
+
         <PDFmodal showModal={showModal} closeModal={closeModal} type={modalContent} />
+        <MailModal showMailModal={showMailModal} closeMailModal={closeMailModal} />
         <InquireModal showInquireModal={showInquireModal} closeInquireModal={closeInquireModal} />
         <Footer />
     </div>)

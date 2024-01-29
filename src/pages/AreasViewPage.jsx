@@ -123,6 +123,7 @@ function AreasViewPage() {
     const [showModal, setShowModal] = useState(false);
 
     const {t} = useTranslation();
+
     const pageTexy= {
         "business": {
             "title": t("areas-business.title"),

@@ -28,8 +28,8 @@ const PDFmodal = ({closeModal,showModal,type}) => {
 
     const modalStyles = {
         content: {
-            width:isMobile()?"95vw":"70vw",
-            height: '65vh',
+            width: "fit-content",
+            height: 'fit-content',
             margin: 'auto',
             overflow:"hidden",
             display: 'flex',

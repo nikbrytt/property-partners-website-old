@@ -114,6 +114,7 @@ const Header = () => {
                     <path d="M7.5 6L14.4282 0H0.571797L7.5 6Z" fill="white" />
                 </svg>
             </div>
+            <Link to={"/developers"}><div className="menu-option">{t('header_option6')}</div></Link>
             <div onClick={() => toggleVisibility('consulting')} className="menu-option">
                 {consultingVisible && <div className="drop-down">
                     <Link to={"/general"}>
@@ -207,24 +208,35 @@ const Header = () => {
                     </div>
 
                     {!consultingTabletVisible && <div className="menu-options">
-                        <Link to={"/"}> <div className="menu-option">
-                            {t('header_option0')}
-                            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16" fill="none">
-                                <path d="M0.933333 15.8002L0 14.8669L6.86667 8.0002L0 1.13353L0.933333 0.200195L8.73333 8.0002L0.933333 15.8002Z" fill="#191C38" />
-                            </svg>
-                        </div></Link>
+                        <Link to={"/"}>
+                            <div className="menu-option">
+                                {t('header_option0')}
+                                <svg xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16" fill="none">
+                                    <path d="M0.933333 15.8002L0 14.8669L6.86667 8.0002L0 1.13353L0.933333 0.200195L8.73333 8.0002L0.933333 15.8002Z" fill="#191C38" />
+                                </svg>
+                            </div>
+                        </Link>
                         <Link to={"/real-estate"}> <div className="menu-option">
                             {t('header_option1')}
                             <svg xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16" fill="none">
                                 <path d="M0.933333 15.8002L0 14.8669L6.86667 8.0002L0 1.13353L0.933333 0.200195L8.73333 8.0002L0.933333 15.8002Z" fill="#191C38" />
                             </svg>
-                        </div></Link>
+                            </div>
+                        </Link>
                         <Link to={"/areas"}> <div className="menu-option">
                             {t('header_option4')}
                             <svg xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16" fill="none">
                                 <path d="M0.933333 15.8002L0 14.8669L6.86667 8.0002L0 1.13353L0.933333 0.200195L8.73333 8.0002L0.933333 15.8002Z" fill="#191C38" />
                             </svg>
                         </div></Link>
+                        <Link to={"/developers"}>
+                            <div className="menu-option">
+                                {t('header_option6')}
+                                <svg xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16" fill="none">
+                                    <path d="M0.933333 15.8002L0 14.8669L6.86667 8.0002L0 1.13353L0.933333 0.200195L8.73333 8.0002L0.933333 15.8002Z" fill="#191C38" />
+                                </svg>
+                            </div>
+                        </Link>
                         <div onClick={() => setConsultingTabletVisible(true)} className="menu-option">
                             {t('header_option2')}
                             <svg xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16" fill="none">
@@ -398,6 +410,11 @@ const Header = () => {
                             <div className="option">Dubai Hills</div>
                         </Link>
                     </div>}
+                    <Link to={"/developers"}>
+                        <div className="option">
+                            {t('header_option6')}
+                        </div>
+                    </Link>
                     <div className={`option ${consultingVisible ? 'active2' : ''}`} onClick={() => toggleVisibility('consulting')} >
                         {t('header_option2')}
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -430,13 +447,11 @@ const Header = () => {
                     <Link to={"/concierge"}>
                         <div className="option">
                             {t('header_option3')}
-
                         </div>
                     </Link>
                     <Link to={"/about-us"}>
                         <div className="option">
                             {t('header_option5')}
-
                         </div>
                     </Link>
                 </div>}

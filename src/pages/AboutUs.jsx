@@ -430,7 +430,7 @@ function AboutUs() {
 
                 <div className="lohachov">
                     <div className="image">
-                        <img src="/src/assets/teams/alex-logachev-min.jpg" alt=""/>
+                        <img src={alexLogachevName} alt=""/>
                     </div>
                     <div className="content">
                         <div className="info">

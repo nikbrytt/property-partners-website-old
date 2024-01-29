@@ -1,0 +1,264 @@
+.ReactModal__Content {
+  overflow: unset !important;
+}
+
+.mail-modal-content {
+  width: 698px;
+  height: 331px;
+  position: relative;
+
+  .content-form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+
+    .text-content {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 50%;
+      background: linear-gradient(180deg, #191C38 45.32%, #0E1024 100%);
+      justify-content: space-between;
+      padding: 32px 20px 32px 30px;
+      gap: 58px;
+
+      .logo {
+        height: 51px;
+        width: 51px;
+        position: relative;
+        svg {
+          position: absolute;
+          top: -40px;
+          left: -40px
+        }
+      }
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+
+        .title {
+          display: flex;
+          flex-direction: column;
+          gap: 7px;
+
+          div {
+            color: #FFF;
+            font-family: Onest;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+          }
+        }
+
+        > div:last-child {
+          color: #FFF;
+          font-family: Onest;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 300;
+
+          span {
+            color: #FFF;
+            font-family: Onest;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      align-items: center;
+      justify-content: center;
+      padding: 0px 37px;
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        width: 100%;
+
+        .form-button {
+          display: flex;
+          flex-direction: column;
+          gap: 2.2vh;
+
+          .form-input {
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+
+            .input {
+              padding: 0px 16px;
+              display: flex;
+              border: 1px solid #CACACA;
+              gap: 24px;
+              height: 48px;
+              align-items: center;
+
+              input {
+                outline: none;
+                border: 0;
+                width: 100%;
+
+                color: #8F8F8F;
+                font-family: Onest;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0.56px;
+              }
+            }
+          }
+
+          .button-no-spam {
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+
+            .button {
+              display: flex;
+              width: 127px;
+              padding: 12px 16px 10px 16px;
+              align-items: center;
+              justify-content: center;
+
+              color: #FFF;
+              font-family: Onest;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: normal;
+              cursor: pointer;
+
+              &:hover {
+                background: #21254B;
+              }
+
+              border-radius: 2px;
+              background: linear-gradient(180deg, #1D213F 0%, #0F1330 100%);
+            }
+
+            .no-spam {
+              color: #8F8F8F;
+              font-family: Onest;
+              font-size: 10px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            }
+          }
+        }
+
+        .not-interested {
+          color: #8F8F8F;
+          font-family: Onest;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-decoration-line: underline;
+
+          cursor: pointer;
+
+          &:hover {
+            color: #d0d0d0;
+          }
+        }
+      }
+    }
+  }
+
+  .close {
+    position: absolute;
+    top: -7px;
+    right: -7px;
+
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1300px) {
+  .ReactModal__Content {
+    overflow: unset !important;
+  }
+
+  .mail-modal-content {
+    width: 644px;
+    height: 288px;
+
+    .content-form {
+      .text-content {
+        padding: 32px 25px;
+
+
+        .logo {
+          width: 35px;
+          height: 35px;
+
+          svg {
+            top: -50px;
+            left: -50px;
+            transform: scale(0.7);
+          }
+        }
+        .text {
+          gap: 15px;
+          .title {
+            div {
+              font-size: 22px;
+            }
+          }
+
+          > div:last-child {
+            font-size: 14px;
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      .form {
+        .content {
+          .form-button {
+            .form-input {
+              .input {
+
+                input {
+                  height: 38px;
+                  font-size: 12px;
+                }
+              }
+            }
+
+            .button-no-spam {
+              .button {
+                font-size: 10px;
+                &:hover {
+                }
+              }
+
+              .no-spam {
+                font-size: 8px;
+              }
+            }
+          }
+
+          .not-interested {
+            font-size: 12px;
+            &:hover {
+            }
+          }
+        }
+      }
+    }
+  }
+}

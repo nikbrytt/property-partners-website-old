@@ -1,18 +1,20 @@
 import Modal from "react-modal";
 import ceo from "../assets/teams/alex-logachev-min.jpg"
-import "../styles/contactUsModal.css"
+import "../styles/contactUsModal.scss"
 import {useEffect, useState} from "react";
 const ContactUsModal = () => {
     const [showModal, setShowModal] = useState(false);
-    useEffect(() => {
-        if(localStorage.getItem("startModalVisible")!=="true") {
-            const timer = setTimeout(() => {
-                setShowModal(true);
-            }, 10000);
-            return () => clearTimeout(timer);
-        }
 
+    useEffect(() => {
+        const startModalVisible = localStorage.getItem("startModalVisible","true")
+            if (!startModalVisible) {
+                const timer = setTimeout(() => {
+                   // setShowModal(true);
+                }, 2);
+                return () => clearTimeout(timer);
+            }
     }, []);
+
     function isMobile() {
         return window.innerWidth <= 768;
     }
@@ -20,10 +22,11 @@ const ContactUsModal = () => {
         setShowModal(false);
         localStorage.setItem("startModalVisible","true")
     };
+
     const modalStyles = {
         content: {
-            width:isMobile()?"95vw":"50vw",
-            height: '65vh',
+            width: 'fit-content',
+            height: 'fit-content',
             margin: 'auto',
             overflow:"hidden",
             display: 'flex',

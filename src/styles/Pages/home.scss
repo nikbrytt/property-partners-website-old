@@ -65,10 +65,10 @@
             color: #FFF;
             leading-trim: both;
             text-edge: cap;
-            font-family: HelveticaBold, sans-serif;
+            font-family: Onest, sans-serif;
             font-size: 16px;
             font-style: normal;
-            font-weight: 400;
+            font-weight: 700;
             line-height: 19.2px;
             /* 120% */
           }
@@ -85,23 +85,22 @@
               flex-shrink: 0;
               border: 1px solid #CACACA;
               color: #191C38;
-              font-family: HelveticaBold, sans-serif;
+              font-family: Onest, sans-serif;
               font-size: 16px;
               font-style: normal;
-              font-weight: 400;
+              font-weight: 700;
               line-height: normal;
               transition: 200ms;
+
+              &:hover {
+                background: #e0e0e0;
+              }
 
               svg {
                 margin-top: 2px;
               }
-
-              &:hover {
-                background: #E9E9E9;
-              }
             }
           }
-
         }
 
       }
@@ -147,7 +146,7 @@
 
       .description {
         color: #575757;
-        font-family: Helvetica;
+        font-family: Onest;
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
@@ -171,6 +170,16 @@
         gap: 12px;
         padding: 24px 24px 20px 24px;
         width: calc(50% - 11px);
+
+        &:nth-child(3) {
+          .content {
+            .collection-info {
+              .tittle {
+                width: 25%;
+              }
+            }
+          }
+        }
 
 
         .image {
@@ -202,7 +211,6 @@
             height: fit-content;
             align-items: center;
 
-
             .tittle {
               width: 30%;
               color: #191C38;
@@ -228,10 +236,10 @@
                 color: #191C38;
                 leading-trim: both;
                 text-edge: cap;
-                font-family: Onest;
+                font-family: Onest, sans-serif;
                 font-size: 16px;
                 font-style: normal;
-                font-weight: 600;
+                font-weight: 400;
                 line-height: 19.2px;
 
                 background: #F1F1F1;
@@ -256,8 +264,8 @@
               justify-content: space-between;
               align-self: stretch;
               border: 1px solid #CACACA;
-              color: #000;
-              font-family: Helvetica, sans-serif;
+              color: #191C38;
+              font-family: Onest, sans-serif;
               font-size: 19px;
               font-style: normal;
               font-weight: 700;
@@ -470,7 +478,7 @@
             flex-direction: column;
             gap: 12px;
             padding: 12px 0 15px;
-            font-family: Helvetica, sans-serif;
+            font-family: Onest, sans-serif;
 
             box-shadow: 0px 2px 60px 0px rgba(0, 0, 0, 0.05);
 
@@ -485,7 +493,7 @@
                 color: #575757;
                 leading-trim: both;
                 text-edge: cap;
-                font-family: Helvetica, sans-serif;
+                font-family: Onest, sans-serif;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 400;
@@ -520,7 +528,7 @@
 
               .tittle {
                 color: #191C38;
-                font-family: HelveticaBold, sans-serif;
+                font-family: Onest, sans-serif;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 400;
@@ -678,7 +686,7 @@
 
       div:last-child {
         color: #818181;
-        font-family: Helvetica;
+        font-family: Onest;
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
@@ -706,13 +714,18 @@
             background-image: url("../../assets/memberBackground.png");
             background-repeat: no-repeat;
             background-size: cover;
+            overflow: hidden;
 
             img {
               width: 100%;
               height: 100%;
               object-fit: cover;
               object-position: top;
+              transition: 200ms;
 
+              &:hover {
+                transform: scale(1.05);
+              }
             }
           }
 
@@ -730,16 +743,16 @@
                 color: #191C38;
                 leading-trim: both;
                 text-edge: cap;
-                font-family: HelveticaBold, sans-serif;
+                font-family: Onest, sans-serif;
                 font-size: 24px;
                 font-style: normal;
-                font-weight: 400;
+                font-weight: 700;
                 line-height: normal;
               }
 
               .position {
                 color: #939393;
-                font-family: Helvetica, sans-serif;
+                font-family: Onest, sans-serif;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
@@ -769,7 +782,7 @@
         cursor: pointer;
         display: flex;
         width: 311px;
-        padding: 16px 16px 18px 16px;
+        padding: 16px 16px 15px 16px;
         justify-content: center;
         align-items: center;
         gap: 16px;
@@ -777,7 +790,7 @@
         color: #FFF;
         leading-trim: both;
         text-edge: cap;
-        font-family: Helvetica, sans-serif;
+        font-family: Onest, sans-serif;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -831,17 +844,17 @@
         div:first-child {
           color: #191C38;
 
-          font-family: HelveticaBold, sans-serif;
+          font-family: Onest, sans-serif;
           font-size: 26px;
           font-style: normal;
-          font-weight: 400;
+          font-weight: 700;
           line-height: 120%;
           /* 28.8px */
         }
 
         div:last-child {
           color: #575757;
-          font-family: Helvetica, sans-serif;
+          font-family: Onest, sans-serif;
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
@@ -867,7 +880,7 @@
             color: #8F8F8F;
             leading-trim: both;
             text-edge: cap;
-            font-family: Helvetica, sans-serif;
+            font-family: Onest, sans-serif;
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
@@ -890,7 +903,7 @@
           background: #191C38;
           border: 1px solid #191C38;
           color: #FFF;
-          font-family: Helvetica, sans-serif;
+          font-family: Onest, sans-serif;
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
@@ -905,7 +918,7 @@
         .form-text {
           width: 100%;
           color: #9E9E9E;
-          font-family: Helvetica, sans-serif;
+          font-family: Onest, sans-serif;
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
@@ -940,17 +953,17 @@
 
             div:first-child {
               color: #191C38;
-              font-family: HelveticaBold, sans-serif;
+              font-family: Onest, sans-serif;
               font-size: 32px;
               font-style: normal;
-              font-weight: 400;
+              font-weight: 700;
               line-height: 120%;
               /* 38.4px */
             }
 
             div:last-child {
               color: #616161;
-              font-family: Helvetica, sans-serif;
+              font-family: Onest, sans-serif;
               font-size: 18px;
               font-style: normal;
               font-weight: 400;
@@ -973,10 +986,10 @@
               .advantage {
                 padding: 8px 12px 8px 8px;
                 color: #FFF;
-                font-family: HelveticaBold, sans-serif;
+                font-family: Onest, sans-serif;
                 font-size: 14px;
                 font-style: normal;
-                font-weight: 400;
+                font-weight: 700;
                 line-height: 19.2px;
                 /* 137.143% */
               }
@@ -1336,7 +1349,7 @@
             .advantage {
               padding: 10px;
               font-size: 14px;
-              font-family: Helvetica, sans-serif;
+              font-family: Onest, sans-serif;
             }
 
             a {
@@ -1359,6 +1372,7 @@
     .collections {
       padding: 16px 16px 16px 16px;
 
+
       .tittle {
         padding: 16px;
         div:first-child {
@@ -1374,10 +1388,22 @@
         gap: 16px;
 
 
+
         .collection {
           padding: 24px ;
           width: calc(50% - 8px);
           gap: 4px;
+
+          &:nth-child(3) {
+            .content {
+              .collection-info {
+                .tittle {
+                  width: 100%;
+                }
+              }
+            }
+          }
+
           .content {
             gap: 0px;
 

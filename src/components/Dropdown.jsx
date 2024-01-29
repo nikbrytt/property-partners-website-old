@@ -1,5 +1,5 @@
 import {useState} from "react";
-import "../styles/dropdownLanguage.css"
+import "../styles/dropdownLanguage.scss"
 import * as i18n from "i18next";
 import i18next from "i18next";
 const Dropdown = () => {
@@ -21,11 +21,14 @@ const Dropdown = () => {
             </svg>
         </div>
 
-        {visible&&
+        {visible &&
         <div className="hiden-element">
-            <div className="option" onClick={()=>handleChangeLanguage("en")}>EN</div>
-            <div className="option" onClick={()=>handleChangeLanguage("ru")}>RU</div>
-            <div className="option" onClick={()=>handleChangeLanguage("ua")}>UA</div>
+            {currentLanguage !== "en" &&
+            <div className="option" onClick={()=>handleChangeLanguage("en")}>EN</div>}
+            {currentLanguage !== "ru" &&
+            <div className="option" onClick={()=>handleChangeLanguage("ru")}>RU</div>}
+            {currentLanguage !== "ua" &&
+            <div className="option" onClick={()=>handleChangeLanguage("ua")}>UA</div>}
         </div>}
     </div>)
 }

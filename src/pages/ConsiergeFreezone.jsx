@@ -350,7 +350,7 @@ function ConsiergeFreezone() {
                 />
 
                 <BigInfoCard
-                    name={t("DubaiInternationalFinancialCenter")}
+                    name={t("DIFC")}
                     price={t("$15,000")}
                     activitiesBlocks={[
                         { text: t("Banking and brokerage services, money management") },

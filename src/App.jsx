@@ -24,6 +24,8 @@ import AboutAgent from "./pages/AboutAgent.jsx";
 import ProjectView from "./pages/ProjectView.jsx";
 import AboutAreas from "./pages/AboutAreas.jsx";
 import AreasViewPage from "./pages/AreasViewPage.jsx";
+import Developers from "./pages/Developers.jsx";
+import Developer from "./pages/Developer.jsx";
 
 function App() {
   const [isPDFModalOpen, setPDFModalOpen] = useState(false);
@@ -63,8 +65,9 @@ function App() {
         <Route path="/about-agent" element={<AboutAgent />} />
         <Route path="/project-view/:id" element={<ProjectView />} />
         <Route path="/areas" element={<AboutAreas />} />
+        <Route path="/developers" element={<Developers />} />
+        <Route path="/developer/:id" element={<Developer />} />
       </Routes>
-
     </BrowserRouter>
 
   )

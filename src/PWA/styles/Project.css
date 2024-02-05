@@ -1,0 +1,97 @@
+.project {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: white;
+  border-radius: 8px;
+  min-width: 213px;
+  max-width: 213px;
+}
+.project .image {
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+.project .image .like {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 130px;
+  background: rgba(0, 0, 0, 0.2);
+  /* Light Shadow */
+  box-shadow: 0px 2px 67.4px -1px rgba(0, 0, 0, 0.09);
+}
+.project .image .info {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  display: flex;
+  gap: 8px;
+}
+.project .image .info .data {
+  display: flex;
+  padding: 4px 6px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+  border: 1px solid #EAEAEA;
+  background: #FFF;
+  color: var(--ProPart-Blue, #191C38);
+  font-family: Onest, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.5px;
+}
+.project .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.project .information {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px;
+}
+.project .information .name {
+  color: var(--ProPart-Blue, #191C38);
+  font-family: Onest, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 120%; /* 19.2px */
+}
+.project .information .location {
+  color: #575757;
+  font-family: Onest, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 16.8px */
+}
+.project .information .price {
+  color: var(--ProPart-Blue, #575757);
+  font-family: Onest, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19.2px; /* 137.143% */
+}
+.project .information .price span {
+  color: var(--ProPart-Blue, #191C38);
+  font-family: Onest, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19.2px;
+}
+
+/*# sourceMappingURL=Project.css.map */

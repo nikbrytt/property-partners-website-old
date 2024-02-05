@@ -1,20 +1,12 @@
 import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
 import '../styles/Pages/Developer.scss'
-import developerMain from "../assets/Developer.png"
 import companiesInfo from '../data/companiesInfo.json'
 import React, {useState} from "react";
 import {Link, useParams} from "react-router-dom";
 import GetConsult from "../components/GetConsult.jsx";
 import {Autoplay, Navigation, Pagination} from "swiper/modules";
 import {Swiper, SwiperSlide} from "swiper/react";
-import emar from "../assets/emar.png";
-import meraas from "../assets/meraas.png";
-import sobha from "../assets/sobha.png";
-import ellington from "../assets/ellington.png";
-import danube from "../assets/danube.png";
-import mjl from "../assets/mjl.png";
-import damac from "../assets/damac.png";
 
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -110,8 +102,8 @@ const Developers = () => {
                                         </div>
                                     </div>
                                     <div className="params">
-                                        <div>188</div>
-                                        <div>307,000 AED</div>
+                                        <div>{company.projects_amount}</div>
+                                        <div>{company.projects_price_from} AED</div>
                                     </div>
                                 </div>
                             </div>

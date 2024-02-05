@@ -130,6 +130,15 @@
   "e1_title": "With our concierge service, you can unlock the full potential of Dubai, whether it's for business or leisure, making your time in this dynamic city truly unforgettable. Let us take care of the details while you focus on enjoying all that Dubai has to offer.",
   "e_but": "Get a free consultation",
 
+
+  "general": "general",
+  "visa": "visa",
+  "mainland": "mainland",
+  "accounting": "accounting",
+  "employment": "employment",
+  "bank-account": "Bank Account",
+  "trademark-registration": "Trademark Registration",
+
   "e_block1": "About us",
   "e_block2": "Property Partners is a team of specialists in Dubai providing concierge services for real estate purchases, investments, and leisure activities. We are ready to assist clients with routine tasks, vacation planning and even doctor's appointments with our extensive partnerships and expertise.",
 
@@ -548,7 +557,7 @@
     "name155": "Top 6 Medical Tourism Index",
  
     "name156": "138 Fortune 500 companies open office in Dubai",
-    "name157": "Inflation rate for the last 10 years",
+    "name157": "Inflation rate for the last 12 years",
     "name158": "Stable exchange rate of the national currency",
 
 
@@ -586,13 +595,13 @@
    "name205": "Selection of an object for request",
    "name206": "Legal audit of the lease agreement",
    "name207": "Full transaction support",
-   "name208": "Assistance in making payments/issuing checks to the owner",
+   "name208": "Assistance in making payments",
    "name209": "Registration of a lease agreement in Ejari",
    "name210": "What you need from the client",
    "name211": "Initial Approval Certificate",
    "name212": "Memorandum of association",
    "name213": "Cost and terms",
-   "name214": "1-20 business days depends on property",
+   "name214": "1-20 business days",
    "name215": "from 7000 aed per year",
    "name216": "Stage 3",
    "name217": "Company setup",
@@ -624,7 +633,7 @@
    "name243": "We get permissions from",
    "name244": "Food Safety Department",
    "name245": "Dubai Municipality",
-   "name246": "Dubai Land Department",
+   "name246": "DLD",
    "name247": "Roads and Transport Authority",
    "name248": "Cost and terms",
    "name249": "14-28 days",
@@ -875,7 +884,9 @@
    "name450": "Renewal every six months",
    "name451": "4 weeks",
    "business": "business  days",
-
+  "Dubai's off-plan": "Dubai's off-plan properties represent a futuristic vision, blending opulence with innovation in the heart of the desert. These pre-construction gems promise a unique opportunity for investors and homeowners alike. From sleek high-rises to sprawling communities, off-plan properties in Dubai boast cutting-edge architecture, world-class amenities, and sustainable designs. ",
+  "Buyers can secure": "Buyers can secure units before completion, often at favorable prices, witnessing the transformation of blueprints into luxurious living spaces. With a skyline that continually evolves, these off-plan developments redefine Dubai's real estate landscape, offering a chance to be part of the city's ever-growing narrative. Whether seeking an urban oasis or waterfront tranquility, these properties epitomize modern living, embracing the essence of luxury, and positioning investors at the forefront of Dubai's dynamic property market.",
+  "About the development": "About the development",
 
 
 
@@ -1566,11 +1577,9 @@
     "attorney_power_description": "Legal support for your business needs",
     "resident_visa": "Resident Visa",
     "resident_visa_description": "Resident Visa",
-    "accounting": "Accounting",
     "accounting_description": "Professional financial management services",
     "trademark_registration": "Trademark registration",
     "trademark_registration_description": "Protect your brand in the UAE market",
-    "mainland": "Mainland",
     "mainland_description": "Navigating business regulations in the UAE mainland",
     "uae_employment": "UAE employment",
     "uae_employment_description": "Hire skilled professionals for your business",

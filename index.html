@@ -42,8 +42,19 @@ maximum-scale=1.0, user-scalable=no" />
     <meta property="twitter:image" content="https://propart-images.s3.me-south-1.amazonaws.com/homeMain-AdKkTWSO+(1).png" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="./public/icons/bigIcon.png">
+    <link rel="manifest" href="./manifest.json">
+
     <meta name="author" content="ProPart">
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbaX7Vb6ERFTrWR4espV48g25lFRGGjIc&libraries=places"></script>
 
     <style>
       body{
@@ -54,6 +65,7 @@ maximum-scale=1.0, user-scalable=no" />
 
       * {
         box-sizing: border-box;
+
       }
 
       * {
@@ -79,6 +91,7 @@ maximum-scale=1.0, user-scalable=no" />
       }
       .ReactModal__Content{
         width: 120vh;
+      }
 
       @media (max-width: 1300px) {
         .ReactModal__Content{
@@ -115,6 +128,7 @@ maximum-scale=1.0, user-scalable=no" />
 
 
     </style>
+
   </head>
   <body>
     <div id="root"></div>

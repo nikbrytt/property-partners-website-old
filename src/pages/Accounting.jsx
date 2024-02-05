@@ -1,7 +1,7 @@
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import "../styles/Pages/auditing.scss"
-import accountaingBaner from "../assets/accounting-main.jpeg";
+import accountaingBaner from "../assets/accBaner.png";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import usa from "../assets/minLand/usa.svg";

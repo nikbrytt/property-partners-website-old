@@ -56,41 +56,45 @@
                 .list-container {
                     display: flex;
                     flex-direction: column;
-                    gap: 16px;
+                    gap: 8px;
 
                     .list-title {
                         color: #191C38;
-                        font-family: HelveticaBold, sans-serif;
+                        font-family: Onest, sans-serif;
                         font-size: 22px;
                         font-style: normal;
-                        font-weight: 400;
+                        font-weight: 700;
                         line-height: normal;
                     }
 
                     .list-upper {
                         display: flex;
-                        flex-direction: column;
                         gap: 16px;
-
+                        flex-wrap: wrap;
                         .list-elem {
                             display: flex;
-                            align-items: center;
                             gap: 8px;
-
+                            align-items: center;
                             color: #000;
                             leading-trim: both;
                             text-edge: cap;
-                            font-family: HelveticaLight, sans-serif;
+                            font-family: Onest, sans-serif;
                             font-size: 16px;
                             font-style: normal;
                             font-weight: 400;
                             line-height: normal;
+
+                            img {
+                                align-self: flex-start;
+                            }
                         }
                     }
 
                     .list-lower {
                         display: flex;
-                        gap: 24px;
+                        flex-direction: column;
+                        gap: 16px;
+                        width: 50%;
 
                         .list-elem {
                             display: flex;
@@ -100,7 +104,7 @@
                             color: #000;
                             leading-trim: both;
                             text-edge: cap;
-                            font-family: HelveticaLight, sans-serif;
+                            font-family: Onest, sans-serif;
                             font-size: 16px;
                             font-style: normal;
                             font-weight: 400;
@@ -118,7 +122,7 @@
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
-                        gap: 36px;
+                        gap: 16px;
                         width: 50%;
 
                         .stage-title {
@@ -128,7 +132,7 @@
 
                             div:first-child {
                                 color: #5E5E5E;
-                                font-family: HelveticaRegular, sans-serif;
+                                font-family: Onest, sans-serif;
                                 font-size: 16px;
                                 font-style: normal;
                                 font-weight: 400;
@@ -137,12 +141,11 @@
 
                             div:last-child {
                                 color: #191C38;
-                                font-family: HelveticaBold, sans-serif;
-                                font-size: 28px;
+                                font-family: Onest, sans-serif;
+                                font-size: 22px;
                                 font-style: normal;
-                                font-weight: 400;
+                                font-weight: 700;
                                 line-height: 120%;
-                                /* 33.6px */
                             }
                         }
 
@@ -151,27 +154,26 @@
                             flex-direction: column;
                             gap: 8px;
 
-
                             .underline {
                                 text-decoration-line: underline;
                             }
 
                             .big-description {
-                                font-size: 20px;
+                                font-size: 16px;
                             }
 
                             div:first-child {
                                 color: #191C38;
-                                font-family: HelveticaBold, sans-serif;
+                                font-family: Onest, sans-serif;
                                 font-size: 22px;
                                 font-style: normal;
-                                font-weight: 400;
+                                font-weight: 700;
                                 line-height: normal;
                             }
 
                             div:last-child {
                                 color: #000;
-                                font-family: HelveticaLight, sans-serif;
+                                font-family: Onest, sans-serif;
                                 font-size: 16px;
                                 font-style: normal;
                                 font-weight: 400;
@@ -182,12 +184,45 @@
 
                     .right-content {
                         display: flex;
-                        flex-direction: column;
+                        flex-direction: row;
                         background-color: #fff;
                         padding: 24px;
                         justify-content: space-between;
                         width: 50%;
                         gap: 10px;
+
+                        .list-container {
+                            width: 50%;
+                            background: #F1F1F1;
+                            padding: 16px;
+                            justify-content: space-between;
+
+                            position: relative;
+
+                            svg {
+                                top: 0;
+                                right: 0;
+                                position: absolute;
+                            }
+
+                            .list-title {
+                                color: #717171;
+                                font-size: 16px;
+                                font-weight: 400;
+                            }
+                            .list-upper {
+
+                                width: 100%;
+                                .list-elem {
+
+                                }
+                            }
+
+                            .list-lower {
+                                background: #F1F1F1;
+                                width: 100%;
+                            }
+                        }
                     }
                 }
             }
@@ -398,9 +433,7 @@
                 .title {}
 
                 .accompany-blocks-container {
-
                     .list-container {
-
                         .list-title {
                             font-size: 18px;
                         }
@@ -423,11 +456,7 @@
                     .accompany-block {
 
                         .left-content {
-
-
                             .stage-title {
-
-
                                 div:first-child {
                                     font-size: 14px;
                                 }
@@ -458,7 +487,16 @@
                         }
 
                         .right-content {
-                            gap: 24px;
+                            flex-direction: column;
+                            gap: 16px;
+
+                            .list-container {
+                                width: 100%;
+
+                                .list-upper {
+                                    flex-direction: column;
+                                }
+                            }
                         }
                     }
                 }
@@ -598,9 +636,7 @@
                 .title {}
 
                 .accompany-blocks-container {
-
                     .list-container {
-
                         .list-title {
                             font-size: 18px;
                         }
@@ -622,11 +658,11 @@
                     }
 
                     .accompany-block {
-
                         flex-direction: column;
 
                         .left-content {
                             width: 100%;
+                            padding: 8px 16px 8px 16px;
 
                             .stage-title {
 
@@ -662,7 +698,8 @@
 
                         .right-content {
                             width: 100%;
-                            gap: 24px;
+                            gap: 16px;
+                            padding: 16px;
                         }
                     }
                 }

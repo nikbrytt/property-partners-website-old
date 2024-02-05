@@ -1,7 +1,7 @@
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import "../styles/Pages/bankaccount.scss"
-import accountaingBaner from "../assets/accounting-main.jpeg";
+import accountaingBaner from "../assets/bk.png";
 import { useTranslation } from "react-i18next";
 
 import GetConsult from "../components/GetConsult"
@@ -264,7 +264,6 @@ function BankAccount() {
                             <div className="stable-title">{t("name158")}</div>
                             <div className="image-cont">
                                 <img src={stable1} alt="" />
-                                <img src={stable2} alt="" />
                             </div>
                         </div>
                     </div>

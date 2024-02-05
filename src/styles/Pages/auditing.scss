@@ -59,6 +59,8 @@
                         padding: 24px;
                         width: 50%;
                         background: #FFF;
+                        position: relative;
+                        overflow: hidden;
 
                         .count {
                             color: #D3D3D3;
@@ -94,6 +96,14 @@
                                 line-height: normal;
                                 letter-spacing: -0.32px;
                             }
+                        }
+
+                        svg {
+                            position: absolute;
+                            top: 0px;
+                            right: 0px;
+
+                            scale: 2;
                         }
                     }
 
@@ -348,6 +358,12 @@
                                 letter-spacing: -0.4px;
                                 margin-top: 0px !important;
                             }
+                        }
+
+                        svg {
+                            top: -40px !important;
+                            right: -40px !important;
+                            scale: 0.8 !important;
                         }
                     }
 
@@ -874,6 +890,10 @@
                                 margin-top: 0px !important;
                             }
                         }
+
+                        svg {
+                            scale: 1.5 !important;
+                        }
                     }
 
                     .image {
@@ -894,11 +914,11 @@
         .employments-cards {
             display: flex;
             padding: 16px 16px 16px 16px !important;
-
             .card-container {
                 display: flex;
                 flex-direction: column;
                 gap: 16px;
+                width: 100% !important;
 
                 .card {
                     padding: 16px !important;
@@ -912,7 +932,7 @@
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
-                        padding: 16px !important;
+                        padding: 16px 16px 32px 16px!important;
                         background: #F5F5F5;
                         width: 100% !important;
                         gap: 24px;
@@ -933,6 +953,7 @@
                             font-weight: 400;
                             line-height: normal;
                             letter-spacing: -0.64px;
+                            display: none !important;
                         }
 
                         .description {
@@ -1162,6 +1183,12 @@
                                 letter-spacing: -0.32px !important;
                                 margin-top: 0px !important;
                             }
+                        }
+
+                        svg {
+                            top: -40px !important;
+                            right: -30px !important;
+                            scale: 0.8 !important;
                         }
                     }
 

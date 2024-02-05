@@ -5,9 +5,45 @@ import "../styles/Pages/agent.scss"
 import brokerTest from "../assets/teams/alla-gerassimova-min.jpg";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import {useState} from "react";
+import axios from "axios";
+
 const Agent = () => {
     const { state } = useLocation();
     const { t } = useTranslation();
+
+    const [name, setName] = useState('')
+    const [phone, setPhone] = useState('')
+    const [mail, setMail] = useState('')
+
+    function sentData() {
+        let data = JSON.stringify({
+            "name": name,
+            "phone": phone,
+            "email": mail,
+            "additional": "Additional information here"
+        });
+
+        let config = {
+            method: 'post',
+            maxBodyLength: Infinity,
+            url: 'http://142.93.97.213:3000/append-data',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data : data
+        };
+
+        axios.request(config)
+            .then((response) => {
+                setName('')
+                setPhone('')
+                setMail('')
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }
 
     const member = state.memberObject
     return (<div className={"agent"}>
@@ -82,18 +118,22 @@ const Agent = () => {
                         </div>
                         <div className="form">
                             <div className="form-input">
-                                <input type="text" placeholder={t("q_text7")} />
+                                <input placeholder={t("j_title42")} type="text" value={name} onChange={(e) => {
+                                    setName(e.target.value)
+                                }} />
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                                     <path d="M20 22.5H4V20.5C4 19.1739 4.52678 17.9021 5.46447 16.9645C6.40215 16.0268 7.67392 15.5 9 15.5H15C16.3261 15.5 17.5979 16.0268 18.5355 16.9645C19.4732 17.9021 20 19.1739 20 20.5V22.5ZM12 13.5C11.2121 13.5 10.4319 13.3448 9.7039 13.0433C8.97595 12.7417 8.31451 12.2998 7.75736 11.7426C7.20021 11.1855 6.75825 10.5241 6.45672 9.7961C6.15519 9.06815 6 8.28793 6 7.5C6 6.71207 6.15519 5.93185 6.45672 5.2039C6.75825 4.47595 7.20021 3.81451 7.75736 3.25736C8.31451 2.70021 8.97595 2.25825 9.7039 1.95672C10.4319 1.65519 11.2121 1.5 12 1.5C13.5913 1.5 15.1174 2.13214 16.2426 3.25736C17.3679 4.38258 18 5.9087 18 7.5C18 9.0913 17.3679 10.6174 16.2426 11.7426C15.1174 12.8679 13.5913 13.5 12 13.5Z" fill="#C29773" />
                                 </svg>
                             </div>
                             <div className="form-input">
-                                <input type="text" placeholder={t("q_text8")} />
+                                <input placeholder={t("j_title43")} type="text" value={phone}  onChange={(e) => {
+                                    setPhone(e.target.value)
+                                }} />
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                                     <path d="M21 16.92V20.456C21.0001 20.7092 20.9042 20.953 20.7316 21.1382C20.559 21.3234 20.3226 21.4363 20.07 21.454C19.633 21.484 19.276 21.5 19 21.5C10.163 21.5 3 14.337 3 5.5C3 5.224 3.015 4.867 3.046 4.43C3.06372 4.17744 3.17658 3.94101 3.3618 3.76841C3.54703 3.59581 3.79082 3.49989 4.044 3.5H7.58C7.70404 3.49987 7.8237 3.54586 7.91573 3.62902C8.00776 3.71218 8.0656 3.82658 8.078 3.95C8.101 4.18 8.122 4.363 8.142 4.502C8.34073 5.88892 8.748 7.23783 9.35 8.503C9.445 8.703 9.383 8.942 9.203 9.07L7.045 10.612C8.36445 13.6865 10.8145 16.1365 13.889 17.456L15.429 15.302C15.4919 15.214 15.5838 15.1509 15.6885 15.1237C15.7932 15.0964 15.9042 15.1068 16.002 15.153C17.267 15.7539 18.6156 16.1601 20.002 16.358C20.141 16.378 20.324 16.4 20.552 16.422C20.6752 16.4346 20.7894 16.4926 20.8724 16.5846C20.9553 16.6766 21.0012 16.7961 21.001 16.92H21Z" fill="#C29773" />
                                 </svg>
                             </div>
-                            <div className="form-button">
+                            <div className="form-button" onClick={sentData}>
                                 {t("q_text9")}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                                     <path d="M9.99999 15.6715L19.192 6.47852L20.607 7.89252L9.99999 18.4995L3.63599 12.1355L5.04999 10.7215L9.99999 15.6715Z" fill="white" />

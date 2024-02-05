@@ -240,12 +240,7 @@ function ConsiergeFreezone() {
                 />
             </div>
 
-            <div className="video">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/pcltj8E-72w?si=iV7VdWvbASMntCgA"
-                        title="YouTube video player" frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowFullScreen></iframe>
-            </div>
+
             <div className="registring">
                 <div className="title">
                     <div>{t("main_title")}</div>

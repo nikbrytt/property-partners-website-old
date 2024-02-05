@@ -69,12 +69,12 @@ import dubaiHills2 from "../assets/Areas/apart-pages/damac-hills2.png";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-
 function AreaPage() {
     const { id } = useParams();
     const [showModal, setShowModal] = useState(false);
 
     const { t } = useTranslation();
+
     const pageTexy = {
         "business": {
             "title": t("areas-business.title"),
@@ -637,6 +637,7 @@ function AreaPage() {
     ]
 
     const { title, titleText, locationText, infrastructureText, images, blocks } = pageTexy[id];
+
     const [modalText, setModalText] = useState({
         tittleText: "",
         buttonText: ""

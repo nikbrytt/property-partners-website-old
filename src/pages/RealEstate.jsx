@@ -13,50 +13,25 @@ import Footer from "../components/Footer.jsx";
 import Marker from "../components/Marker.jsx";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
-import {
-    useAdvancedMarkerRef
-} from '@vis.gl/react-google-maps';
-import AreasCard from "../components/AreasCard.jsx";
-import { Link } from "react-router-dom";
 
 import GetConsult from "../components/GetConsult.jsx";
 import React from 'react';
-import areasinfo from "../data/Areasinfo.jsx";
-import project from "../components/Project.jsx";
-import DynamicTruncatedText from "../components/DynamicTruncatedText.jsx";
 import AreasCardsInfo from "../data/AreasCardsInfo.jsx";
 import AreaCard from "../components/AreaCard.jsx";
-import areasViewPage from "./AreasViewPage.jsx";
-
+import Response from "../data/response.json"
 const RealEstate = () => {
     const [mapZoom, setMapZoom] = useState(10);
-    const [projects, setProjects] = useState(null)
+    const [projects, setProjects] = useState(Response)
     const [visibleProjects, setVisibleProjects] = useState([])
     const { t } = useTranslation();
     const [projectPerView, setprojectsPerView] = useState(10)
-
-    useEffect(() => {
-        let config = {
-            method: 'get',
-            maxBodyLength: Infinity,
-            url: 'http://157.175.196.127:8080/api/projects/get-all',
-            headers: {}
-        };
-
-        axios.request(config)
-            .then((response) => {
-                setProjects(response.data)
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-    }, []);
 
     useEffect(() => {
         if(visibleProjects.length === 0 && projects !== null) {
             setVisibleProjects(projects.slice(0, 10))
         }
     }, [projects]);
+
     const updateProjectsVisibility = () => {
         const currentZoom = mapZoom;
         let visiblePercentage = 100;

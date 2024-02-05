@@ -4,6 +4,7 @@ import "../styles/Components/MailModal.scss"
 import {useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
 import InqureModalBg from "../assets/Modal/inquireBg.png"
+import axios from "axios";
 
 
 const MailModal = ({showMailModal, closeMailModal}) => {
@@ -32,6 +33,39 @@ const MailModal = ({showMailModal, closeMailModal}) => {
             zIndex: 999
         }
     };
+
+    const [name, setName] = useState('')
+    const [phone, setPhone] = useState('')
+    const [mail, setMail] = useState('')
+
+    function sentData() {
+        let data = JSON.stringify({
+            "name": name,
+            "phone": phone,
+            "email": mail,
+            "additional": "Additional information here"
+        });
+
+        let config = {
+            method: 'post',
+            maxBodyLength: Infinity,
+            url: 'http://142.93.97.213:3000/append-data',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data : data
+        };
+
+        axios.request(config)
+            .then((response) => {
+                setName('')
+                setPhone('')
+                setMail('')
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }
 
     return(<Modal  isOpen={showMailModal} style={modalStyles} onRequestClose={closeMailModal}>
         <div className="mail-modal-content">
@@ -98,7 +132,9 @@ const MailModal = ({showMailModal, closeMailModal}) => {
                         <div className="form-button">
                             <div className="form-input">
                                 <div className="input">
-                                    <input type="text" placeholder='Your name'/>
+                                    <input placeholder={t("j_title42")} type="text" value={name} onChange={(e) => {
+                                        setName(e.target.value)
+                                    }} />
 
                                     <div>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="19" height="20"
@@ -111,8 +147,9 @@ const MailModal = ({showMailModal, closeMailModal}) => {
                                     </div>
                                 </div>
                                 <div className="input">
-                                    <input type="text" placeholder='Enter your email'/>
-
+                                    <input placeholder={t("j_title44")} type="text" value={mail} onChange={(e) => {
+                                        setMail(e.target.value)
+                                    }}/>
                                     <div>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="19" height="20"
                                              viewBox="0 0 19 20"
@@ -125,7 +162,7 @@ const MailModal = ({showMailModal, closeMailModal}) => {
                                 </div>
                             </div>
                             <div className="button-no-spam">
-                                <div className="button">
+                                <div className="button" onClick={sentData}>
                                     SUBSCRIBE
                                 </div>
                                 <div className="no-spam">

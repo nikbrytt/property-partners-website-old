@@ -1,0 +1,18 @@
+.pwa-menu{
+  display: flex;
+  padding: 16px;
+
+  justify-content: space-between;
+  align-items: flex-start;
+  .burger-menu{
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    flex-shrink: 0;
+  }
+  .additional{
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+  }
+}

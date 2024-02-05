@@ -1,0 +1,35 @@
+.footer {
+  display: flex;
+  padding: 16px;
+  align-items: flex-start;
+  gap: 14px;
+  position: sticky;
+  bottom: 0;
+  background: white;
+  z-index: 9999;
+  align-self: stretch;
+}
+.footer a {
+  flex: 1;
+  width: 100%;
+}
+.footer a .option {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #6E6E6E;
+  font-family: Onest, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  align-items: center;
+  font-weight: 400;
+  line-height: normal;
+}
+.footer a .option.active {
+  color: var(--ProPart-Beige, #C29773);
+}
+.footer a .option.active svg path {
+  fill: #C29773;
+}
+
+/*# sourceMappingURL=Footer.css.map */

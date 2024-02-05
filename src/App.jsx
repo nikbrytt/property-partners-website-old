@@ -26,6 +26,11 @@ import AboutAreas from "./pages/AboutAreas.jsx";
 import AreasViewPage from "./pages/AreasViewPage.jsx";
 import Developers from "./pages/Developers.jsx";
 import Developer from "./pages/Developer.jsx";
+import HomePage from "./PWA/pages/HomePage.jsx";
+import PhoneMap from "./PWA/pages/PhoneMap.jsx";
+import Properties from "./PWA/pages/Properties.jsx";
+import ProjectInfo from "./PWA/pages/ProjectInfo.jsx";
+import AreasPhone from "./PWA/pages/AreasPhone.jsx";
 
 function App() {
   const [isPDFModalOpen, setPDFModalOpen] = useState(false);
@@ -67,10 +72,14 @@ function App() {
         <Route path="/areas" element={<AboutAreas />} />
         <Route path="/developers" element={<Developers />} />
         <Route path="/developer/:id" element={<Developer />} />
-      </Routes>
-    </BrowserRouter>
 
-  )
+        <Route path="/phone" element={<HomePage />} />
+        <Route path="/phone/map" element={<PhoneMap />} />
+        <Route path="/phone/properties" element={<Properties />} />
+        <Route path="/phone/project" element={<ProjectInfo />} />
+        <Route path="/phone/areas" element={<AreasPhone />} />
+      </Routes>
+    </BrowserRouter>)
 }
 
 export default App

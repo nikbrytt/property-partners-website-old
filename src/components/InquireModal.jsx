@@ -4,6 +4,7 @@ import "../styles/Components/InquireModal.scss"
 import {useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
 import InqureModalBg from "../assets/Modal/inquireBg.png"
+import axios from "axios";
 
 
 const InquireModal = ({showInquireModal, closeInquireModal}) => {
@@ -33,6 +34,39 @@ const InquireModal = ({showInquireModal, closeInquireModal}) => {
             zIndex: 999
         }
     };
+
+    const [name, setName] = useState('')
+    const [phone, setPhone] = useState('')
+    const [mail, setMail] = useState('')
+
+    function sentData() {
+        let data = JSON.stringify({
+            "name": name,
+            "phone": phone,
+            "email": mail,
+            "additional": "Additional information here"
+        });
+
+        let config = {
+            method: 'post',
+            maxBodyLength: Infinity,
+            url: 'http://142.93.97.213:3000/append-data',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data : data
+        };
+
+        axios.request(config)
+            .then((response) => {
+                setName('')
+                setPhone('')
+                setMail('')
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }
 
 
     return(<Modal  isOpen={showInquireModal} style={modalStyles} onRequestClose={closeInquireModal}>
@@ -82,7 +116,9 @@ const InquireModal = ({showInquireModal, closeInquireModal}) => {
                     <div className="form-privacy">
                         <div className="form">
                             <div className="field-input">
-                                <input type="text" placeholder="Your name"/>
+                                <input type="text" placeholder={t("j_title42")} value={name} onChange={(e) => {
+                                    setName(e.target.value)
+                                }}/>
                                 <div>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20"
                                          fill="none">
@@ -93,7 +129,9 @@ const InquireModal = ({showInquireModal, closeInquireModal}) => {
                                 </div>
                             </div>
                             <div className="field-input">
-                                <input type="text" placeholder="Phone number"/>
+                                <input placeholder={t("j_title43")} type="text" value={phone}  onChange={(e) => {
+                                    setPhone(e.target.value)
+                                }}/>
                                 <div>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
                                          fill="none">
@@ -103,7 +141,7 @@ const InquireModal = ({showInquireModal, closeInquireModal}) => {
                                     </svg>
                                 </div>
                             </div>
-                            <div className="field-button">
+                            <div className="field-button" onClick={sentData}>
                                 Get offer
                             </div>
                         </div>

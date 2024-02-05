@@ -55,9 +55,9 @@ import bluewaters from "../assets/Areas/apart-pages/bluewaters.png";
 import bluewaters1 from "../assets/Areas/apart-pages/bluewaters1.png";
 import bluewaters2 from "../assets/Areas/apart-pages/bluewaters2.png";
 
-import centralPark from "../assets/Areas/apart-pages/bluewaters.png";
-import centralPark1 from "../assets/Areas/apart-pages/bluewaters1.png";
-import centralPark2 from "../assets/Areas/apart-pages/bluewaters2.png";
+import centralPark from "../assets/Areas/apart-pages/central-park1.png";
+import centralPark1 from "../assets/Areas/apart-pages/central-park2.png";
+import centralPark2 from "../assets/Areas/apart-pages/central-park.png";
 
 import damacHills from "../assets/Areas/apart-pages/damac-hills.png";
 import damacHills1 from "../assets/Areas/apart-pages/damac-hills1.png";
@@ -594,7 +594,7 @@ function AreasViewPage() {
                 t('central-park.infrastructureText.1'),
                 t('central-park.infrastructureText.2')
             ],
-            "images": [centralPark, centralPark1, centralPark2, cityWalkMap],
+            "images": [cityWalkMap, centralPark, centralPark2, centralPark1],
             "blocks": [
                 {
                     "title": t('central-park.blocks.0.title'),
@@ -724,9 +724,7 @@ function AreasViewPage() {
         setShowModal(false);
     };
 
-    const [activePlan, setActivePlan] = useState(0)
     const [projects, setProjects] = useState(null);
-    const [activeFloorPlan, setActiveFloorPlan] = useState(0)
     function convertPriceToShortFormat(price) {
         price = (Number(price) / 3.16).toFixed(0).toString()
         const suffixes = ['', 'K', 'M', 'B', 'T'];
@@ -739,7 +737,6 @@ function AreasViewPage() {
 
         return price.toFixed(1) + suffixes[suffixIndex];
     }
-    const [randomProjects, setRandomProjects] = useState(null);
     const [mapZoom, setMapZoom] = useState(15);
     const [currnetIndex, setCurrentIndex] = useState(null)
 
@@ -755,23 +752,6 @@ function AreasViewPage() {
             return { lat: this.lat, lng: this.lng };
         },
     };
-
-    useEffect(() => {
-        let config = {
-            method: 'get',
-            maxBodyLength: Infinity,
-            url: 'http://157.175.196.127:8080/api/projects/get-all',
-            headers: {}
-        };
-
-        axios.request(config)
-            .then((response) => {
-                setProjects(response.data)
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-    }, []);
 
     if (projects === null) {
         return null;

@@ -191,7 +191,7 @@ function AboutUs() {
                                     <div className="title-med"> {t('about-us.since-inception.title')}</div>
                                     <div className="descr">
                                         <div
-                                            className="text-med">{t('about-us.since-inception.description.1')} \{t('about-us.since-inception.description.2')}</div>
+                                            className="text-med">{t('about-us.since-inception.description.1')} {t('about-us.since-inception.description.2')}</div>
 
                                         <div className="text-med">{t('about-us.since-inception.description.3')}</div>
                                     </div>

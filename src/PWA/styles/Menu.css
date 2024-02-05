@@ -1,0 +1,19 @@
+.pwa-menu {
+  display: flex;
+  padding: 16px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.pwa-menu .burger-menu {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  flex-shrink: 0;
+}
+.pwa-menu .additional {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+/*# sourceMappingURL=Menu.css.map */

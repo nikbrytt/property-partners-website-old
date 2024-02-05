@@ -55,7 +55,7 @@ const Marker = ({ index, mapZoom, project, currnetIndex, setCurrentIndex }) => {
                     anchor={marker}
                     maxWidth={200}
                 >
-                    <div className="pop-container" onClick={() => window.location.href = `/project/${project._id}`}>
+                    <div className="pop-container" onClick={() => window.location.href = `/project-view/${project._id}`}>
                         <img src={project.imageSrcMain} alt="" />
                         <div className="pop-content">
                             <div>{project.projectName}</div>

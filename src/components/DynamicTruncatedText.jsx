@@ -1,5 +1,3 @@
-// DynamicTruncatedText.js
-
 import React, { useState, useEffect } from 'react';
 
 const DynamicTruncatedText = ({ text, customBreakpoints }) => {

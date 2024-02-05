@@ -118,28 +118,28 @@ const Header = () => {
             <div onClick={() => toggleVisibility('consulting')} className="menu-option">
                 {consultingVisible && <div className="drop-down">
                     <Link to={"/general"}>
-                        <div className="option">General</div>
+                        <div className="option">{t("general")}</div>
                     </Link>
                     <Link to={"/visa"}>
-                        <div className="option">Visa</div>
+                        <div className="option">{t("visa")}</div>
                     </Link>
                     {/* <Link to={"/attorney"}>
                         <div className="option">Attorney</div>
                     </Link> */}
                     <Link to={"/main-land"}>
-                        <div className="option">Mainland</div>
+                        <div className="option">{t("mainland")}</div>
                     </Link>
                     <Link to={"/accounting"}>
-                        <div className="option">Accounting</div>
+                        <div className="option">{t("accounting")}</div>
                     </Link>
                     <Link to={"/employment"}>
-                        <div className="option">Employment</div>
+                        <div className="option">{t("employment")}</div>
                     </Link>
                     <Link to={"/bank-account"}>
-                        <div className="option">Bank account</div>
+                        <div className="option">{t("bank-account")}</div>
                     </Link>
                     <Link to={"/trademark-registration"}>
-                        <div className="option">Trademark registration</div>
+                        <div className="option">{t("trademark-registration")}</div>
                     </Link>
                 </div>}
                 {t('header_option2')}
@@ -268,27 +268,27 @@ const Header = () => {
                         </Link>
                         <Link to={"/main-land"}>
                             <div className="option">
-                                Mainland
+                                {t("mainland")}
                             </div>
                         </Link>
                         <Link to={"/bank-account"}>
                             <div className="option">
-                                Bank account
+                                {t("bank-account")}
                             </div>
                         </Link>
                         <Link to={"/general"}>
                             <div className="option">
-                                General
+                                {t("general")}
                             </div>
                         </Link>
                         <Link to={"/accounting"}>
                             <div className="option">
-                                Accounting
+                                {t("accounting")}
                             </div>
                         </Link>
                         <Link to={"/employment"}>
                             <div className="option">
-                                Employment
+                                {t("employment")}
                             </div>
                         </Link>
 
@@ -300,7 +300,7 @@ const Header = () => {
 
                         <Link to={"/trademark-registration"}>
                             <div className="option">
-                                Trademark registration
+                                {t("trademark-registration")}
                             </div>
                         </Link>
                     </div>}
@@ -423,25 +423,25 @@ const Header = () => {
                     </div>
                     {consultingVisible && <div className="cons-drop-down">
                         <Link to={"/general"}>
-                            <div className="option">General</div>
+                            <div className="option">{t("general")}</div>
                         </Link>
                         <Link to={"/visa"}>
-                            <div className="option">Visa</div>
+                            <div className="option">{t("visa")}</div>
                         </Link>
                         <Link to={"/main-land"}>
-                            <div className="option">Mainland</div>
+                            <div className="option">{t("mainland")}</div>
                         </Link>
                         <Link to={"/accounting"}>
-                            <div className="option">Accounting</div>
+                            <div className="option">{t("accounting")}</div>
                         </Link>
                         <Link to={"/employment"}>
-                            <div className="option">Employment</div>
+                            <div className="option">{t("employment")}</div>
                         </Link>
                         <Link to={"/bank-account"}>
-                            <div className="option">Bank account</div>
+                            <div className="option">{t("bank-account")}</div>
                         </Link>
                         <Link to={"/trademark-registration"}>
-                            <div className="option">Trademark registration</div>
+                            <div className="option">{t("trademark-registration")}</div>
                         </Link>
                     </div>}
                     <Link to={"/concierge"}>

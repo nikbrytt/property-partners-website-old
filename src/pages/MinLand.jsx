@@ -1,7 +1,7 @@
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import "../styles/Pages/minLand.scss"
-import accountaingBaner from "../assets/accounting-main.jpeg";
+import accountaingBaner from "../assets/mainLandBg.png";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import checkBrown from "../assets/minland/checkbox-circle-fill-brown.svg";
@@ -197,6 +197,7 @@ function MinLand() {
             {t("setUpLocalCompanySubtitle")}
         </div>
     )
+    
     return (
         <div className="minland-wrapper ">
             <Header></Header>
@@ -232,38 +233,69 @@ function MinLand() {
                                     <div>{t("name192")}</div>
                                 </div>
                                 <div className="accompany-paragraph">
-                                    <div>{t("name193")}</div>
                                     <div>{t("name194")}</div>
                                 </div>
                             </div>
                             <div className="right-content">
                                 <div className="list-container">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="58" height="110" viewBox="0 0 58 110"
+                                         fill="none">
+                                        <g opacity="0.1" filter="url(#filter0_d_1917_9156)">
+                                            <ellipse cx="55.0003" cy="27.5003" rx="18.3333" ry="18.3333"
+                                                     fill="#C29773"/>
+                                            <path
+                                                d="M91.6663 80.208C91.6663 91.5989 91.6663 100.833 54.9997 100.833C18.333 100.833 18.333 91.5989 18.333 80.208C18.333 68.8171 34.7492 59.583 54.9997 59.583C75.2501 59.583 91.6663 68.8171 91.6663 80.208Z"
+                                                fill="#C29773"/>
+                                        </g>
+                                        <defs>
+                                            <filter id="filter0_d_1917_9156" x="-4" y="0" width="118" height="118"
+                                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                               result="hardAlpha"/>
+                                                <feOffset dy="4"/>
+                                                <feGaussianBlur stdDeviation="2"/>
+                                                <feComposite in2="hardAlpha" operator="out"/>
+                                                <feColorMatrix type="matrix"
+                                                               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                                <feBlend mode="normal" in2="BackgroundImageFix"
+                                                         result="effect1_dropShadow_1917_9156"/>
+                                                <feBlend mode="normal" in="SourceGraphic"
+                                                         in2="effect1_dropShadow_1917_9156" result="shape"/>
+                                            </filter>
+                                        </defs>
+                                    </svg>
                                     <div className="list-title">{t("name195")}</div>
                                     <div className="list-upper">
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name196")}
                                         </div>
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name197")}
-                                        </div>
-                                        <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
-                                            {t("name198")}
                                         </div>
                                     </div>
                                 </div>
 
                                 <div className="list-container">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="59" height="110" viewBox="0 0 59 110"
+                                         fill="none">
+                                        <g opacity="0.1">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M33.7063 9.16699H77.2937C82.6052 9.16699 85.2609 9.16699 87.4028 9.91227C91.4644 11.3255 94.6532 14.6083 96.026 18.7895C96.75 20.9945 96.75 23.7285 96.75 29.1964V93.3821C96.75 97.3156 92.2354 99.4027 89.3796 96.7894C87.7017 95.254 85.1733 95.254 83.4954 96.7894L81.2812 98.8155C78.3406 101.506 73.9094 101.506 70.9688 98.8155C68.0281 96.1246 63.5969 96.1246 60.6562 98.8155C57.7156 101.506 53.2844 101.506 50.3438 98.8155C47.4031 96.1246 42.9719 96.1246 40.0312 98.8155C37.0906 101.506 32.6594 101.506 29.7188 98.8155L27.5046 96.7894C25.8267 95.254 23.2983 95.254 21.6204 96.7894C18.7646 99.4027 14.25 97.3156 14.25 93.3821V29.1964C14.25 23.7285 14.25 20.9945 14.974 18.7895C16.3468 14.6083 19.5356 11.3255 23.5972 9.91227C25.7391 9.16699 28.3948 9.16699 33.7063 9.16699ZM32.5833 30.9378C30.6849 30.9378 29.1458 32.4768 29.1458 34.3753C29.1458 36.2738 30.6849 37.8128 32.5833 37.8128H34.875C36.7735 37.8128 38.3125 36.2738 38.3125 34.3753C38.3125 32.4768 36.7735 30.9378 34.875 30.9378H32.5833ZM48.625 30.9378C46.7265 30.9378 45.1875 32.4768 45.1875 34.3753C45.1875 36.2738 46.7265 37.8128 48.625 37.8128H78.4167C80.3151 37.8128 81.8542 36.2738 81.8542 34.3753C81.8542 32.4768 80.3151 30.9378 78.4167 30.9378H48.625ZM32.5833 46.9795C30.6849 46.9795 29.1458 48.5185 29.1458 50.417C29.1458 52.3155 30.6849 53.8545 32.5833 53.8545H34.875C36.7735 53.8545 38.3125 52.3155 38.3125 50.417C38.3125 48.5185 36.7735 46.9795 34.875 46.9795H32.5833ZM48.625 46.9795C46.7265 46.9795 45.1875 48.5185 45.1875 50.417C45.1875 52.3155 46.7265 53.8545 48.625 53.8545H78.4167C80.3151 53.8545 81.8542 52.3155 81.8542 50.417C81.8542 48.5185 80.3151 46.9795 78.4167 46.9795H48.625ZM32.5833 63.0212C30.6849 63.0212 29.1458 64.5602 29.1458 66.4587C29.1458 68.3571 30.6849 69.8962 32.5833 69.8962H34.875C36.7735 69.8962 38.3125 68.3571 38.3125 66.4587C38.3125 64.5602 36.7735 63.0212 34.875 63.0212H32.5833ZM48.625 63.0212C46.7265 63.0212 45.1875 64.5602 45.1875 66.4587C45.1875 68.3571 46.7265 69.8962 48.625 69.8962H78.4167C80.3151 69.8962 81.8542 68.3571 81.8542 66.4587C81.8542 64.5602 80.3151 63.0212 78.4167 63.0212H48.625Z"
+                                                  fill="#C29773"/>
+                                        </g>
+                                    </svg>
                                     <div className="list-title">{t("name199")}</div>
                                     <div className="list-lower">
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name200")}
                                         </div>
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name201")}
                                         </div>
                                     </div>
@@ -278,26 +310,25 @@ function MinLand() {
                                     <div>{t("name203")}</div>
                                 </div>
                                 <div className="list-container">
-                                    <div className="list-title">{t("name204")}</div>
                                     <div className="list-upper">
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name205")}
                                         </div>
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name206")}
                                         </div>
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name207")}
                                         </div>
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name208")}
                                         </div>
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name209")}
                                         </div>
                                     </div>
@@ -306,28 +337,64 @@ function MinLand() {
 
                             <div className="right-content">
                                 <div className="list-container">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="58" height="110" viewBox="0 0 58 110"
+                                         fill="none">
+                                        <g opacity="0.1" filter="url(#filter0_d_1917_9156)">
+                                            <ellipse cx="55.0003" cy="27.5003" rx="18.3333" ry="18.3333"
+                                                     fill="#C29773"/>
+                                            <path
+                                                d="M91.6663 80.208C91.6663 91.5989 91.6663 100.833 54.9997 100.833C18.333 100.833 18.333 91.5989 18.333 80.208C18.333 68.8171 34.7492 59.583 54.9997 59.583C75.2501 59.583 91.6663 68.8171 91.6663 80.208Z"
+                                                fill="#C29773"/>
+                                        </g>
+                                        <defs>
+                                            <filter id="filter0_d_1917_9156" x="-4" y="0" width="118" height="118"
+                                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                               result="hardAlpha"/>
+                                                <feOffset dy="4"/>
+                                                <feGaussianBlur stdDeviation="2"/>
+                                                <feComposite in2="hardAlpha" operator="out"/>
+                                                <feColorMatrix type="matrix"
+                                                               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                                <feBlend mode="normal" in2="BackgroundImageFix"
+                                                         result="effect1_dropShadow_1917_9156"/>
+                                                <feBlend mode="normal" in="SourceGraphic"
+                                                         in2="effect1_dropShadow_1917_9156" result="shape"/>
+                                            </filter>
+                                        </defs>
+                                    </svg>
                                     <div className="list-title">{t("name210")}</div>
                                     <div className="list-upper">
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name211")}
                                         </div>
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name212")}
                                         </div>
                                     </div>
                                 </div>
 
                                 <div className="list-container">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="59" height="110" viewBox="0 0 59 110"
+                                         fill="none">
+                                        <g opacity="0.1">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M33.7063 9.16699H77.2937C82.6052 9.16699 85.2609 9.16699 87.4028 9.91227C91.4644 11.3255 94.6532 14.6083 96.026 18.7895C96.75 20.9945 96.75 23.7285 96.75 29.1964V93.3821C96.75 97.3156 92.2354 99.4027 89.3796 96.7894C87.7017 95.254 85.1733 95.254 83.4954 96.7894L81.2812 98.8155C78.3406 101.506 73.9094 101.506 70.9688 98.8155C68.0281 96.1246 63.5969 96.1246 60.6562 98.8155C57.7156 101.506 53.2844 101.506 50.3438 98.8155C47.4031 96.1246 42.9719 96.1246 40.0312 98.8155C37.0906 101.506 32.6594 101.506 29.7188 98.8155L27.5046 96.7894C25.8267 95.254 23.2983 95.254 21.6204 96.7894C18.7646 99.4027 14.25 97.3156 14.25 93.3821V29.1964C14.25 23.7285 14.25 20.9945 14.974 18.7895C16.3468 14.6083 19.5356 11.3255 23.5972 9.91227C25.7391 9.16699 28.3948 9.16699 33.7063 9.16699ZM32.5833 30.9378C30.6849 30.9378 29.1458 32.4768 29.1458 34.3753C29.1458 36.2738 30.6849 37.8128 32.5833 37.8128H34.875C36.7735 37.8128 38.3125 36.2738 38.3125 34.3753C38.3125 32.4768 36.7735 30.9378 34.875 30.9378H32.5833ZM48.625 30.9378C46.7265 30.9378 45.1875 32.4768 45.1875 34.3753C45.1875 36.2738 46.7265 37.8128 48.625 37.8128H78.4167C80.3151 37.8128 81.8542 36.2738 81.8542 34.3753C81.8542 32.4768 80.3151 30.9378 78.4167 30.9378H48.625ZM32.5833 46.9795C30.6849 46.9795 29.1458 48.5185 29.1458 50.417C29.1458 52.3155 30.6849 53.8545 32.5833 53.8545H34.875C36.7735 53.8545 38.3125 52.3155 38.3125 50.417C38.3125 48.5185 36.7735 46.9795 34.875 46.9795H32.5833ZM48.625 46.9795C46.7265 46.9795 45.1875 48.5185 45.1875 50.417C45.1875 52.3155 46.7265 53.8545 48.625 53.8545H78.4167C80.3151 53.8545 81.8542 52.3155 81.8542 50.417C81.8542 48.5185 80.3151 46.9795 78.4167 46.9795H48.625ZM32.5833 63.0212C30.6849 63.0212 29.1458 64.5602 29.1458 66.4587C29.1458 68.3571 30.6849 69.8962 32.5833 69.8962H34.875C36.7735 69.8962 38.3125 68.3571 38.3125 66.4587C38.3125 64.5602 36.7735 63.0212 34.875 63.0212H32.5833ZM48.625 63.0212C46.7265 63.0212 45.1875 64.5602 45.1875 66.4587C45.1875 68.3571 46.7265 69.8962 48.625 69.8962H78.4167C80.3151 69.8962 81.8542 68.3571 81.8542 66.4587C81.8542 64.5602 80.3151 63.0212 78.4167 63.0212H48.625Z"
+                                                  fill="#C29773"/>
+                                        </g>
+                                    </svg>
                                     <div className="list-title">{t("name213")}</div>
                                     <div className="list-lower">
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name214")}
                                         </div>
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name215")}
                                         </div>
                                     </div>
@@ -342,7 +409,6 @@ function MinLand() {
                                     <div>{t("name217")}</div>
                                 </div>
                                 <div className="accompany-paragraph">
-                                    <div>{t("name218")}</div>
                                     <div>
                                         <span className="big-description">
                                             {t("name219")}
@@ -353,24 +419,60 @@ function MinLand() {
 
                             <div className="right-content">
                                 <div className="list-container">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="58" height="110" viewBox="0 0 58 110"
+                                         fill="none">
+                                        <g opacity="0.1" filter="url(#filter0_d_1917_9156)">
+                                            <ellipse cx="55.0003" cy="27.5003" rx="18.3333" ry="18.3333"
+                                                     fill="#C29773"/>
+                                            <path
+                                                d="M91.6663 80.208C91.6663 91.5989 91.6663 100.833 54.9997 100.833C18.333 100.833 18.333 91.5989 18.333 80.208C18.333 68.8171 34.7492 59.583 54.9997 59.583C75.2501 59.583 91.6663 68.8171 91.6663 80.208Z"
+                                                fill="#C29773"/>
+                                        </g>
+                                        <defs>
+                                            <filter id="filter0_d_1917_9156" x="-4" y="0" width="118" height="118"
+                                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                               result="hardAlpha"/>
+                                                <feOffset dy="4"/>
+                                                <feGaussianBlur stdDeviation="2"/>
+                                                <feComposite in2="hardAlpha" operator="out"/>
+                                                <feColorMatrix type="matrix"
+                                                               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                                <feBlend mode="normal" in2="BackgroundImageFix"
+                                                         result="effect1_dropShadow_1917_9156"/>
+                                                <feBlend mode="normal" in="SourceGraphic"
+                                                         in2="effect1_dropShadow_1917_9156" result="shape"/>
+                                            </filter>
+                                        </defs>
+                                    </svg>
                                     <div className="list-title">{t("name220")}</div>
                                     <div className="list-upper">
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name221")}
                                         </div>
                                     </div>
                                 </div>
 
                                 <div className="list-container">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="59" height="110" viewBox="0 0 59 110"
+                                         fill="none">
+                                        <g opacity="0.1">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M33.7063 9.16699H77.2937C82.6052 9.16699 85.2609 9.16699 87.4028 9.91227C91.4644 11.3255 94.6532 14.6083 96.026 18.7895C96.75 20.9945 96.75 23.7285 96.75 29.1964V93.3821C96.75 97.3156 92.2354 99.4027 89.3796 96.7894C87.7017 95.254 85.1733 95.254 83.4954 96.7894L81.2812 98.8155C78.3406 101.506 73.9094 101.506 70.9688 98.8155C68.0281 96.1246 63.5969 96.1246 60.6562 98.8155C57.7156 101.506 53.2844 101.506 50.3438 98.8155C47.4031 96.1246 42.9719 96.1246 40.0312 98.8155C37.0906 101.506 32.6594 101.506 29.7188 98.8155L27.5046 96.7894C25.8267 95.254 23.2983 95.254 21.6204 96.7894C18.7646 99.4027 14.25 97.3156 14.25 93.3821V29.1964C14.25 23.7285 14.25 20.9945 14.974 18.7895C16.3468 14.6083 19.5356 11.3255 23.5972 9.91227C25.7391 9.16699 28.3948 9.16699 33.7063 9.16699ZM32.5833 30.9378C30.6849 30.9378 29.1458 32.4768 29.1458 34.3753C29.1458 36.2738 30.6849 37.8128 32.5833 37.8128H34.875C36.7735 37.8128 38.3125 36.2738 38.3125 34.3753C38.3125 32.4768 36.7735 30.9378 34.875 30.9378H32.5833ZM48.625 30.9378C46.7265 30.9378 45.1875 32.4768 45.1875 34.3753C45.1875 36.2738 46.7265 37.8128 48.625 37.8128H78.4167C80.3151 37.8128 81.8542 36.2738 81.8542 34.3753C81.8542 32.4768 80.3151 30.9378 78.4167 30.9378H48.625ZM32.5833 46.9795C30.6849 46.9795 29.1458 48.5185 29.1458 50.417C29.1458 52.3155 30.6849 53.8545 32.5833 53.8545H34.875C36.7735 53.8545 38.3125 52.3155 38.3125 50.417C38.3125 48.5185 36.7735 46.9795 34.875 46.9795H32.5833ZM48.625 46.9795C46.7265 46.9795 45.1875 48.5185 45.1875 50.417C45.1875 52.3155 46.7265 53.8545 48.625 53.8545H78.4167C80.3151 53.8545 81.8542 52.3155 81.8542 50.417C81.8542 48.5185 80.3151 46.9795 78.4167 46.9795H48.625ZM32.5833 63.0212C30.6849 63.0212 29.1458 64.5602 29.1458 66.4587C29.1458 68.3571 30.6849 69.8962 32.5833 69.8962H34.875C36.7735 69.8962 38.3125 68.3571 38.3125 66.4587C38.3125 64.5602 36.7735 63.0212 34.875 63.0212H32.5833ZM48.625 63.0212C46.7265 63.0212 45.1875 64.5602 45.1875 66.4587C45.1875 68.3571 46.7265 69.8962 48.625 69.8962H78.4167C80.3151 69.8962 81.8542 68.3571 81.8542 66.4587C81.8542 64.5602 80.3151 63.0212 78.4167 63.0212H48.625Z"
+                                                  fill="#C29773"/>
+                                        </g>
+                                    </svg>
                                     <div className="list-title">{t("name222")}</div>
                                     <div className="list-upper">
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name223")}
                                         </div>
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name224")}
                                         </div>
                                     </div>
@@ -385,26 +487,25 @@ function MinLand() {
                                     <div>{t("name226")}</div>
                                 </div>
                                 <div className="list-container">
-                                    <div className="list-title">{t("name227")}</div>
                                     <div className="list-upper">
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name228")}
                                         </div>
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name229")}
                                         </div>
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name230")}
                                         </div>
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name231")}
                                         </div>
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name232")}
                                         </div>
                                     </div>
@@ -413,36 +514,72 @@ function MinLand() {
 
                             <div className="right-content">
                                 <div className="list-container">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="58" height="110" viewBox="0 0 58 110"
+                                         fill="none">
+                                        <g opacity="0.1" filter="url(#filter0_d_1917_9156)">
+                                            <ellipse cx="55.0003" cy="27.5003" rx="18.3333" ry="18.3333"
+                                                     fill="#C29773"/>
+                                            <path
+                                                d="M91.6663 80.208C91.6663 91.5989 91.6663 100.833 54.9997 100.833C18.333 100.833 18.333 91.5989 18.333 80.208C18.333 68.8171 34.7492 59.583 54.9997 59.583C75.2501 59.583 91.6663 68.8171 91.6663 80.208Z"
+                                                fill="#C29773"/>
+                                        </g>
+                                        <defs>
+                                            <filter id="filter0_d_1917_9156" x="-4" y="0" width="118" height="118"
+                                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                               result="hardAlpha"/>
+                                                <feOffset dy="4"/>
+                                                <feGaussianBlur stdDeviation="2"/>
+                                                <feComposite in2="hardAlpha" operator="out"/>
+                                                <feColorMatrix type="matrix"
+                                                               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                                <feBlend mode="normal" in2="BackgroundImageFix"
+                                                         result="effect1_dropShadow_1917_9156"/>
+                                                <feBlend mode="normal" in="SourceGraphic"
+                                                         in2="effect1_dropShadow_1917_9156" result="shape"/>
+                                            </filter>
+                                        </defs>
+                                    </svg>
                                     <div className="list-title">{t("name233")}</div>
                                     <div className="list-upper">
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name234")}
                                         </div>
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name235")}
                                         </div>
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name236")}
                                         </div>
                                     </div>
                                 </div>
 
                                 <div className="list-container">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="59" height="110" viewBox="0 0 59 110"
+                                         fill="none">
+                                        <g opacity="0.1">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M33.7063 9.16699H77.2937C82.6052 9.16699 85.2609 9.16699 87.4028 9.91227C91.4644 11.3255 94.6532 14.6083 96.026 18.7895C96.75 20.9945 96.75 23.7285 96.75 29.1964V93.3821C96.75 97.3156 92.2354 99.4027 89.3796 96.7894C87.7017 95.254 85.1733 95.254 83.4954 96.7894L81.2812 98.8155C78.3406 101.506 73.9094 101.506 70.9688 98.8155C68.0281 96.1246 63.5969 96.1246 60.6562 98.8155C57.7156 101.506 53.2844 101.506 50.3438 98.8155C47.4031 96.1246 42.9719 96.1246 40.0312 98.8155C37.0906 101.506 32.6594 101.506 29.7188 98.8155L27.5046 96.7894C25.8267 95.254 23.2983 95.254 21.6204 96.7894C18.7646 99.4027 14.25 97.3156 14.25 93.3821V29.1964C14.25 23.7285 14.25 20.9945 14.974 18.7895C16.3468 14.6083 19.5356 11.3255 23.5972 9.91227C25.7391 9.16699 28.3948 9.16699 33.7063 9.16699ZM32.5833 30.9378C30.6849 30.9378 29.1458 32.4768 29.1458 34.3753C29.1458 36.2738 30.6849 37.8128 32.5833 37.8128H34.875C36.7735 37.8128 38.3125 36.2738 38.3125 34.3753C38.3125 32.4768 36.7735 30.9378 34.875 30.9378H32.5833ZM48.625 30.9378C46.7265 30.9378 45.1875 32.4768 45.1875 34.3753C45.1875 36.2738 46.7265 37.8128 48.625 37.8128H78.4167C80.3151 37.8128 81.8542 36.2738 81.8542 34.3753C81.8542 32.4768 80.3151 30.9378 78.4167 30.9378H48.625ZM32.5833 46.9795C30.6849 46.9795 29.1458 48.5185 29.1458 50.417C29.1458 52.3155 30.6849 53.8545 32.5833 53.8545H34.875C36.7735 53.8545 38.3125 52.3155 38.3125 50.417C38.3125 48.5185 36.7735 46.9795 34.875 46.9795H32.5833ZM48.625 46.9795C46.7265 46.9795 45.1875 48.5185 45.1875 50.417C45.1875 52.3155 46.7265 53.8545 48.625 53.8545H78.4167C80.3151 53.8545 81.8542 52.3155 81.8542 50.417C81.8542 48.5185 80.3151 46.9795 78.4167 46.9795H48.625ZM32.5833 63.0212C30.6849 63.0212 29.1458 64.5602 29.1458 66.4587C29.1458 68.3571 30.6849 69.8962 32.5833 69.8962H34.875C36.7735 69.8962 38.3125 68.3571 38.3125 66.4587C38.3125 64.5602 36.7735 63.0212 34.875 63.0212H32.5833ZM48.625 63.0212C46.7265 63.0212 45.1875 64.5602 45.1875 66.4587C45.1875 68.3571 46.7265 69.8962 48.625 69.8962H78.4167C80.3151 69.8962 81.8542 68.3571 81.8542 66.4587C81.8542 64.5602 80.3151 63.0212 78.4167 63.0212H48.625Z"
+                                                  fill="#C29773"/>
+                                        </g>
+                                    </svg>
                                     <div className="list-title">{t("name237")}</div>
                                     <div className="list-upper">
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name238")}
                                         </div>
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name239")}
                                         </div>
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name240")}
                                         </div>
                                     </div>
@@ -457,23 +594,30 @@ function MinLand() {
                                     <div>{t("name242")}</div>
                                 </div>
                                 <div className="list-container">
-                                    <div className="list-title">{t("name243")}</div>
                                     <div className="list-upper">
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name244")}
                                         </div>
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name245")}
                                         </div>
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name246")}
                                         </div>
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name247")}
+                                        </div>
+                                        <div className="list-elem">
+                                            <img src={checkBrown} alt=""/>
+                                            {t("Emirates ID Issue")}
+                                        </div>
+                                        <div className="list-elem">
+                                            <img src={checkBrown} alt=""/>
+                                            {t("Roads and Transport Authority")}
                                         </div>
                                     </div>
                                 </div>
@@ -481,15 +625,64 @@ function MinLand() {
 
                             <div className="right-content">
                                 <div className="list-container">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="58" height="110" viewBox="0 0 58 110"
+                                         fill="none">
+                                        <g opacity="0.1" filter="url(#filter0_d_1917_9156)">
+                                            <ellipse cx="55.0003" cy="27.5003" rx="18.3333" ry="18.3333"
+                                                     fill="#C29773"/>
+                                            <path
+                                                d="M91.6663 80.208C91.6663 91.5989 91.6663 100.833 54.9997 100.833C18.333 100.833 18.333 91.5989 18.333 80.208C18.333 68.8171 34.7492 59.583 54.9997 59.583C75.2501 59.583 91.6663 68.8171 91.6663 80.208Z"
+                                                fill="#C29773"/>
+                                        </g>
+                                        <defs>
+                                            <filter id="filter0_d_1917_9156" x="-4" y="0" width="118" height="118"
+                                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                               result="hardAlpha"/>
+                                                <feOffset dy="4"/>
+                                                <feGaussianBlur stdDeviation="2"/>
+                                                <feComposite in2="hardAlpha" operator="out"/>
+                                                <feColorMatrix type="matrix"
+                                                               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                                <feBlend mode="normal" in2="BackgroundImageFix"
+                                                         result="effect1_dropShadow_1917_9156"/>
+                                                <feBlend mode="normal" in="SourceGraphic"
+                                                         in2="effect1_dropShadow_1917_9156" result="shape"/>
+                                            </filter>
+                                        </defs>
+                                    </svg>
                                     <div className="list-title">{t("name248")}</div>
                                     <div className="list-upper">
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
-                                            {t("name249")}
+                                            <img src={checkBrown} alt=""/>
+                                            {t("Contract details for employee")}
                                         </div>
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
-                                            {t("name250")}
+                                            <img src={checkBrown} alt=""/>
+                                            {t("E-signature")}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="list-container">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="59" height="110" viewBox="0 0 59 110"
+                                         fill="none">
+                                        <g opacity="0.1">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M33.7063 9.16699H77.2937C82.6052 9.16699 85.2609 9.16699 87.4028 9.91227C91.4644 11.3255 94.6532 14.6083 96.026 18.7895C96.75 20.9945 96.75 23.7285 96.75 29.1964V93.3821C96.75 97.3156 92.2354 99.4027 89.3796 96.7894C87.7017 95.254 85.1733 95.254 83.4954 96.7894L81.2812 98.8155C78.3406 101.506 73.9094 101.506 70.9688 98.8155C68.0281 96.1246 63.5969 96.1246 60.6562 98.8155C57.7156 101.506 53.2844 101.506 50.3438 98.8155C47.4031 96.1246 42.9719 96.1246 40.0312 98.8155C37.0906 101.506 32.6594 101.506 29.7188 98.8155L27.5046 96.7894C25.8267 95.254 23.2983 95.254 21.6204 96.7894C18.7646 99.4027 14.25 97.3156 14.25 93.3821V29.1964C14.25 23.7285 14.25 20.9945 14.974 18.7895C16.3468 14.6083 19.5356 11.3255 23.5972 9.91227C25.7391 9.16699 28.3948 9.16699 33.7063 9.16699ZM32.5833 30.9378C30.6849 30.9378 29.1458 32.4768 29.1458 34.3753C29.1458 36.2738 30.6849 37.8128 32.5833 37.8128H34.875C36.7735 37.8128 38.3125 36.2738 38.3125 34.3753C38.3125 32.4768 36.7735 30.9378 34.875 30.9378H32.5833ZM48.625 30.9378C46.7265 30.9378 45.1875 32.4768 45.1875 34.3753C45.1875 36.2738 46.7265 37.8128 48.625 37.8128H78.4167C80.3151 37.8128 81.8542 36.2738 81.8542 34.3753C81.8542 32.4768 80.3151 30.9378 78.4167 30.9378H48.625ZM32.5833 46.9795C30.6849 46.9795 29.1458 48.5185 29.1458 50.417C29.1458 52.3155 30.6849 53.8545 32.5833 53.8545H34.875C36.7735 53.8545 38.3125 52.3155 38.3125 50.417C38.3125 48.5185 36.7735 46.9795 34.875 46.9795H32.5833ZM48.625 46.9795C46.7265 46.9795 45.1875 48.5185 45.1875 50.417C45.1875 52.3155 46.7265 53.8545 48.625 53.8545H78.4167C80.3151 53.8545 81.8542 52.3155 81.8542 50.417C81.8542 48.5185 80.3151 46.9795 78.4167 46.9795H48.625ZM32.5833 63.0212C30.6849 63.0212 29.1458 64.5602 29.1458 66.4587C29.1458 68.3571 30.6849 69.8962 32.5833 69.8962H34.875C36.7735 69.8962 38.3125 68.3571 38.3125 66.4587C38.3125 64.5602 36.7735 63.0212 34.875 63.0212H32.5833ZM48.625 63.0212C46.7265 63.0212 45.1875 64.5602 45.1875 66.4587C45.1875 68.3571 46.7265 69.8962 48.625 69.8962H78.4167C80.3151 69.8962 81.8542 68.3571 81.8542 66.4587C81.8542 64.5602 80.3151 63.0212 78.4167 63.0212H48.625Z"
+                                                  fill="#C29773"/>
+                                        </g>
+                                    </svg>
+                                    <div className="list-title">{t("Cost and terms")}</div>
+                                    <div className="list-upper">
+                                        <div className="list-elem">
+                                            <img src={checkBrown} alt=""/>
+                                            {t("14-28 days")}
+                                        </div>
+                                        <div className="list-elem">
+                                            <img src={checkBrown} alt=""/>
+                                            {t('name250')}
                                         </div>
                                     </div>
                                 </div>
@@ -503,11 +696,18 @@ function MinLand() {
                                     <div>{t("name252")}</div>
                                 </div>
                                 <div className="list-container">
-                                    <div className="list-title">{t("name253")}</div>
                                     <div className="list-upper">
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
+                                            <img src={checkBrown} alt=""/>
                                             {t("name254")}
+                                        </div>
+                                        <div className="list-elem">
+                                            <img src={checkBrown} alt=""/>
+                                            {t("Emirates ID Issue")}
+                                        </div>
+                                        <div className="list-elem">
+                                            <img src={checkBrown} alt=""/>
+                                            {t("Roads and Transport Authority")}
                                         </div>
                                     </div>
                                 </div>
@@ -515,11 +715,64 @@ function MinLand() {
 
                             <div className="right-content">
                                 <div className="list-container">
-                                    <div className="list-title">{t("name255")}</div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="58" height="110" viewBox="0 0 58 110"
+                                         fill="none">
+                                        <g opacity="0.1" filter="url(#filter0_d_1917_9156)">
+                                            <ellipse cx="55.0003" cy="27.5003" rx="18.3333" ry="18.3333"
+                                                     fill="#C29773"/>
+                                            <path
+                                                d="M91.6663 80.208C91.6663 91.5989 91.6663 100.833 54.9997 100.833C18.333 100.833 18.333 91.5989 18.333 80.208C18.333 68.8171 34.7492 59.583 54.9997 59.583C75.2501 59.583 91.6663 68.8171 91.6663 80.208Z"
+                                                fill="#C29773"/>
+                                        </g>
+                                        <defs>
+                                            <filter id="filter0_d_1917_9156" x="-4" y="0" width="118" height="118"
+                                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                               result="hardAlpha"/>
+                                                <feOffset dy="4"/>
+                                                <feGaussianBlur stdDeviation="2"/>
+                                                <feComposite in2="hardAlpha" operator="out"/>
+                                                <feColorMatrix type="matrix"
+                                                               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                                <feBlend mode="normal" in2="BackgroundImageFix"
+                                                         result="effect1_dropShadow_1917_9156"/>
+                                                <feBlend mode="normal" in="SourceGraphic"
+                                                         in2="effect1_dropShadow_1917_9156" result="shape"/>
+                                            </filter>
+                                        </defs>
+                                    </svg>
+                                    <div className="list-title">{t("What you need from the client?")}</div>
                                     <div className="list-upper">
                                         <div className="list-elem">
-                                            <img src={checkBrown} alt="" />
-                                            {t("name256")}
+                                            <img src={checkBrown} alt=""/>
+                                            {t("Contract details for employee")}
+                                        </div>
+                                        <div className="list-elem">
+                                            <img src={checkBrown} alt=""/>
+                                            {t("E-signature")}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="list-container">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="59" height="110" viewBox="0 0 59 110"
+                                         fill="none">
+                                        <g opacity="0.1">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M33.7063 9.16699H77.2937C82.6052 9.16699 85.2609 9.16699 87.4028 9.91227C91.4644 11.3255 94.6532 14.6083 96.026 18.7895C96.75 20.9945 96.75 23.7285 96.75 29.1964V93.3821C96.75 97.3156 92.2354 99.4027 89.3796 96.7894C87.7017 95.254 85.1733 95.254 83.4954 96.7894L81.2812 98.8155C78.3406 101.506 73.9094 101.506 70.9688 98.8155C68.0281 96.1246 63.5969 96.1246 60.6562 98.8155C57.7156 101.506 53.2844 101.506 50.3438 98.8155C47.4031 96.1246 42.9719 96.1246 40.0312 98.8155C37.0906 101.506 32.6594 101.506 29.7188 98.8155L27.5046 96.7894C25.8267 95.254 23.2983 95.254 21.6204 96.7894C18.7646 99.4027 14.25 97.3156 14.25 93.3821V29.1964C14.25 23.7285 14.25 20.9945 14.974 18.7895C16.3468 14.6083 19.5356 11.3255 23.5972 9.91227C25.7391 9.16699 28.3948 9.16699 33.7063 9.16699ZM32.5833 30.9378C30.6849 30.9378 29.1458 32.4768 29.1458 34.3753C29.1458 36.2738 30.6849 37.8128 32.5833 37.8128H34.875C36.7735 37.8128 38.3125 36.2738 38.3125 34.3753C38.3125 32.4768 36.7735 30.9378 34.875 30.9378H32.5833ZM48.625 30.9378C46.7265 30.9378 45.1875 32.4768 45.1875 34.3753C45.1875 36.2738 46.7265 37.8128 48.625 37.8128H78.4167C80.3151 37.8128 81.8542 36.2738 81.8542 34.3753C81.8542 32.4768 80.3151 30.9378 78.4167 30.9378H48.625ZM32.5833 46.9795C30.6849 46.9795 29.1458 48.5185 29.1458 50.417C29.1458 52.3155 30.6849 53.8545 32.5833 53.8545H34.875C36.7735 53.8545 38.3125 52.3155 38.3125 50.417C38.3125 48.5185 36.7735 46.9795 34.875 46.9795H32.5833ZM48.625 46.9795C46.7265 46.9795 45.1875 48.5185 45.1875 50.417C45.1875 52.3155 46.7265 53.8545 48.625 53.8545H78.4167C80.3151 53.8545 81.8542 52.3155 81.8542 50.417C81.8542 48.5185 80.3151 46.9795 78.4167 46.9795H48.625ZM32.5833 63.0212C30.6849 63.0212 29.1458 64.5602 29.1458 66.4587C29.1458 68.3571 30.6849 69.8962 32.5833 69.8962H34.875C36.7735 69.8962 38.3125 68.3571 38.3125 66.4587C38.3125 64.5602 36.7735 63.0212 34.875 63.0212H32.5833ZM48.625 63.0212C46.7265 63.0212 45.1875 64.5602 45.1875 66.4587C45.1875 68.3571 46.7265 69.8962 48.625 69.8962H78.4167C80.3151 69.8962 81.8542 68.3571 81.8542 66.4587C81.8542 64.5602 80.3151 63.0212 78.4167 63.0212H48.625Z"
+                                                  fill="#C29773"/>
+                                        </g>
+                                    </svg>
+                                    <div className="list-title">{t("Cost and terms?")}</div>
+                                    <div className="list-upper">
+                                        <div className="list-elem">
+                                            <img src={checkBrown} alt=""/>
+                                            {t("3-6 weeks")}
+                                        </div>
+                                        <div className="list-elem">
+                                            <img src={checkBrown} alt=""/>
+                                            {t('name250')}
                                         </div>
                                     </div>
                                 </div>
@@ -529,15 +782,15 @@ function MinLand() {
                 </div>
 
                 <div className="get-consult-block">
-                    <GetConsult />
+                    <GetConsult/>
                 </div>
 
                 <div className="cost-of-service-box">
                     <div className="cost-of-service-title">
                         <div className="page-title">{t("name165.1")} </div>
-                        <div className="page-description" >{t("name165.2")}</div>
+                        <div className="page-description">{t("name165.2")}</div>
                     </div>
-                    <CostOfService />
+                    <CostOfService/>
                 </div>
 
                 <div className="the-main-services">
@@ -548,10 +801,16 @@ function MinLand() {
                         <div className="content-blocks">
                             <div className="block">
                                 <div className="image">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path d="M10 17.25C9.30964 17.25 8.75 16.6904 8.75 16C8.75 15.3096 9.30964 14.75 10 14.75C10.6904 14.75 11.25 15.3096 11.25 16C11.25 16.6904 10.6904 17.25 10 17.25Z" fill="#C29773" />
-                                        <path d="M15.25 8C15.25 8.69036 14.6904 9.25 14 9.25C13.3096 9.25 12.75 8.69036 12.75 8C12.75 7.30964 13.3096 6.75 14 6.75C14.6904 6.75 15.25 7.30964 15.25 8Z" fill="#C29773" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12ZM10 18.75C8.48122 18.75 7.25 17.5188 7.25 16C7.25 14.4812 8.48122 13.25 10 13.25C11.5188 13.25 12.75 14.4812 12.75 16C12.75 17.5188 11.5188 18.75 10 18.75ZM16.75 8C16.75 9.51878 15.5188 10.75 14 10.75C12.4812 10.75 11.25 9.51878 11.25 8C11.25 6.48122 12.4812 5.25 14 5.25C15.5188 5.25 16.75 6.48122 16.75 8ZM13.25 16C13.25 15.5858 13.5858 15.25 14 15.25H19C19.4142 15.25 19.75 15.5858 19.75 16C19.75 16.4142 19.4142 16.75 19 16.75H14C13.5858 16.75 13.25 16.4142 13.25 16ZM10 7.25C10.4142 7.25 10.75 7.58579 10.75 8C10.75 8.41421 10.4142 8.75 10 8.75L5 8.75C4.58579 8.75 4.25 8.41421 4.25 8C4.25 7.58579 4.58579 7.25 5 7.25L10 7.25ZM4.25 16C4.25 15.5858 4.58579 15.25 5 15.25H6C6.41421 15.25 6.75 15.5858 6.75 16C6.75 16.4142 6.41421 16.75 6 16.75H5C4.58579 16.75 4.25 16.4142 4.25 16ZM19 7.25C19.4142 7.25 19.75 7.58579 19.75 8C19.75 8.41421 19.4142 8.75 19 8.75H18C17.5858 8.75 17.25 8.41421 17.25 8C17.25 7.58579 17.5858 7.25 18 7.25H19Z" fill="#C29773" />
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                         fill="none">
+                                        <path
+                                            d="M10 17.25C9.30964 17.25 8.75 16.6904 8.75 16C8.75 15.3096 9.30964 14.75 10 14.75C10.6904 14.75 11.25 15.3096 11.25 16C11.25 16.6904 10.6904 17.25 10 17.25Z"
+                                            fill="#C29773"/>
+                                        <path
+                                            d="M15.25 8C15.25 8.69036 14.6904 9.25 14 9.25C13.3096 9.25 12.75 8.69036 12.75 8C12.75 7.30964 13.3096 6.75 14 6.75C14.6904 6.75 15.25 7.30964 15.25 8Z"
+                                            fill="#C29773"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12ZM10 18.75C8.48122 18.75 7.25 17.5188 7.25 16C7.25 14.4812 8.48122 13.25 10 13.25C11.5188 13.25 12.75 14.4812 12.75 16C12.75 17.5188 11.5188 18.75 10 18.75ZM16.75 8C16.75 9.51878 15.5188 10.75 14 10.75C12.4812 10.75 11.25 9.51878 11.25 8C11.25 6.48122 12.4812 5.25 14 5.25C15.5188 5.25 16.75 6.48122 16.75 8ZM13.25 16C13.25 15.5858 13.5858 15.25 14 15.25H19C19.4142 15.25 19.75 15.5858 19.75 16C19.75 16.4142 19.4142 16.75 19 16.75H14C13.5858 16.75 13.25 16.4142 13.25 16ZM10 7.25C10.4142 7.25 10.75 7.58579 10.75 8C10.75 8.41421 10.4142 8.75 10 8.75L5 8.75C4.58579 8.75 4.25 8.41421 4.25 8C4.25 7.58579 4.58579 7.25 5 7.25L10 7.25ZM4.25 16C4.25 15.5858 4.58579 15.25 5 15.25H6C6.41421 15.25 6.75 15.5858 6.75 16C6.75 16.4142 6.41421 16.75 6 16.75H5C4.58579 16.75 4.25 16.4142 4.25 16ZM19 7.25C19.4142 7.25 19.75 7.58579 19.75 8C19.75 8.41421 19.4142 8.75 19 8.75H18C17.5858 8.75 17.25 8.41421 17.25 8C17.25 7.58579 17.5858 7.25 18 7.25H19Z" fill="#C29773" />
                                     </svg>
                                 </div>
                                 <img src={settings} alt="" />

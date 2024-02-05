@@ -1,0 +1,593 @@
+.project-info {
+  display: flex;
+  gap: 32px;
+  padding-bottom: 16px;
+  flex-direction: column;
+}
+.project-info .images-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.project-info .images-container .images {
+  height: 300px;
+  display: flex;
+  position: relative;
+}
+.project-info .images-container .images .options {
+  position: absolute;
+  top: 20px;
+  z-index: 99999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 16px;
+}
+.project-info .images-container .images .options .option {
+  display: flex;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 130px;
+  background: rgba(0, 0, 0, 0.2);
+  width: 46px;
+  height: 46px;
+  /* Light Shadow */
+  box-shadow: 0px 2px 67.4px -1px rgba(0, 0, 0, 0.09);
+}
+.project-info .images-container .images .swiper-slide {
+  height: 300px;
+}
+.project-info .images-container .images .swiper-pagination {
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  align-self: center;
+  display: flex;
+  padding: 10px var(--Padding-Small, 12px);
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 87px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(33.5999984741px);
+}
+.project-info .images-container .images .swiper {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+.project-info .images-container .images .swiper-pagination-bullet-active {
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(33.5999984741px);
+}
+.project-info .images-container .images .swiper-pagination-bullet {
+  border-radius: 28px;
+  margin: unset;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(33.5999984741px);
+  background: transparent;
+}
+.project-info .images-container .images img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0px 0px 10px 10px;
+  object-fit: cover;
+}
+.project-info .images-container .information {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 16px;
+}
+.project-info .images-container .information .general {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.project-info .images-container .information .general .name {
+  color: var(--ProPart-Blue, #191C38);
+  font-family: Onest, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 21.6px */
+}
+.project-info .images-container .information .general .location {
+  color: #575757;
+  font-family: Onest, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 16.8px */
+}
+.project-info .images-container .information .price {
+  color: var(--ProPart-Blue, #575757);
+  font-family: Onest, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19.2px; /* 137.143% */
+}
+.project-info .images-container .information .price span {
+  color: var(--ProPart-Blue, #191C38);
+  font-family: Onest, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19.2px;
+}
+.project-info .images-container .information .advantages {
+  display: flex;
+  gap: 8px;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.project-info .images-container .information .advantages::-webkit-scrollbar {
+  display: none;
+}
+.project-info .images-container .information .advantages .option {
+  display: flex;
+  padding: 6px 4px 6px 6px;
+  align-items: center;
+  gap: 4px;
+  border-radius: 4px;
+  border: 1px solid #EAEAEA;
+  background: #FFF;
+  color: var(--ProPart-Blue, #191C38);
+  font-family: Onest, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.5px;
+}
+.project-info .images-container .information .advantages .option span {
+  color: var(--ProPart-Blue, #191C38);
+  font-family: Onest, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.5px;
+}
+.project-info .interior-photo {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.project-info .interior-photo .header {
+  color: #000;
+  font-family: Onest, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 19.2px */
+}
+.project-info .interior-photo .content {
+  height: 200px;
+}
+.project-info .interior-photo .content .swiper-slide {
+  width: 65vw;
+  height: 200px;
+}
+.project-info .interior-photo .content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.project-info .manager {
+  padding: 0 16px;
+  height: 200px;
+}
+.project-info .manager .content {
+  height: 100%;
+  border-radius: 4px;
+  display: flex;
+  background: #FFF;
+  box-shadow: 0px 0px 27px 0px rgba(0, 0, 0, 0.12);
+}
+.project-info .manager .content .image {
+  border-radius: 4px 0px 0px 4px;
+  width: 40%;
+  height: 100%;
+  background: url("../../assets/memberBackground.png");
+}
+.project-info .manager .content .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.project-info .manager .content .info {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.project-info .manager .content .info .main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.project-info .manager .content .info .main .genaral {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.project-info .manager .content .info .main .genaral .position {
+  color: #939393;
+  font-family: Onest, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.project-info .manager .content .info .main .genaral .name {
+  color: var(--ProPart-Blue, #191C38);
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Onest, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.project-info .manager .content .info .main .desc {
+  color: #939393;
+  font-family: Onest, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.project-info .manager .content .info .buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+}
+.project-info .manager .content .info .buttons > div {
+  flex: 1;
+  width: 100%;
+}
+.project-info .manager .content .info .buttons .contact {
+  display: flex;
+  padding: 12px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex: 1 0 0;
+  border-radius: 4px;
+  border: 1px solid #CACACA;
+  color: #000;
+  font-family: Onest, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.56px;
+}
+.project-info .manager .content .info .buttons .request {
+  display: flex;
+  padding: 12px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex: 1 0 0;
+  border-radius: 4px;
+  background: var(--ProPart-Beige, #C29773);
+  color: #FFF;
+  font-family: Onest, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.56px;
+}
+.project-info .payment-plan {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px solid #E1E1E1;
+  border-bottom: 1px solid #E1E1E1;
+}
+.project-info .payment-plan .content {
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.project-info .payment-plan .content .header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.project-info .payment-plan .content .header .tittle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.project-info .payment-plan .content .header .tittle .name {
+  color: var(--ProPart-Blue, #191C38);
+  font-family: Onest, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 19.2px */
+}
+.project-info .payment-plan .content .header .tittle .price {
+  color: var(--ProPart-Blue, #191C38);
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Onest, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19.2px; /* 137.143% */
+}
+.project-info .payment-plan .content .header .options {
+  display: flex;
+  gap: 8px;
+}
+.project-info .payment-plan .content .header .options .option {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  padding: 6px 4px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 4px;
+  border: 1px solid #EAEAEA;
+  background: #FFF;
+  color: var(--ProPart-Blue, #191C38);
+  text-align: center;
+  font-family: Onest, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 3.2px;
+}
+.project-info .payment-plan .content .header .options .option.active {
+  border-radius: 4px;
+  background: #C19773;
+  color: #FFF;
+  text-align: center;
+  font-family: Onest, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 3.2px;
+}
+.project-info .payment-plan .content .data {
+  display: flex;
+  justify-content: space-between;
+}
+.project-info .payment-plan .content .data .column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.project-info .payment-plan .content .data .column .header {
+  color: #575757;
+  font-family: Onest, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.project-info .payment-plan .content .data .column .data {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.project-info .payment-plan .content .data .column .data .data-data {
+  color: #000;
+  font-family: Onest, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.project-info .floor-plans {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+  gap: 16px;
+}
+.project-info .floor-plans .header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.project-info .floor-plans .header .tittle {
+  color: var(--ProPart-Blue, #191C38);
+  font-family: Onest, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 19.2px */
+}
+.project-info .floor-plans .header .options {
+  display: flex;
+  gap: 8px;
+}
+.project-info .floor-plans .header .options .option {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  padding: 6px 4px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 4px;
+  border: 1px solid #EAEAEA;
+  background: #FFF;
+  color: var(--ProPart-Blue, #191C38);
+  text-align: center;
+  font-family: Onest, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 3.2px;
+}
+.project-info .floor-plans .header .options .option.active {
+  border-radius: 4px;
+  background: #C19773;
+  color: #FFF;
+  text-align: center;
+  font-family: Onest, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 3.2px;
+}
+.project-info .floor-plans .data .swiper-slide {
+  width: max-content !important;
+}
+.project-info .floor-plans .data .floor-plan-data {
+  height: 218px;
+  width: 218px;
+  background: white;
+  display: flex;
+  padding: 8px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: 8px;
+}
+.project-info .floor-plans .data .floor-plan-data .image {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+}
+.project-info .floor-plans .data .floor-plan-data .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.project-info .floor-plans .data .floor-plan-data .data {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.project-info .floor-plans .data .floor-plan-data .data .price {
+  color: var(--ProPart-Blue, #191C38);
+  font-family: Onest, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.5px;
+}
+.project-info .floor-plans .data .floor-plan-data .data .type {
+  color: var(--ProPart-Blue, #191C38);
+  font-family: Onest, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.5px;
+}
+.project-info .floor-plans .data .floor-plan-data .data .size {
+  color: var(--ProPart-Blue, #191C38);
+  font-family: Onest, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.5px;
+}
+.project-info .floor-plans .data .floor-plan-data .data .size span {
+  color: var(--ProPart-Blue, #191C38);
+  font-family: Onest, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.5px;
+}
+.project-info .locations {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.project-info .locations .header {
+  color: var(--ProPart-Blue, #191C38);
+  font-family: Onest, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 19.2px */
+}
+.project-info .locations .data {
+  width: 100%;
+  height: 200px;
+}
+.project-info .simmilar {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.project-info .simmilar .header {
+  color: var(--ProPart-Blue, #191C38);
+  font-family: Onest, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 19.2px */
+}
+.project-info .simmilar .content {
+  display: flex;
+  gap: 8px;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.project-info .simmilar .content::-webkit-scrollbar {
+  display: none;
+}
+.project-info .simmilar .content .project .image .like {
+  display: none;
+}
+.project-info .call-us {
+  padding: 0 16px;
+}
+.project-info .call-us .content {
+  display: flex;
+  padding: 14px 12px 14px 16px;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 0 0;
+  border-radius: 4px;
+  background: var(--ProPart-Blue, #191C38);
+  color: #FFF;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Onest, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/*# sourceMappingURL=ProjectInfo.css.map */

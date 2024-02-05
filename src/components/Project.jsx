@@ -8,10 +8,7 @@ const Project = ({ project }) => {
         return value.replace(/,/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
 
-    console.log(project)
-
     return (<div className={"project-sim"} onClick={() => window.location.href = `/project-view/${project._id}`}>
-
         <div className="img-container">
             <div className="image" style={{
                 background: `linear-gradient(0deg, #000 -58.46%, rgba(0, 0, 0, 0.00) 96.51%), url(${project.imageSrcMain}) lightgray 50% / cover no-repeat`,

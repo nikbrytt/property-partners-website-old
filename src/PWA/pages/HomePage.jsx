@@ -37,6 +37,13 @@ import ruslanGeisha from "../../assets/teams/ruslan-geisha.png";
 import {useTranslation} from "react-i18next";
 import DynamicTruncatedText from "../../components/DynamicTruncatedText.jsx";
 import Footer from "../components/Footer.jsx";
+import {Link} from "react-router-dom";
+import offer2 from "../../assets/offer.png"
+import offer3 from "../../assets/offer2.png"
+import offer4 from "../../assets/offer3.png"
+import business from "../../assets/pwa/Areas/bigAreaCard2.png"
+import marina from "../../assets/pwa/Areas/bigAreaCard3.png"
+import hils from "../../assets/pwa/Areas/bigAreaCard4.png"
 
 const HomePage = () => {
     const [activeBanner, setActiveBanner] = useState(1)
@@ -165,6 +172,23 @@ const HomePage = () => {
         }
 
     ]
+    const [slidesData, setSlidesData] = useState([
+        { img: collection1, name: "Golf Gate 2", developer: "by Damac Properties" },
+        { img: offer2, name: "Kempinski", developer: "by Swiss Property" },
+        { img: offer3, name: "The Orchard Place", developer: "by Peak Summit" },
+        { img: offer4, name: "Harbour Lights", developer: "by Damac Properties" }
+    ]);
+    const shuffleSlides = () => {
+        const shuffled = slidesData.slice();
+        for (let i = shuffled.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+        setSlidesData(shuffled);
+    }
+    useEffect(() => {
+        shuffleSlides()
+    }, []);
     const bedroomOptions = ["Studio", "1", "2", "3", "4", "5", "6", "7"];
     useEffect(() => {
         const interval = setInterval(() => {
@@ -288,7 +312,7 @@ const HomePage = () => {
         <div className="collections">
             <div className="header">
                 <div className="tittle">Special collection</div>
-                <div className="option">See more</div>
+                <Link to={"/phone/properties"}> <div className="option">See more</div></Link>
             </div>
             <div className="collection-data">
                 <Swiper slidesPerView={"auto"}
@@ -299,13 +323,13 @@ const HomePage = () => {
                         <Collection img={collection1} type={"For rent"} projects={"4"} price={"$190,000"}/>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Collection img={collection1} type={"For rent"} projects={"4"} price={"$190,000"}/>
+                        <Collection img={collection2} type={"For families"} projects={"13"} price={"$170,000"}/>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Collection img={collection1} type={"For rent"} projects={"4"} price={"$190,000"}/>
+                        <Collection img={collection3} type={"Selection of villas"} projects={"5"} price={"$2,100,000"}/>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Collection img={collection1} type={"For rent"} projects={"4"} price={"$190,000"}/>
+                        <Collection img={collection4} type={"For resale"} projects={"6"} price={"$150,000"}/>
                     </SwiperSlide>
                 </Swiper>
             </div>
@@ -314,7 +338,7 @@ const HomePage = () => {
             <div className="main">
                 <img src={whyDubai}/>
                 <div className="prompt">Why Dubai?</div>
-                <div className="see-more">See more</div>
+                <Link to={"/phone/areas"}><div className="see-more">See more</div></Link>
             </div>
             <div className="information">
                 <div className="icon">
@@ -351,123 +375,47 @@ const HomePage = () => {
             <div className="information">
                 <div className="icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <g clip-path="url(#clip0_3225_3146)">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M5.44941 4.44391C5.44413 4.44849 5.43886 4.45307 5.43359 4.45766L5.44941 4.44391Z"
-                                  fill="#C29773"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M12 22C6.477 22 2 17.523 2 12C2 9.11374 3.22266 6.51315 5.17832 4.68788L8.82367 8.29404C8.60791 8.40908 8.40829 8.55617 8.23223 8.73223C7.76339 9.20107 7.5 9.83696 7.5 10.5C7.5 11.163 7.76339 11.7989 8.23223 12.2678C8.70107 12.7366 9.33696 13 10 13H13.5808L13.9881 13.403L14.3955 13.8059C14.3826 13.8226 14.3686 13.8385 14.3536 13.8536C14.2598 13.9473 14.1326 14 14 14H8.5V16H11V18H13V16H14C14.663 16 15.2989 15.7366 15.7678 15.2678C15.7853 15.2503 15.8025 15.2325 15.8194 15.2146L19.3855 18.7423C17.5569 20.7442 14.9251 22 12 22ZM14.495 13.4293C14.4798 13.3228 14.4305 13.2234 14.3536 13.1464C14.2758 13.0687 14.1751 13.0192 14.0674 13.0046L14.495 13.4293ZM19.5997 18.5L16.0321 14.9562C16.3344 14.5343 16.5 14.0257 16.5 13.5C16.5 12.837 16.2366 12.2011 15.7678 11.7322C15.2989 11.2634 14.663 11 14 11H12.0494L11.0427 10H15.5V8H13V6H11V8H10C9.71513 8 9.43528 8.04862 9.17153 8.14126L5.44941 4.44391C7.20409 2.92142 9.49441 2 12 2C17.523 2 22 6.477 22 12C22 14.4816 21.0962 16.752 19.5997 18.5ZM10.5482 10H10C9.86739 10 9.74021 10.0527 9.64645 10.1464C9.55268 10.2402 9.5 10.3674 9.5 10.5C9.5 10.6326 9.55268 10.7598 9.64645 10.8536C9.74021 10.9473 9.86739 11 10 11H11.559L10.5482 10Z"
-                                  fill="#C29773"/>
-                            <path
-                                d="M9.17153 8.14126L5.44941 4.44391L5.43359 4.45766C5.34719 4.53296 5.26208 4.60971 5.17832 4.68788L8.82367 8.29404C8.93562 8.23434 9.05192 8.18327 9.17153 8.14126Z"
-                                fill="#C29773"/>
-                            <path d="M12.0494 11L11.0427 10H10.5482L11.559 11H12.0494Z" fill="#C29773"/>
-                            <path
-                                d="M14.495 13.4293L14.0674 13.0046C14.0452 13.0015 14.0227 13 14 13H13.5808L13.9881 13.403L14.3955 13.8059C14.4629 13.7188 14.5 13.6113 14.5 13.5C14.5 13.4762 14.4983 13.4526 14.495 13.4293Z"
-                                fill="#C29773"/>
-                            <path
-                                d="M19.3855 18.7423C19.4581 18.6627 19.5296 18.5819 19.5997 18.5L16.0321 14.9562C15.9674 15.0465 15.8964 15.1329 15.8194 15.2146L19.3855 18.7423Z"
-                                fill="#C29773"/>
-                            <path d="M3 3L21.5 21.5" stroke="white" stroke-width="3"/>
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_3225_3146">
-                                <rect width="24" height="24" fill="white"/>
-                            </clipPath>
-                        </defs>
+                        <path d="M10 10.111V1L21 7V21H3V7L10 10.111Z" fill="#C29773"/>
                     </svg>
                 </div>
-                <div className="tittle">No taxes</div>
-                <div className="desc">No income or property taxes, enticing tax benefits</div>
+                <div className="tittle">Raising properties</div>
+                <div className="desc">Real estate is 50% of Dubai's GDP</div>
             </div>
             <div className="information">
                 <div className="icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <g clip-path="url(#clip0_3225_3146)">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M5.44941 4.44391C5.44413 4.44849 5.43886 4.45307 5.43359 4.45766L5.44941 4.44391Z"
-                                  fill="#C29773"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M12 22C6.477 22 2 17.523 2 12C2 9.11374 3.22266 6.51315 5.17832 4.68788L8.82367 8.29404C8.60791 8.40908 8.40829 8.55617 8.23223 8.73223C7.76339 9.20107 7.5 9.83696 7.5 10.5C7.5 11.163 7.76339 11.7989 8.23223 12.2678C8.70107 12.7366 9.33696 13 10 13H13.5808L13.9881 13.403L14.3955 13.8059C14.3826 13.8226 14.3686 13.8385 14.3536 13.8536C14.2598 13.9473 14.1326 14 14 14H8.5V16H11V18H13V16H14C14.663 16 15.2989 15.7366 15.7678 15.2678C15.7853 15.2503 15.8025 15.2325 15.8194 15.2146L19.3855 18.7423C17.5569 20.7442 14.9251 22 12 22ZM14.495 13.4293C14.4798 13.3228 14.4305 13.2234 14.3536 13.1464C14.2758 13.0687 14.1751 13.0192 14.0674 13.0046L14.495 13.4293ZM19.5997 18.5L16.0321 14.9562C16.3344 14.5343 16.5 14.0257 16.5 13.5C16.5 12.837 16.2366 12.2011 15.7678 11.7322C15.2989 11.2634 14.663 11 14 11H12.0494L11.0427 10H15.5V8H13V6H11V8H10C9.71513 8 9.43528 8.04862 9.17153 8.14126L5.44941 4.44391C7.20409 2.92142 9.49441 2 12 2C17.523 2 22 6.477 22 12C22 14.4816 21.0962 16.752 19.5997 18.5ZM10.5482 10H10C9.86739 10 9.74021 10.0527 9.64645 10.1464C9.55268 10.2402 9.5 10.3674 9.5 10.5C9.5 10.6326 9.55268 10.7598 9.64645 10.8536C9.74021 10.9473 9.86739 11 10 11H11.559L10.5482 10Z"
-                                  fill="#C29773"/>
-                            <path
-                                d="M9.17153 8.14126L5.44941 4.44391L5.43359 4.45766C5.34719 4.53296 5.26208 4.60971 5.17832 4.68788L8.82367 8.29404C8.93562 8.23434 9.05192 8.18327 9.17153 8.14126Z"
-                                fill="#C29773"/>
-                            <path d="M12.0494 11L11.0427 10H10.5482L11.559 11H12.0494Z" fill="#C29773"/>
-                            <path
-                                d="M14.495 13.4293L14.0674 13.0046C14.0452 13.0015 14.0227 13 14 13H13.5808L13.9881 13.403L14.3955 13.8059C14.4629 13.7188 14.5 13.6113 14.5 13.5C14.5 13.4762 14.4983 13.4526 14.495 13.4293Z"
-                                fill="#C29773"/>
-                            <path
-                                d="M19.3855 18.7423C19.4581 18.6627 19.5296 18.5819 19.5997 18.5L16.0321 14.9562C15.9674 15.0465 15.8964 15.1329 15.8194 15.2146L19.3855 18.7423Z"
-                                fill="#C29773"/>
-                            <path d="M3 3L21.5 21.5" stroke="white" stroke-width="3"/>
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_3225_3146">
-                                <rect width="24" height="24" fill="white"/>
-                            </clipPath>
-                        </defs>
+                        <path d="M3 3H21C21.2652 3 21.5196 3.10536 21.7071 3.29289C21.8946 3.48043 22 3.73478 22 4V20C22 20.2652 21.8946 20.5196 21.7071 20.7071C21.5196 20.8946 21.2652 21 21 21H3C2.73478 21 2.48043 20.8946 2.29289 20.7071C2.10536 20.5196 2 20.2652 2 20V4C2 3.73478 2.10536 3.48043 2.29289 3.29289C2.48043 3.10536 2.73478 3 3 3ZM8.5 14V16H11V18H13V16H14C14.663 16 15.2989 15.7366 15.7678 15.2678C16.2366 14.7989 16.5 14.163 16.5 13.5C16.5 12.837 16.2366 12.2011 15.7678 11.7322C15.2989 11.2634 14.663 11 14 11H10C9.86739 11 9.74021 10.9473 9.64645 10.8536C9.55268 10.7598 9.5 10.6326 9.5 10.5C9.5 10.3674 9.55268 10.2402 9.64645 10.1464C9.74021 10.0527 9.86739 10 10 10H15.5V8H13V6H11V8H10C9.33696 8 8.70107 8.26339 8.23223 8.73223C7.76339 9.20107 7.5 9.83696 7.5 10.5C7.5 11.163 7.76339 11.7989 8.23223 12.2678C8.70107 12.7366 9.33696 13 10 13H14C14.1326 13 14.2598 13.0527 14.3536 13.1464C14.4473 13.2402 14.5 13.3674 14.5 13.5C14.5 13.6326 14.4473 13.7598 14.3536 13.8536C14.2598 13.9473 14.1326 14 14 14H8.5Z" fill="#C29773"/>
                     </svg>
                 </div>
-                <div className="tittle">No taxes</div>
-                <div className="desc">No income or property taxes, enticing tax benefits</div>
+                <div className="tittle">Dynamic market</div>
+                <div className="desc">60-65K annual projects, 3-4% growth</div>
             </div>
             <div className="information">
                 <div className="icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <g clip-path="url(#clip0_3225_3146)">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M5.44941 4.44391C5.44413 4.44849 5.43886 4.45307 5.43359 4.45766L5.44941 4.44391Z"
-                                  fill="#C29773"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M12 22C6.477 22 2 17.523 2 12C2 9.11374 3.22266 6.51315 5.17832 4.68788L8.82367 8.29404C8.60791 8.40908 8.40829 8.55617 8.23223 8.73223C7.76339 9.20107 7.5 9.83696 7.5 10.5C7.5 11.163 7.76339 11.7989 8.23223 12.2678C8.70107 12.7366 9.33696 13 10 13H13.5808L13.9881 13.403L14.3955 13.8059C14.3826 13.8226 14.3686 13.8385 14.3536 13.8536C14.2598 13.9473 14.1326 14 14 14H8.5V16H11V18H13V16H14C14.663 16 15.2989 15.7366 15.7678 15.2678C15.7853 15.2503 15.8025 15.2325 15.8194 15.2146L19.3855 18.7423C17.5569 20.7442 14.9251 22 12 22ZM14.495 13.4293C14.4798 13.3228 14.4305 13.2234 14.3536 13.1464C14.2758 13.0687 14.1751 13.0192 14.0674 13.0046L14.495 13.4293ZM19.5997 18.5L16.0321 14.9562C16.3344 14.5343 16.5 14.0257 16.5 13.5C16.5 12.837 16.2366 12.2011 15.7678 11.7322C15.2989 11.2634 14.663 11 14 11H12.0494L11.0427 10H15.5V8H13V6H11V8H10C9.71513 8 9.43528 8.04862 9.17153 8.14126L5.44941 4.44391C7.20409 2.92142 9.49441 2 12 2C17.523 2 22 6.477 22 12C22 14.4816 21.0962 16.752 19.5997 18.5ZM10.5482 10H10C9.86739 10 9.74021 10.0527 9.64645 10.1464C9.55268 10.2402 9.5 10.3674 9.5 10.5C9.5 10.6326 9.55268 10.7598 9.64645 10.8536C9.74021 10.9473 9.86739 11 10 11H11.559L10.5482 10Z"
-                                  fill="#C29773"/>
-                            <path
-                                d="M9.17153 8.14126L5.44941 4.44391L5.43359 4.45766C5.34719 4.53296 5.26208 4.60971 5.17832 4.68788L8.82367 8.29404C8.93562 8.23434 9.05192 8.18327 9.17153 8.14126Z"
-                                fill="#C29773"/>
-                            <path d="M12.0494 11L11.0427 10H10.5482L11.559 11H12.0494Z" fill="#C29773"/>
-                            <path
-                                d="M14.495 13.4293L14.0674 13.0046C14.0452 13.0015 14.0227 13 14 13H13.5808L13.9881 13.403L14.3955 13.8059C14.4629 13.7188 14.5 13.6113 14.5 13.5C14.5 13.4762 14.4983 13.4526 14.495 13.4293Z"
-                                fill="#C29773"/>
-                            <path
-                                d="M19.3855 18.7423C19.4581 18.6627 19.5296 18.5819 19.5997 18.5L16.0321 14.9562C15.9674 15.0465 15.8964 15.1329 15.8194 15.2146L19.3855 18.7423Z"
-                                fill="#C29773"/>
-                            <path d="M3 3L21.5 21.5" stroke="white" stroke-width="3"/>
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_3225_3146">
-                                <rect width="24" height="24" fill="white"/>
-                            </clipPath>
-                        </defs>
+                        <path d="M13 2V3H20V5H13V19H17V21H7V19H11V5H4V3H11V2H13ZM5 6.343L7.828 9.172C8.552 9.895 9 10.895 9 12C9 14.21 7.21 16 5 16C2.79 16 1 14.21 1 12C1 10.895 1.448 9.895 2.172 9.172L5 6.343ZM19 6.343L21.828 9.172C22.552 9.895 23 10.895 23 12C23 14.21 21.21 16 19 16C16.79 16 15 14.21 15 12C15 10.895 15.448 9.895 16.172 9.172L19 6.343ZM19 9.172L17.586 10.586C17.212 10.96 17 11.46 17 12L21 12.001C21 11.461 20.788 10.96 20.414 10.586L19 9.172ZM5 9.172L3.586 10.586C3.212 10.96 3 11.46 3 12L7 12.001C7 11.461 6.788 10.96 6.414 10.586L5 9.172Z" fill="#C29773"/>
                     </svg>
                 </div>
-                <div className="tittle">No taxes</div>
-                <div className="desc">No income or property taxes, enticing tax benefits</div>
+                <div className="tittle">Stability</div>
+                <div className="desc">Recent years saw a 20-25% surge in property prices</div>
             </div>
 
         </div>
         <div className="offers">
             <div className="header">
                 <div className="tittle">Offers</div>
-                <div className="see-more">See more</div>
+                <Link to={"/phone/properties"}><div className="see-more">See more</div></Link>
             </div>
             <div className="offer-content">
                 <Swiper slidesPerView={1}
                         spaceBetween={50}
                         pagination={true} modules={[Pagination]}
                 >
-                    <SwiperSlide>
-                        <Offers/>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <Offers/>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <Offers/>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <Offers/>
-                    </SwiperSlide>
+                    {slidesData.map((slide, index) => (
+                        <SwiperSlide key={index}>
+                            <Offers img={slide.img} name={slide.name} developer={slide.developer} />
+                        </SwiperSlide>
+                    ))}
                 </Swiper>
             </div>
         </div>
@@ -488,17 +436,17 @@ const HomePage = () => {
                 >
 
                     <SwiperSlide>
-                        <KindProjects tittle={"Commercial real estate"}
-                                      text={"Our specialists have Dubai commercial real estate database. We assist in processing business documents and finding the right property for your company."}/>
+                        <KindProjects tittle={"Primary real estate"}
+                                      text={"Our partners are Dubai's largest real estate developers, which will allow you to get insider information on new projects."}/>
 
                     </SwiperSlide>
                     <SwiperSlide>
-                        <KindProjects tittle={"Commercial real estate"}
-                                      text={"Our specialists have Dubai commercial real estate database. We assist in processing business documents and finding the right property for your company."}/>
+                        <KindProjects tittle={"Secondary real estate"}
+                                      text={"In Dubai, the secondary real estate market is also developed, where we can help you find a project that suits your preferences."}/>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <KindProjects tittle={"Commercial real estate"}
-                                      text={"Our specialists have Dubai commercial real estate database. We assist in processing business documents and finding the right property for your company."}/>
+                        <KindProjects tittle={"Rentals"}
+                                      text={"Whether you're searching for a property or visiting Dubai for tourism or business, Property Partners will find the best long-term and short-term rental offers for you."}/>
                     </SwiperSlide>
                     <SwiperSlide>
                         <KindProjects tittle={"Commercial real estate"}
@@ -515,55 +463,46 @@ const HomePage = () => {
             </div>
             <div className="content">
                 <div className="area">
-                    <img src={palm}/>
+                    <img src={marina}/>
                     <div className="info">
-                        <div className="name">Palm Jebel Ali</div>
-                        <div className="price">Price from 18,000,000 AED</div>
+                        <div className="name">Dubai Marina</div>
+                        <div className="price">Price from 600,000 AED</div>
                     </div>
                 </div>
                 <div className="area">
-                    <img src={palm}/>
+                    <img src={hils}/>
                     <div className="info">
-                        <div className="name">Palm Jebel Ali</div>
-                        <div className="price">Price from 18,000,000 AED</div>
+                        <div className="name">Dubai Hills</div>
+                        <div className="price">Price from 860,000 AED</div>
                     </div>
                 </div>
                 <div className="area">
-                    <img src={palm}/>
+                    <img src={business}/>
                     <div className="info">
-                        <div className="name">Palm Jebel Ali</div>
-                        <div className="price">Price from 18,000,000 AED</div>
+                        <div className="name">Business Bay</div>
+                        <div className="price">Price from 410,000 AED</div>
                     </div>
                 </div>
             </div>
-            <div className="see-more">See more
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                    <path d="M12.5 16L6.5 10H18.5L12.5 16Z" fill="#191C38"/>
-                </svg>
-            </div>
+           <Link to={"/phone/areas"}> <div className="see-more">See more
+
+            </div></Link>
         </div>
         <div className="offers">
             <div className="header">
                 <div className="tittle">Offers</div>
-                <div className="see-more">See more</div>
+                <Link to={"/phone/properties"}><div className="see-more">See more</div></Link>
             </div>
             <div className="offer-content">
                 <Swiper slidesPerView={1}
                         spaceBetween={50}
                         pagination={true} modules={[Pagination]}
                 >
-                    <SwiperSlide>
-                        <Offers/>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <Offers/>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <Offers/>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <Offers/>
-                    </SwiperSlide>
+                    {slidesData.map((slide, index) => (
+                        <SwiperSlide key={index}>
+                            <Offers img={slide.img} name={slide.name} developer={slide.developer} />
+                        </SwiperSlide>
+                    ))}
                 </Swiper>
             </div>
         </div>
@@ -612,8 +551,8 @@ const HomePage = () => {
                                         d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM13 12V7H11V14H17V12H13Z"
                                         fill="#C29773"/>
                                 </svg>
-                                <div className="tittle">Investor visa for 10 years or more</div>
-                                <div className="description">Obtaining an Investor Visa with Long-Term Duration</div>
+                                <div className="tittle">Registration of a local company (LLC)</div>
+                                <div className="description">A proper business registration in the UAE</div>
                             </div>
                             <div className="option">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24"
@@ -622,59 +561,12 @@ const HomePage = () => {
                                         d="M20.5 2C20.7652 2 21.0196 2.10536 21.2071 2.29289C21.3946 2.48043 21.5 2.73478 21.5 3V21C21.5 21.2652 21.3946 21.5196 21.2071 21.7071C21.0196 21.8946 20.7652 22 20.5 22H4.5C4.23478 22 3.98043 21.8946 3.79289 21.7071C3.60536 21.5196 3.5 21.2652 3.5 21V3C3.5 2.73478 3.60536 2.48043 3.79289 2.29289C3.98043 2.10536 4.23478 2 4.5 2H20.5ZM16.5 16H8.5V18H16.5V16ZM12.5 6C11.4391 6 10.4217 6.42143 9.67157 7.17157C8.92143 7.92172 8.5 8.93913 8.5 10C8.5 11.0609 8.92143 12.0783 9.67157 12.8284C10.4217 13.5786 11.4391 14 12.5 14C13.5609 14 14.5783 13.5786 15.3284 12.8284C16.0786 12.0783 16.5 11.0609 16.5 10C16.5 8.93913 16.0786 7.92172 15.3284 7.17157C14.5783 6.42143 13.5609 6 12.5 6ZM12.5 8C13.0304 8 13.5391 8.21071 13.9142 8.58579C14.2893 8.96086 14.5 9.46957 14.5 10C14.5 10.5304 14.2893 11.0391 13.9142 11.4142C13.5391 11.7893 13.0304 12 12.5 12C11.9696 12 11.4609 11.7893 11.0858 11.4142C10.7107 11.0391 10.5 10.5304 10.5 10C10.5 9.46957 10.7107 8.96086 11.0858 8.58579C11.4609 8.21071 11.9696 8 12.5 8Z"
                                         fill="#C29773"/>
                                 </svg>
-                                <div className="tittle">Issuance of UAE resident visa</div>
-                                <div className="description">Acquiring a UAE Resident Visa for Employees</div>
+                                <div className="tittle">Registration of a company in a free economic zone</div>
+                                <div className="description">Get a formal way of staying after property purchase</div>
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="consult-slide">
-                            <div className="option">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                     fill="none">
-                                    <path
-                                        d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM13 12V7H11V14H17V12H13Z"
-                                        fill="#C29773"/>
-                                </svg>
-                                <div className="tittle">Investor visa for 10 years or more</div>
-                                <div className="description">Obtaining an Investor Visa with Long-Term Duration</div>
-                            </div>
-                            <div className="option">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24"
-                                     fill="none">
-                                    <path
-                                        d="M20.5 2C20.7652 2 21.0196 2.10536 21.2071 2.29289C21.3946 2.48043 21.5 2.73478 21.5 3V21C21.5 21.2652 21.3946 21.5196 21.2071 21.7071C21.0196 21.8946 20.7652 22 20.5 22H4.5C4.23478 22 3.98043 21.8946 3.79289 21.7071C3.60536 21.5196 3.5 21.2652 3.5 21V3C3.5 2.73478 3.60536 2.48043 3.79289 2.29289C3.98043 2.10536 4.23478 2 4.5 2H20.5ZM16.5 16H8.5V18H16.5V16ZM12.5 6C11.4391 6 10.4217 6.42143 9.67157 7.17157C8.92143 7.92172 8.5 8.93913 8.5 10C8.5 11.0609 8.92143 12.0783 9.67157 12.8284C10.4217 13.5786 11.4391 14 12.5 14C13.5609 14 14.5783 13.5786 15.3284 12.8284C16.0786 12.0783 16.5 11.0609 16.5 10C16.5 8.93913 16.0786 7.92172 15.3284 7.17157C14.5783 6.42143 13.5609 6 12.5 6ZM12.5 8C13.0304 8 13.5391 8.21071 13.9142 8.58579C14.2893 8.96086 14.5 9.46957 14.5 10C14.5 10.5304 14.2893 11.0391 13.9142 11.4142C13.5391 11.7893 13.0304 12 12.5 12C11.9696 12 11.4609 11.7893 11.0858 11.4142C10.7107 11.0391 10.5 10.5304 10.5 10C10.5 9.46957 10.7107 8.96086 11.0858 8.58579C11.4609 8.21071 11.9696 8 12.5 8Z"
-                                        fill="#C29773"/>
-                                </svg>
-                                <div className="tittle">Issuance of UAE resident visa</div>
-                                <div className="description">Acquiring a UAE Resident Visa for Employees</div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="consult-slide">
-                            <div className="option">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                     fill="none">
-                                    <path
-                                        d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM13 12V7H11V14H17V12H13Z"
-                                        fill="#C29773"/>
-                                </svg>
-                                <div className="tittle">Investor visa for 10 years or more</div>
-                                <div className="description">Obtaining an Investor Visa with Long-Term Duration</div>
-                            </div>
-                            <div className="option">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24"
-                                     fill="none">
-                                    <path
-                                        d="M20.5 2C20.7652 2 21.0196 2.10536 21.2071 2.29289C21.3946 2.48043 21.5 2.73478 21.5 3V21C21.5 21.2652 21.3946 21.5196 21.2071 21.7071C21.0196 21.8946 20.7652 22 20.5 22H4.5C4.23478 22 3.98043 21.8946 3.79289 21.7071C3.60536 21.5196 3.5 21.2652 3.5 21V3C3.5 2.73478 3.60536 2.48043 3.79289 2.29289C3.98043 2.10536 4.23478 2 4.5 2H20.5ZM16.5 16H8.5V18H16.5V16ZM12.5 6C11.4391 6 10.4217 6.42143 9.67157 7.17157C8.92143 7.92172 8.5 8.93913 8.5 10C8.5 11.0609 8.92143 12.0783 9.67157 12.8284C10.4217 13.5786 11.4391 14 12.5 14C13.5609 14 14.5783 13.5786 15.3284 12.8284C16.0786 12.0783 16.5 11.0609 16.5 10C16.5 8.93913 16.0786 7.92172 15.3284 7.17157C14.5783 6.42143 13.5609 6 12.5 6ZM12.5 8C13.0304 8 13.5391 8.21071 13.9142 8.58579C14.2893 8.96086 14.5 9.46957 14.5 10C14.5 10.5304 14.2893 11.0391 13.9142 11.4142C13.5391 11.7893 13.0304 12 12.5 12C11.9696 12 11.4609 11.7893 11.0858 11.4142C10.7107 11.0391 10.5 10.5304 10.5 10C10.5 9.46957 10.7107 8.96086 11.0858 8.58579C11.4609 8.21071 11.9696 8 12.5 8Z"
-                                        fill="#C29773"/>
-                                </svg>
-                                <div className="tittle">Issuance of UAE resident visa</div>
-                                <div className="description">Acquiring a UAE Resident Visa for Employees</div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
+
                 </Swiper>
             </div>
         </div>

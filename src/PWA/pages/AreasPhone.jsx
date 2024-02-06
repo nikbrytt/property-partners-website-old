@@ -10,11 +10,16 @@ import BigAreaCard3 from "../../assets/pwa/Areas/bigAreaCard3.png"
 import BigAreaCard4 from "../../assets/pwa/Areas/bigAreaCard4.png"
 import BigAreaCard5 from "../../assets/pwa/Areas/bigAreaCard5.png"
 import Footer from "../components/Footer.jsx";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import AreasCardsInfo from "../../data/AreasCardsInfo.jsx";
 import areasinfo from "../../data/Areasinfo.jsx";
 import DynamicTruncatedText from "../../components/DynamicTruncatedText.jsx";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import {Link} from "react-router-dom";
+import collection1 from "../../assets/collection1.jpg";
+import offer2 from "../../assets/offer.png";
+import offer3 from "../../assets/offer2.png";
+import offer4 from "../../assets/offer3.png";
 
 
 const AreasPhoneCard = ({name, description, price, image, area}) => {
@@ -25,7 +30,7 @@ const AreasPhoneCard = ({name, description, price, image, area}) => {
                 <div className="price">{price}</div>
             </div>
             <div className="title">
-                <div>{name}</div>
+                <div className={"name"}>{name}</div>
                 <div><DynamicTruncatedText text={description} customBreakpoints={
                     {
                         650: 20,
@@ -118,7 +123,23 @@ const AreasPhone = () => {
             pv: 5119,
         },
     ];
-
+    const [slidesData, setSlidesData] = useState([
+        { img: collection1, name: "Golf Gate 2", developer: "by Damac Properties" },
+        { img: offer2, name: "Kempinski", developer: "by Swiss Property" },
+        { img: offer3, name: "The Orchard Place", developer: "by Peak Summit" },
+        { img: offer4, name: "Harbour Lights", developer: "by Damac Properties" }
+    ]);
+    const shuffleSlides = () => {
+        const shuffled = slidesData.slice();
+        for (let i = shuffled.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+        setSlidesData(shuffled);
+    }
+    useEffect(() => {
+        shuffleSlides()
+    }, []);
     const BigAreasCardInfo = [
             {
                 "saleValue": "15.4B",
@@ -314,25 +335,18 @@ const AreasPhone = () => {
             <div className="offers">
                 <div className="header">
                     <div className="tittle">Offers</div>
-                    <div className="see-more">See more</div>
+                    <Link to={"/phone/properties"}><div className="see-more">See more</div></Link>
                 </div>
                 <div className="offer-content">
                     <Swiper slidesPerView={1}
                             spaceBetween={50}
                             pagination={true} modules={[Pagination]}
                     >
-                        <SwiperSlide>
-                            <Offers/>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Offers/>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Offers/>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Offers/>
-                        </SwiperSlide>
+                        {slidesData.map((slide, index) => (
+                            <SwiperSlide key={index}>
+                                <Offers img={slide.img} name={slide.name} developer={slide.developer} />
+                            </SwiperSlide>
+                        ))}
                     </Swiper>
                 </div>
             </div>

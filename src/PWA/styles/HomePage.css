@@ -40,6 +40,7 @@
   line-height: 120%; /* 19.2px */
 }
 .phone-home .main-banner .filter {
+  margin-top: 50px;
   display: flex;
   padding: 8px;
   flex-direction: column;
@@ -204,7 +205,7 @@
   line-height: 19.2px; /* 137.143% */
 }
 .phone-home .collections .collection-data .swiper-slide {
-  width: 65vw;
+  width: 275px;
 }
 .phone-home .why-dubai {
   padding: 0 16px;
@@ -273,6 +274,7 @@
 .phone-home .why-dubai .information {
   padding: 16px;
   height: max-content;
+  height: 100%;
   background: white;
 }
 .phone-home .why-dubai .information .icon {
@@ -352,7 +354,10 @@
   background: #FFF;
 }
 .phone-home .kind-projects {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 30.9%, rgba(0, 0, 0, 0.23) 71.4%, rgba(0, 0, 0, 0.5) 100%), url("../../assets/kindOfProjects.png"), lightgray 50%/cover no-repeat;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 30.9%, rgba(0, 0, 0, 0.23) 71.4%, rgba(0, 0, 0, 0.5) 100%), url("../../assets/kindOfProjects.png") lightgray;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   padding: var(--Padding-Small, 12px) 16px;
   flex-direction: column;
@@ -423,7 +428,7 @@
   gap: 16px;
 }
 .phone-home .areas .content .area {
-  height: 175px;
+  height: 250px;
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.15);
   position: relative;
 }
@@ -469,7 +474,10 @@
   font-weight: 400;
   line-height: 19.2px; /* 120% */
 }
-.phone-home .areas .see-more {
+.phone-home .areas a {
+  width: 100%;
+}
+.phone-home .areas a .see-more {
   width: 100%;
   display: flex;
   align-items: center;

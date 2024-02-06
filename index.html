@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale = 1.0,
-maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="title" content="ProPart Dubai Real Estate">
     <meta name="description" content="ProPart Dubai: Your Gateway to Elite Real Estate in the UAE.">
     <meta name="keywords" content="ProPart, luxury properties, exclusive residences, high-end real estate, prestigious developments, prime locations, premium living, Dubai real estate, UAE properties, elite homes, luxury lifestyle, investment opportunities, gated communities, waterfront properties, iconic architecture, top-tier amenities, prestigious neighborhoods, skyline views, contemporary design, elite clientele, international standards">
@@ -54,7 +53,6 @@ maximum-scale=1.0, user-scalable=no" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbaX7Vb6ERFTrWR4espV48g25lFRGGjIc&libraries=places"></script>
 
     <style>
       body{
@@ -128,7 +126,17 @@ maximum-scale=1.0, user-scalable=no" />
 
 
     </style>
-
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js').then(function(registration) {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, function(err) {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+        });
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

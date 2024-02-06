@@ -46,6 +46,7 @@
     }
 
     .filter {
+      margin-top: 50px;
       display: flex;
       padding: 8px;
       flex-direction: column;
@@ -231,7 +232,7 @@
 
     .collection-data {
       .swiper-slide {
-        width: 65vw;
+        width: 275px;
       }
 
     }
@@ -269,6 +270,7 @@
         height: 100%;
         object-fit: cover;
         border-radius: 4px;
+
 
       }
 
@@ -313,6 +315,7 @@
     .information {
       padding: 16px;
       height: max-content;
+      height: 100%;
       background: white;
 
       .icon {
@@ -409,8 +412,13 @@
   }
 
   .kind-projects {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 30.9%, rgba(0, 0, 0, 0.23) 71.4%, rgba(0, 0, 0, 0.50) 100%), url("../../assets/kindOfProjects.png"), lightgray 50% / cover no-repeat;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 30.9%, rgba(0, 0, 0, 0.23) 71.4%, rgba(0, 0, 0, 0.50) 100%), url("../../assets/kindOfProjects.png") lightgray;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     display: flex;
+
+
     padding: var(--Padding-Small, 12px) 16px;
     flex-direction: column;
     align-items: center;
@@ -486,7 +494,7 @@
       flex-direction: column;
       gap: 16px;
       .area{
-        height: 175px;
+        height: 250px;
         box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.15);
         position: relative;
         &:before {
@@ -534,29 +542,33 @@
         }
       }
     }
-    .see-more{
+    a{
       width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
+      .see-more{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
 
-      padding: 8px 10px;
-      border-radius: 4px;
-      border: 1px solid #EAEAEA;
-      background: #FFF;
+        padding: 8px 10px;
+        border-radius: 4px;
+        border: 1px solid #EAEAEA;
+        background: #FFF;
 
-      /* Light Shadow */
-      box-shadow: 0px 2px 67.4px -1px rgba(0, 0, 0, 0.09);
-      color: var(--ProPart-Blue, #191C38);
-      leading-trim: both;
-      text-edge: cap;
-      font-family: Onest,sans-serif;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 19.2px; /* 137.143% */
+        /* Light Shadow */
+        box-shadow: 0px 2px 67.4px -1px rgba(0, 0, 0, 0.09);
+        color: var(--ProPart-Blue, #191C38);
+        leading-trim: both;
+        text-edge: cap;
+        font-family: Onest,sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 19.2px; /* 137.143% */
+      }
     }
+
   }
   .consulting{
     padding: 0 16px;

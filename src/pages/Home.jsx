@@ -211,7 +211,18 @@ const Home = ({ openModal }) => {
     function isMobile() {
         return window.innerWidth <= 768;
     }
+    useEffect(() => {
+        const handleResize = () => {
+            setIsSmallScreen(window.innerWidth < 600);
+        };
 
+        window.addEventListener('resize', handleResize);
+
+        // Cleanup
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     const navigationNextRef = React.useRef(null)
     const navigationPrevRef = React.useRef(null)
 
@@ -245,9 +256,9 @@ const Home = ({ openModal }) => {
                 console.log(error);
             });
     }
-    // if (isSmallScreen ) {
-    //     return <HomePage/>
-    // }
+    if (isSmallScreen ) {
+        return <HomePage/>
+    }
     return (<div className={"home-page"}>
         <Header />
         <div className="home-banner">

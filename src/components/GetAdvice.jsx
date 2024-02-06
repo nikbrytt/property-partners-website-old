@@ -22,7 +22,7 @@ function GetAdvice({title}) {
         let config = {
             method: 'post',
             maxBodyLength: Infinity,
-            url: 'http://142.93.97.213:3000/append-data',
+            url: 'https://contact.propart.ae/append-data',
             headers: {
                 'Content-Type': 'application/json'
             },

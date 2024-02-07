@@ -9,7 +9,7 @@ const Collection = ({img,type,projects,price}) => {
             <div className="general">
                 <div className="main">
                     <div className="type">{type}</div>
-                    <div className="projects">{projects} projects</div>
+                    <div className="project-count">{projects} projects</div>
                 </div>
 
                 <div className="price"><span>from</span> {price}</div>

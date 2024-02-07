@@ -315,6 +315,7 @@ const HomePage = () => {
                 <Link to={"/phone/properties"}> <div className="option">See more</div></Link>
             </div>
             <div className="collection-data">
+
                 <Swiper slidesPerView={"auto"}
                         spaceBetween={10}
 

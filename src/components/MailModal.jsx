@@ -37,7 +37,7 @@ const MailModal = ({showMailModal, closeMailModal}) => {
     const [name, setName] = useState('')
     const [phone, setPhone] = useState('')
     const [mail, setMail] = useState('')
-
+    const [dataSented, setDataSented] = useState('')
     function sentData() {
         let data = JSON.stringify({
             "name": name,
@@ -61,6 +61,7 @@ const MailModal = ({showMailModal, closeMailModal}) => {
                 setName('')
                 setPhone('')
                 setMail('')
+                setDataSented(true)
             })
             .catch((error) => {
                 console.log(error);
@@ -162,7 +163,7 @@ const MailModal = ({showMailModal, closeMailModal}) => {
                                 </div>
                             </div>
                             <div className="button-no-spam">
-                                <div className="button" onClick={sentData}>
+                                <div className={`button ${dataSented ? 'fade-out' : ''}`}  onClick={sentData}>
                                     SUBSCRIBE
                                 </div>
                                 <div className="no-spam">

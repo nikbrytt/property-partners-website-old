@@ -38,12 +38,13 @@ const InquireModal = ({showInquireModal, closeInquireModal}) => {
     const [name, setName] = useState('')
     const [phone, setPhone] = useState('')
     const [mail, setMail] = useState('')
+    const [dataSented, setDataSented] = useState('')
 
     function sentData() {
         let data = JSON.stringify({
             "name": name,
             "phone": phone,
-            "email": mail,
+            "email": "mail",
             "additional": "Additional information here"
         });
 
@@ -61,7 +62,7 @@ const InquireModal = ({showInquireModal, closeInquireModal}) => {
             .then((response) => {
                 setName('')
                 setPhone('')
-                setMail('')
+                setDataSented(true)
             })
             .catch((error) => {
                 console.log(error);
@@ -118,6 +119,7 @@ const InquireModal = ({showInquireModal, closeInquireModal}) => {
                             <div className="field-input">
                                 <input type="text" placeholder={t("j_title42")} value={name} onChange={(e) => {
                                     setName(e.target.value)
+                                    setDataSented(false)
                                 }}/>
                                 <div>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20"
@@ -131,6 +133,7 @@ const InquireModal = ({showInquireModal, closeInquireModal}) => {
                             <div className="field-input">
                                 <input placeholder={t("j_title43")} type="text" value={phone}  onChange={(e) => {
                                     setPhone(e.target.value)
+                                    setDataSented(false)
                                 }}/>
                                 <div>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
@@ -141,8 +144,8 @@ const InquireModal = ({showInquireModal, closeInquireModal}) => {
                                     </svg>
                                 </div>
                             </div>
-                            <div className="field-button" onClick={sentData}>
-                                Get offer
+                            <div className={`form-button ${dataSented ? 'field-button' : ''}`} onClick={sentData}>
+                                {dataSented ? "Your message was received" : t("Get offer")}
                             </div>
                         </div>
                         <div className="privacy">
@@ -167,8 +170,8 @@ const InquireModal = ({showInquireModal, closeInquireModal}) => {
                             <div>$204K</div>
                             <div>PRICE FROM</div>
                         </div>
-                        <div className="button" onClick={() => setInquire(true)}>
-                            INQUIRE NOW
+                        <div className={`form-button`}  onClick={() => setInquire(true)}>
+                            {t("INQUIRE NOW")}
                         </div>
                     </div>
                 </div>

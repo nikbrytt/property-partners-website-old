@@ -106,6 +106,21 @@
                     }
                 }
 
+
+                .fade-out {
+                    animation: fadeOut 2s ease forwards;
+                }
+
+                @keyframes fadeOut {
+                    from {
+                        background: #C29773;
+                    }
+                    to {
+                        background: #191C38;
+                    }
+                }
+
+
                 .form-button {
                     cursor: pointer;
                     display: flex;
@@ -115,10 +130,10 @@
                     align-self: stretch;
                     background: #C29773;
                     color: #FFF;
-                    font-family: HelveticaBold, serif;
+                    font-family: Onest, serif;
                     font-size: 16px;
                     font-style: normal;
-                    font-weight: 400;
+                    font-weight: 700;
                     line-height: normal;
 
                     &:hover {

@@ -13,6 +13,7 @@ const Header = () => {
     const [activeLanguage, setActiveLanguage] = useState(i18next.language)
     const [consultingVisible, setConsultingVisible] = useState(false)
     const [areasVisible, setAreasVisible] = useState(false)
+
     const toggleVisibility = (section) => {
         setConsultingVisible(section === 'consulting' ? !consultingVisible : false);
         setAreasVisible(section === 'areas' ? !areasVisible : false);
@@ -221,7 +222,7 @@ const Header = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16" fill="none">
                                 <path d="M0.933333 15.8002L0 14.8669L6.86667 8.0002L0 1.13353L0.933333 0.200195L8.73333 8.0002L0.933333 15.8002Z" fill="#191C38" />
                             </svg>
-                            </div>
+                        </div>
                         </Link>
                         <Link to={"/areas"}> <div className="menu-option">
                             {t('header_option4')}

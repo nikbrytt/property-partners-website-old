@@ -893,8 +893,22 @@
           }
         }
 
-        .form-button {
 
+        .fade-out {
+          animation: fadeOut 2s ease forwards;
+        }
+
+        @keyframes fadeOut {
+          from {
+            background: #C29773;
+          }
+          to {
+            background: #191C38;
+          }
+        }
+
+
+        .form-button {
           display: flex;
           padding: 16px;
           justify-content: space-between;

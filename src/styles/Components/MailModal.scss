@@ -123,6 +123,19 @@
             flex-direction: column;
             gap: 9px;
 
+            .fade-out {
+              animation: fadeOut 2s ease forwards;
+            }
+
+            @keyframes fadeOut {
+              from {
+                background: #191C38;
+              }
+              to {
+                background: #C29773;
+              }
+            }
+
             .button {
               display: flex;
               width: 127px;

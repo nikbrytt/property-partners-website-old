@@ -223,12 +223,13 @@ const Home = ({ openModal }) => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
+
     const navigationNextRef = React.useRef(null)
     const navigationPrevRef = React.useRef(null)
 
     const [name, setName] = useState('')
     const [phone, setPhone] = useState('')
-
+    const [dataSented, setDataSented] = useState('')
     function sentData() {
         let data = JSON.stringify({
             "name": name,
@@ -240,7 +241,7 @@ const Home = ({ openModal }) => {
         let config = {
             method: 'post',
             maxBodyLength: Infinity,
-            url: 'https://contact.propart.ae/append-data',
+            url: 'https://contact.propart.ae/append-datanp',
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -251,6 +252,7 @@ const Home = ({ openModal }) => {
             .then((response) => {
                 setName('')
                 setPhone('')
+                setDataSented(true)
             })
             .catch((error) => {
                 console.log(error);
@@ -1010,6 +1012,7 @@ const Home = ({ openModal }) => {
                     <div className="form-input">
                         <input placeholder={t("block6_line1")} type="text" value={name} onChange={(e) => {
                             setName(e.target.value)
+                            setDataSented(false)
                         }}  />
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path
@@ -1020,6 +1023,7 @@ const Home = ({ openModal }) => {
                     <div className="form-input">
                         <input placeholder={t("block6_line2")}  type="text" value={phone}  onChange={(e) => {
                             setPhone(e.target.value)
+                            setDataSented(false)
                         }} />
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path
@@ -1027,14 +1031,15 @@ const Home = ({ openModal }) => {
                                 fill="#C29773" />
                         </svg>
                     </div>
-                    <div className="form-button" onClick={sentData}>{t("block6_line3")}
+                    <div className="form-button" onClick={sentData}>{dataSented ? "Your message was received" : t("block6_line3")}
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path
                                 d="M9.99999 15.172L19.192 5.979L20.607 7.393L9.99999 18L3.63599 11.636L5.04999 10.222L9.99999 15.172Z"
                                 fill="white" />
                         </svg>
                     </div>
-                    <div className="form-text">{t("block6_text2")}
+                    <div className="form-text">
+                        {t("block6_text2")}
                     </div>
                 </div>
             </div>

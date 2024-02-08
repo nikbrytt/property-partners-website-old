@@ -82,15 +82,14 @@ import cityWalkMap from "../assets/Areas/AreasPhoto/city-walk.png";
 
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import DynamicTruncatedText from "../components/DynamicTruncatedText.jsx";
 import AreasCardsInfo from "../data/AreasCardsInfo.jsx";
 import AreaCard from "../components/AreaCard.jsx";
 import {Navigation} from "swiper/modules";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {AdvancedMarker, APIProvider, ControlPosition, Map, MapControl} from "@vis.gl/react-google-maps";
 import Marker from "../components/Marker.jsx";
-import axios from "axios";
-import dubai from "../assets/Areas/AreasPhoto/dubai.png";
+import projecsData from '../data/Areasinfo.jsx'
+import projecs from '../data/response.json'
 
 const Block = ({ title, content }) => {
     const [isExpanded, setIsExpanded] = useState(false);
@@ -724,19 +723,8 @@ function AreasViewPage() {
         setShowModal(false);
     };
 
-    const [projects, setProjects] = useState(null);
-    function convertPriceToShortFormat(price) {
-        price = (Number(price) / 3.16).toFixed(0).toString()
-        const suffixes = ['', 'K', 'M', 'B', 'T'];
-        let suffixIndex = 0;
+    const [projects, setProjects] = useState(projecs);
 
-        while (price >= 1000 && suffixIndex < suffixes.length - 1) {
-            price /= 1000;
-            suffixIndex++;
-        }
-
-        return price.toFixed(1) + suffixes[suffixIndex];
-    }
     const [mapZoom, setMapZoom] = useState(15);
     const [currnetIndex, setCurrentIndex] = useState(null)
 

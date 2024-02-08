@@ -41,7 +41,7 @@ import Response from "../data/response.json"
 const ProjectView = () => {
     const { id } = useParams();
     const [showImages, setShowImages] = useState(false);
-    const [project, setProject] = useState(null);
+    const [project, setProject] = useState(Response.find(project => project._id === id));
     const [randomProjects, setRandomProjects] = useState(Response);
     const [activePlan, setActivePlan] = useState(0)
     const [activeFloorPlan, setActiveFloorPlan] = useState(0)
@@ -51,15 +51,14 @@ const ProjectView = () => {
     const [showMore, setShowMore] = useState(false);
     const [translatedText, setTranslatedText] = useState('');
 
+
+    const projectData = Response.find(project => project._id === id);
+
     const [modalText, setModalText] = useState({
         tittleText: "",
         buttonText: ""
     });
 
-    useEffect(() => {
-        i18n.changeLanguage(localStorage.getItem("lang"))
-        handleTranslate();
-    }, [id]);
 
     const { t } = useTranslation();
 
@@ -70,6 +69,7 @@ const ProjectView = () => {
     const closeModal = () => {
         setShowModal(false);
     };
+
 
     function formatNumberWithCommas(value) {
         value = (Number(value) / 3.16).toFixed(0).toString()
@@ -95,8 +95,8 @@ const ProjectView = () => {
     let formattedTotalSum = 0
 
     if (project != null) {
-        const activePaymentPlan = project.paymentPlans[activePlan];
-
+        const activePaymentPlan = project.paymentPlans[1];
+        console.log(project.paymentPlans[1])
         const totalSum =
             parseFloat(activePaymentPlan.sum1) +
             parseFloat(activePaymentPlan.sum2) +
@@ -216,9 +216,7 @@ const ProjectView = () => {
         },
     ]
 
-    if (project === null || randomProjects === null) {
-        return null;
-    }
+
 
     const ProjectSimm = ({ project }) => {
         return (<div className={"project-sim"} onClick={() => window.location.href = `/project-view/${project._id}`}>
@@ -338,6 +336,7 @@ const ProjectView = () => {
     }
 
     const text = "Featuring a central park and lush green areas, this community provides an ideal environment for a balanced and tranquil way of life. Enveloped by jogging trails, cycling lanes, charming cafes and convenient retail options, Town Square Dubai caters to all your needs, creating a vibrant atmosphere filled with energy and warmth in every corner! Featuring combination of 1, 2, and 3-bedroom apartments, these modern layouts prioritize nprivacy and comfort. Experience the warmth of an inviting lobby upon returning home and relax in the landscaped courtyard, complete with a swimming pool, expansive deck, and children’s play areas."
+
 
     return (<div className={"project-view"}>
         <Header />
@@ -494,23 +493,23 @@ const ProjectView = () => {
                             <div className="column">
                                 <div className="header">{t("r_pay4")}</div>
                                 <div className="values">
-                                    <div className="value">{project.paymentPlans[activePlan].percent1}%</div>
-                                    <div className="value">{project.paymentPlans[activePlan].percent2}%</div>
-                                    <div className="value">{project.paymentPlans[activePlan].percent3}%</div>
-                                    <div className="value">{project.paymentPlans[activePlan].percent4}%</div>
+                                    <div className="value">{project.paymentPlans[1].percent1}%</div>
+                                    <div className="value">{project.paymentPlans[1].percent2}%</div>
+                                    <div className="value">{project.paymentPlans[1].percent3}%</div>
+                                    <div className="value">{project.paymentPlans[1].percent4}%</div>
                                 </div>
                             </div>
                             <div className="column">
                                 <div className="header">{t("r_pay5")}</div>
                                 <div className="values">
                                     <div
-                                        className="value">$ {formatNumberWithCommas(project.paymentPlans[activePlan].sum1)}</div>
+                                        className="value">$ {formatNumberWithCommas(project.paymentPlans[1].sum1)}</div>
                                     <div
-                                        className="value">$ {formatNumberWithCommas(project.paymentPlans[activePlan].sum2)}</div>
+                                        className="value">$ {formatNumberWithCommas(project.paymentPlans[1].sum2)}</div>
                                     <div
-                                        className="value">$ {formatNumberWithCommas(project.paymentPlans[activePlan].sum3)}</div>
+                                        className="value">$ {formatNumberWithCommas(project.paymentPlans[1].sum3)}</div>
                                     <div
-                                        className="value">$ {formatNumberWithCommas(project.paymentPlans[activePlan].sum4)}</div>
+                                        className="value">$ {formatNumberWithCommas(project.paymentPlans[1].sum4)}</div>
                                 </div>
                             </div>
                         </div>
@@ -867,23 +866,23 @@ const ProjectView = () => {
                         <div className="column">
                             <div className="header">{t("r_pay4")}</div>
                             <div className="values">
-                                <div className="value">{project.paymentPlans[activePlan].percent1}%</div>
-                                <div className="value">{project.paymentPlans[activePlan].percent2}%</div>
-                                <div className="value">{project.paymentPlans[activePlan].percent3}%</div>
-                                <div className="value">{project.paymentPlans[activePlan].percent4}%</div>
+                                <div className="value">{project.paymentPlans[1].percent1}%</div>
+                                <div className="value">{project.paymentPlans[1].percent2}%</div>
+                                <div className="value">{project.paymentPlans[1].percent3}%</div>
+                                <div className="value">{project.paymentPlans[1].percent4}%</div>
                             </div>
                         </div>
                         <div className="column">
                             <div className="header">{t("r_pay5")}</div>
                             <div className="values">
                                 <div
-                                    className="value">$ {formatNumberWithCommas(project.paymentPlans[activePlan].sum1)}</div>
+                                    className="value">$ {formatNumberWithCommas(project.paymentPlans[1].sum1)}</div>
                                 <div
-                                    className="value">$ {formatNumberWithCommas(project.paymentPlans[activePlan].sum2)}</div>
+                                    className="value">$ {formatNumberWithCommas(project.paymentPlans[1].sum2)}</div>
                                 <div
-                                    className="value">$ {formatNumberWithCommas(project.paymentPlans[activePlan].sum3)}</div>
+                                    className="value">$ {formatNumberWithCommas(project.paymentPlans[1].sum3)}</div>
                                 <div
-                                    className="value">$ {formatNumberWithCommas(project.paymentPlans[activePlan].sum4)}</div>
+                                    className="value">$ {formatNumberWithCommas(project.paymentPlans[1].sum4)}</div>
                             </div>
                         </div>
                     </div>
@@ -1043,7 +1042,7 @@ const ProjectView = () => {
                                 }
                             }}
                         >
-                            {project.plans[activeFloorPlan].map((plan, index) => (
+                            {project.plans[1].map((plan, index) => (
                                 <SwiperSlide key={index}>
                                     <FloorPlan plan={plan} type={activeFloorPlan} />
                                 </SwiperSlide>

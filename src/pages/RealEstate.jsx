@@ -230,7 +230,7 @@ const RealEstate = () => {
                             </Map>
                         </APIProvider>
                     </div>
-                    <div className="projects">
+                    <div className="real-projects">
                         {
                             filteredProjects.slice(0, projectPerView).map((project, index) => (
                                 <Project project={project} key={index} />

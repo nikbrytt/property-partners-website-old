@@ -1,4 +1,4 @@
-import "../styles/ProjectBig.css"
+import "../styles/ProjectBig.scss"
 import collection1 from "../../assets/collection1.jpg"
 import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";

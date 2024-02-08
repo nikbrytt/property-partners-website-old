@@ -1,6 +1,6 @@
 import MenuProjectFilter from "../components/MenuProjectFilter.jsx";
 import Footer from "../components/Footer.jsx";
-import "../styles/Projects.css"
+import "../styles/Projects.scss"
 import ProjectBig from "../components/ProjectBig.jsx";
 import projects from "../data/response.json"
 import Modal from "react-modal";

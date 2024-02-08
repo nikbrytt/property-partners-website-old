@@ -894,23 +894,9 @@
         }
 
 
-        .fade-out {
-          animation: fadeOut 2s ease forwards;
-        }
-
-        @keyframes fadeOut {
-          from {
-            background: #C29773;
-          }
-          to {
-            background: #191C38;
-          }
-        }
-
-
         .form-button {
           display: flex;
-          padding: 16px;
+          padding: 16px 16px 14px 16px;
           justify-content: space-between;
           align-items: center;
           align-self: stretch;
@@ -924,6 +910,12 @@
           line-height: normal;
           cursor: pointer;
           transition: 200ms;
+
+          svg {
+            margin-bottom: 2px;
+            flex-shrink: 0;
+          }
+
           &:hover {
             background: #21254B;
           }

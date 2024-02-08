@@ -61,22 +61,24 @@
             flex-direction: column;
             gap: 20px;
 
-            > div:first-child {
+            >div:first-child {
               color: #FFF;
               font-family: Onest;
               font-size: 54px;
               font-style: normal;
               font-weight: 700;
-              line-height: 120%; /* 64.8px */
+              line-height: 120%;
+              /* 64.8px */
             }
 
-           > div {
+            >div {
               color: #D1D1D1;
               font-family: Onest;
               font-size: 16px;
               font-style: normal;
               font-weight: 400;
-              line-height: 28px; /* 175% */
+              line-height: 28px;
+              /* 175% */
             }
           }
 
@@ -97,7 +99,8 @@
               font-size: 16px;
               font-style: normal;
               font-weight: 400;
-              line-height: 28px; /* 175% */
+              line-height: 28px;
+              /* 175% */
 
               border-radius: 2px;
               background: #C29773;
@@ -128,8 +131,6 @@
         background: #fff;
         width: 100%;
 
-
-
         .title {
           color: #191C38;
           font-family: Helvetica;
@@ -152,7 +153,8 @@
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
-            line-height: 28px; /* 175% */
+            line-height: 28px;
+            /* 175% */
           }
         }
       }
@@ -203,7 +205,8 @@
             font-size: 36px;
             font-style: normal;
             font-weight: 700;
-            line-height: 120%; /* 43.2px */
+            line-height: 120%;
+            /* 43.2px */
           }
 
           div:last-child {
@@ -214,7 +217,8 @@
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
-            line-height: 28px; /* 155.556% */
+            line-height: 28px;
+            /* 155.556% */
           }
         }
 
@@ -239,6 +243,7 @@
 
       .image {
         width: 100%;
+
         img {
           width: 100%;
         }
@@ -256,24 +261,28 @@
         background: #fff;
         padding: 25px 20px;
 
-        > div:first-child {
+        >div:first-child {
           color: #191C38;
           font-family: Helvetica;
           font-size: 36px;
           font-style: normal;
           font-weight: 700;
-          line-height: 120%; /* 43.2px */
+          line-height: 120%;
+          /* 43.2px */
         }
+
         .description {
           display: flex;
           flex-direction: column;
+
           div {
             color: #575757;
             font-family: Onest;
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
-            line-height: 37px; /* 205.556% */
+            line-height: 37px;
+            /* 205.556% */
           }
         }
       }
@@ -308,11 +317,10 @@
     .areas-container {
       .path {
         padding: 16px 16px 8px 16px;
-        div {
-        }
 
-        a {
-        }
+        div {}
+
+        a {}
       }
 
       .area-baner {
@@ -321,18 +329,19 @@
         .image-content {
           height: 60vh;
 
-          .image {
-          }
+          .image {}
 
           .content {
             padding: 24px;
+
             .title {
               gap: 10px;
-              > div:first-child {
+
+              >div:first-child {
                 font-size: 24px;
               }
 
-              > div {
+              >div {
                 font-size: 12px;
               }
             }
@@ -370,6 +379,7 @@
 
           .description {
             justify-content: unset;
+
             div {
               font-size: 16px;
             }
@@ -382,16 +392,17 @@
           justify-content: center;
           align-items: center;
 
-          img {
-          }
+          img {}
         }
       }
 
       .infrastructure {
         padding: 16px 16px 16px 16px;
         gap: 16px;
+
         .block {
           min-height: 260px;
+
           .info {
             div:first-child {
               font-size: 24px;
@@ -402,17 +413,16 @@
             }
           }
 
-          .read-more {
-          }
+          .read-more {}
         }
       }
 
       .gallery {
         padding: 16px 16px 16px 16px;
         gap: 16px;
+
         .image {
-          img {
-          }
+          img {}
         }
 
       }
@@ -421,9 +431,10 @@
         padding: 8px 16px 16px 16px;
 
         .content {
-          > div:first-child {
+          >div:first-child {
             font-size: 24px;
           }
+
           .description {
             div {
               font-size: 16px;
@@ -434,9 +445,9 @@
 
       .map-container {
         padding: 8px 16px 16px 16px;
+
         .content {
-          .map {
-          }
+          .map {}
         }
       }
 
@@ -444,8 +455,7 @@
         padding: 8px 16px 16px 16px;
       }
 
-      .consolt-box {
-      }
+      .consolt-box {}
     }
   }
 }
@@ -460,8 +470,7 @@
       .area-baner {
         .image-content {
 
-          .image {
-          }
+          .image {}
 
           .content {
             top: unset;
@@ -472,12 +481,12 @@
             padding: 15px;
 
             .title {
-              > div:first-child {
+              >div:first-child {
                 display: flex;
                 font-size: 36px;
               }
 
-              > div {
+              >div {
                 display: none;
               }
             }
@@ -494,6 +503,7 @@
       .baner-info {
         display: flex;
         padding: 16px;
+
         &.active {
           display: flex;
         }
@@ -514,17 +524,18 @@
             flex-direction: column;
             gap: 20px;
 
-            > div:first-child {
+            >div:first-child {
               display: none;
             }
 
-            > div {
+            >div {
               color: #848484;
               font-family: Onest;
               font-size: 14px;
               font-style: normal;
               font-weight: 400;
-              line-height: 28px; /* 200% */
+              line-height: 28px;
+              /* 200% */
             }
           }
 
@@ -540,7 +551,8 @@
               font-size: 14px;
               font-style: normal;
               font-weight: 400;
-              line-height: 28px; /* 200% */
+              line-height: 28px;
+              /* 200% */
               width: fit-content;
               border-radius: 2px;
               background: #C29773;
@@ -550,77 +562,69 @@
       }
 
       .location-features {
-        &.active {
-        }
+        &.active {}
 
         .content {
           width: 100%;
-          &:last-child {
-          }
 
-          .title {
-          }
+          &:last-child {}
+
+          .title {}
 
           .description {
-            div {
-            }
+            div {}
           }
         }
 
         .image {
           width: 100%;
-          img {
-          }
+
+          img {}
         }
       }
 
       .infrastructure {
         display: flex;
         flex-direction: column;
+
         .block {
           .info {
-            div:first-child {
-            }
+            div:first-child {}
 
-            div:last-child {
-            }
+            div:last-child {}
           }
 
-          .read-more {
-          }
+          .read-more {}
         }
       }
 
       .gallery {
         display: flex;
         flex-direction: column;
+
         .image {
-          img {
-          }
+          img {}
         }
 
       }
 
       .property {
         .content {
-          > div:first-child {
-          }
+          >div:first-child {}
+
           .description {
-            div {
-            }
+            div {}
           }
         }
       }
 
       .map-container {
         .content {
-          .map {
-          }
+          .map {}
         }
       }
 
-      .areas-cards {
-      }
+      .areas-cards {}
 
       .consolt-box {
         padding: 13px 0px 29px 0px;

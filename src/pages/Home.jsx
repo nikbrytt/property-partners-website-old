@@ -234,14 +234,14 @@ const Home = ({ openModal }) => {
         let data = JSON.stringify({
             "name": name,
             "phone": phone,
-            "email": "email",
+            "email": 'mail',
             "additional": "Additional information here"
         });
 
         let config = {
             method: 'post',
             maxBodyLength: Infinity,
-            url: 'https://contact.propart.ae/append-datanp',
+            url: 'https://contact.propart.ae/append-data',
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -258,6 +258,7 @@ const Home = ({ openModal }) => {
                 console.log(error);
             });
     }
+
     if (isSmallScreen ) {
         return <HomePage/>
     }
@@ -1031,7 +1032,7 @@ const Home = ({ openModal }) => {
                                 fill="#C29773" />
                         </svg>
                     </div>
-                    <div className="form-button" onClick={sentData}>{dataSented ? "Your message was received" : t("block6_line3")}
+                    <div className={`form-button ${dataSented ? 'fade-out' : ''}`}onClick={sentData}>{dataSented ? "Your message was received" : t("block6_line3")}
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path
                                 d="M9.99999 15.172L19.192 5.979L20.607 7.393L9.99999 18L3.63599 11.636L5.04999 10.222L9.99999 15.172Z"

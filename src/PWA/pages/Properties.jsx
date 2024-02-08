@@ -5,6 +5,7 @@ import Project from "../components/Project.jsx";
 import projects from "../data/response.json";
 import {useEffect, useState} from "react";
 import {shuffle} from "lodash";
+import {Link} from "react-router-dom";
 
 const Properties = () => {
 
@@ -42,7 +43,7 @@ const Properties = () => {
             <div className="option">
                 <div className="header">
                     <div className="tittle">Popular</div>
-                    <div className="see-more">See more</div>
+                    <Link to={"/phone/projects"}>  <div className="see-more">See more</div></Link>
                 </div>
                 <div className="content">
                     {
@@ -57,7 +58,7 @@ const Properties = () => {
             {visited.length>0&&<div className="option">
                 <div className="header">
                     <div className="tittle">Reviewed</div>
-                    <div className="see-more">See more</div>
+                   <div className="see-more">See more</div>
                 </div>
                 <div className="content">
                     {projects.filter(project => visited.includes(project._id)).map((likedProject, index) => (

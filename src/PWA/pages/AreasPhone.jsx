@@ -1,6 +1,5 @@
 import "../styles/Areas.scss"
 import Menu from "../components/Menu.jsx";
-import bluewaters from "../../assets/Areas/AreasPhoto/bluewaters.png"
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Pagination} from "swiper/modules";
 import Offers from "../components/Offers.jsx";
@@ -12,7 +11,6 @@ import BigAreaCard5 from "../../assets/pwa/Areas/bigAreaCard5.png"
 import Footer from "../components/Footer.jsx";
 import {useEffect, useState} from "react";
 import AreasCardsInfo from "../../data/AreasCardsInfo.jsx";
-import areasinfo from "../../data/Areasinfo.jsx";
 import DynamicTruncatedText from "../../components/DynamicTruncatedText.jsx";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import {Link} from "react-router-dom";

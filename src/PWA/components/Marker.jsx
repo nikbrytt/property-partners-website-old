@@ -4,12 +4,11 @@ import {
     InfoWindow,
     useAdvancedMarkerRef
 } from '@vis.gl/react-google-maps';
-import RealEstate from '../pages/RealEstate';
 import {Link} from "react-router-dom";
 
 
 
-const Marker = ({ index, mapZoom, project }) => {
+const Marker = ({ index, mapZoom, project,currnetIndex,setCurrentIndex }) => {
     const [infowindowOpen, setInfowindowOpen] = useState(false);
     const [markerRef, marker] = useAdvancedMarkerRef();
     const elementRef = useRef(null);
@@ -45,7 +44,7 @@ const Marker = ({ index, mapZoom, project }) => {
                         lng: Number.parseFloat(project.lng)
                     }}
                     title={'AdvancedMarker that opens an Infowindow when clicked.'}
-                    onClick={() => setInfowindowOpen(true)}
+                    onClick={() => setCurrentIndex(index)}
                 >
                     <div style={{ borderRadius: mapZoom < 13 ? 20 : 5, padding: mapZoom < 13 ? 7 : 0 }}>
                         <div ref={elementRef} style={{ display: mapZoom < 13 ? "none" : "block" }} className="price">
@@ -54,18 +53,18 @@ const Marker = ({ index, mapZoom, project }) => {
                     </div>
                 </AdvancedMarker>
             )}
-            {infowindowOpen && (
+            {currnetIndex===index && (
                 <InfoWindow
                     anchor={marker}
                     maxWidth={200}
                 >
-                     <div className="pop-container" onClick={() => window.location.href = `/project/${project._id}`}>
+                    <Link to="/phone/project" state={{ project: project }} >  <div className="pop-container" >
                         <img src={project.imageSrcMain} alt="" />
                         <div className="pop-content">
                             <div>{project.projectName}</div>
                             <div>{project.developer}</div>
                         </div>
-                    </div>
+                    </div></Link>
                 </InfoWindow>
             )}
         </>

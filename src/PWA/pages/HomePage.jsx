@@ -197,7 +197,198 @@ const HomePage = () => {
 
         return () => clearInterval(interval);
     }, []);
+    const  values =[
+        {"value": "Al Barari", "label": "Al Barari"},
+        {"value": "Al Barsha 1", "label": "Al Barsha 1"},
+        {"value": "Al Barsha 2", "label": "Al Barsha 2"},
+        {"value": "Al Barsha 3", "label": "Al Barsha 3"},
+        {"value": "Al Furjan", "label": "Al Furjan"},
+        {"value": "Al Habtoor City", "label": "Al Habtoor City"},
+        {"value": "Al Jaddaf", "label": "Al Jaddaf"},
+        {"value": "Al Khail Heights", "label": "Al Khail Heights"},
+        {"value": "Al Reem Island, Abu Dhabi", "label": "Al Reem Island, Abu Dhabi"},
+        {"value": "Al Sufouh 1", "label": "Al Sufouh 1"},
+        {"value": "Al Sufouh 2", "label": "Al Sufouh 2"},
+        {"value": "Al Wasl (City Walk)", "label": "Al Wasl (City Walk)"},
+        {"value": "Arabian Ranches", "label": "Arabian Ranches"},
+        {"value": "Arabian Ranches 2", "label": "Arabian Ranches 2"},
+        {"value": "Arabian Ranches 3", "label": "Arabian Ranches 3"},
+        {"value": "Arjan", "label": "Arjan"},
+        {"value": "Barsha South", "label": "Barsha South"},
+        {"value": "Bluewaters Island", "label": "Bluewaters Island"},
+        {"value": "Business Bay", "label": "Business Bay"},
+        {"value": "Cherrywoods", "label": "Cherrywoods"},
+        {"value": "City of Arabia", "label": "City of Arabia"},
+        {"value": "Complex (Dubailand)", "label": "Complex (Dubailand)"},
+        {"value": "Creekside", "label": "Creekside"},
+        {"value": "Culture Village", "label": "Culture Village"},
+        {"value": "Damac Hills", "label": "Damac Hills"},
+        {"value": "Damac Hills 2", "label": "Damac Hills 2"},
+        {"value": "Damac Lagoons", "label": "Damac Lagoons"},
+        {"value": "Discovery Gardens", "label": "Discovery Gardens"},
+        {"value": "Downtown Dubai", "label": "Downtown Dubai"},
+        {"value": "Dubai Creek Harbour", "label": "Dubai Creek Harbour"},
+        {"value": "Dubai Design District", "label": "Dubai Design District"},
+        {"value": "Dubai Festival City", "label": "Dubai Festival City"},
+        {"value": "Dubai Golf City", "label": "Dubai Golf City"},
+        {"value": "Dubai Harbour", "label": "Dubai Harbour"},
+        {"value": "Dubai Healthcare City", "label": "Dubai Healthcare City"},
+        {"value": "Dubai Hills", "label": "Dubai Hills"},
+        {"value": "Dubai International", "label": "Dubai International"},
+        {"value": "Dubai Investment Park", "label": "Dubai Investment Park"},
+        {"value": "Dubai Islands", "label": "Dubai Islands"},
+        {"value": "Dubai Marina", "label": "Dubai Marina"},
+        {"value": "Dubai Maritime City", "label": "Dubai Maritime City"},
+        {"value": "Dubai Production City", "label": "Dubai Production City"},
+        {"value": "Dubai Science Park", "label": "Dubai Science Park"},
+        {"value": "Dubai Silicon Oasis", "label": "Dubai Silicon Oasis"},
+        {"value": "Dubai South", "label": "Dubai South"},
+        {"value": "Dubai Sports City", "label": "Dubai Sports City"},
+        {"value": "Dubai Studio City", "label": "Dubai Studio City"},
+        {"value": "Dubai Water Canal", "label": "Dubai Water Canal"},
+        {"value": "Dubai Waterfront", "label": "Dubai Waterfront"},
+        {"value": "Emaar South", "label": "Emaar South"},
+        {"value": "Emirates Hills", "label": "Emirates Hills"},
+        {"value": "Expo City Dubai", "label": "Expo City Dubai"},
+        {"value": "Financial Centre", "label": "Financial Centre"},
+        {"value": "International City", "label": "International City"},
+        {"value": "Jebel Ali", "label": "Jebel Ali"},
+        {"value": "Jumeirah", "label": "Jumeirah"},
+        {"value": "Jumeirah Beach Residence (JBR)", "label": "Jumeirah Beach Residence (JBR)"},
+        {"value": "Jumeirah Golf Estates", "label": "Jumeirah Golf Estates"},
+        {"value": "Jumeirah Heights", "label": "Jumeirah Heights"},
+        {"value": "Jumeirah Islands", "label": "Jumeirah Islands"},
+        {"value": "Jumeirah Lake Towers (JLT)", "label": "Jumeirah Lake Towers (JLT)"},
+        {"value": "Jumeirah Park", "label": "Jumeirah Park"},
+        {"value": "Jumeirah Village Circle (JVC)", "label": "Jumeirah Village Circle (JVC)"},
+        {"value": "Jumeirah Village Triangle (JVT)", "label": "Jumeirah Village Triangle (JVT)"},
+        {"value": "La Mer", "label": "La Mer"},
+        {"value": "Liwan", "label": "Liwan"},
+        {"value": "Madina Jumeirah Living", "label": "Madina Jumeirah Living"},
+        {"value": "Mina Al Arab, Ras Al Khaimah", "label": "Mina Al Arab, Ras Al Khaimah"},
+        {"value": "Mina Rashid", "label": "Mina Rashid"},
+        {"value": "Mirdif Hills", "label": "Mirdif Hills"},
+        {"value": "Mirdif Tulip", "label": "Mirdif Tulip"},
+        {"value": "Mohammed Bin Rashid City (MBR)", "label": "Mohammed Bin Rashid City (MBR)"},
+        {"value": "Motor City", "label": "Motor City"},
+        {"value": "Mudon", "label": "Mudon"},
+        {"value": "Nad Al Sheba", "label": "Nad Al Sheba"},
+        {"value": "Nshama", "label": "Nshama"},
+        {"value": "Old Town", "label": "Old Town"},
+        {"value": "Oman", "label": "Oman"},
+        {"value": "Park Gate Residences", "label": "Park Gate Residences"},
+        {"value": "Palm Jumeirah", "label": "Palm Jumeirah"},
+        {"value": "Ras Al Khor", "label": "Ras Al Khor"},
+        {"value": "Remraam", "label": "Remraam"},
+        {"value": "Rashid Yachts and Marina", "label": "Rashid Yachts and Marina"},
+        {"value": "Sharjah", "label": "Sharjah"},
+        {"value": "Sheikh Zayed Road", "label": "Sheikh Zayed Road"},
+        {"value": "The Greens", "label": "The Greens"},
+        {"value": "The Lakes", "label": "The Lakes"},
+        {"value": "The Meadows", "label": "The Meadows"},
+        {"value": "The Springs", "label": "The Springs"},
+        {"value": "The Sustainable City", "label": "The Sustainable City"},
+        {"value": "The Valley", "label": "The Valley"},
+        {"value": "The Villa", "label": "The Villa"},
+        {"value": "The World Islands", "label": "The World Islands"},
+        {"value": "Tilal Al Ghaf", "label": "Tilal Al Ghaf"},
+        {"value": "Town Square", "label": "Town Square"},
+        {"value": "Villanova", "label": "Villanova"},
+        {"value": "Wadi Al Safa 5", "label": "Wadi Al Safa 5"},
+        {"value": "YAS Island", "label": "YAS Island"}
+    ];
+    const sizeData = [
+        {value:300,label:"300"},
+        {value:600,label:"600"},
+        {value:900,label:"900"},
+        {value:1300,label:"1300"},
+        {value:1700,label:"1700"},
+        {value:2200,label:"2200"},
+        {value:2600,label:"2600"},
+        {value:3300,label:"3300"},
+        {value:5000,label:"5000"},
+    ]
+    const priceData = [
+        {value:150000,label:"150K"},
+        {value:250000,label:"250K"},
+        {value:500000,label:"500K"},
+        {value:1000000,label:"1M"},
+        {value:5000000,label:"5M"},
+    ]
+    const [filterDataProjects, setFilterDataProjects] = useState({
+        search: "",
+        priceValues: { from: "", to: "" },
+        sizeValues: { from: "", to: "" },
+        bedrooms: [],
+        location: [],
+        completion: [],
+        propertyType: []
+    })
 
+    const handlePriceFromChange = (value) => {
+        setFilterDataProjects(prevState => ({
+            ...prevState,
+            priceValues: {
+                ...prevState.priceValues,
+                from: value
+            }
+        }));
+    }
+
+    const handlePriceToChange = (value) => {
+        setFilterDataProjects(prevState => ({
+            ...prevState,
+            priceValues: {
+                ...prevState.priceValues,
+                to: value
+            }
+        }));
+    }
+    const handleSizeFromChange = (value) => {
+        setFilterDataProjects(prevState => ({
+            ...prevState,
+            sizeValues: {
+                ...prevState.sizeValues,
+                from: value
+            }
+        }));
+    }
+
+    const handleSizeToChange = (value) => {
+        setFilterDataProjects(prevState => ({
+            ...prevState,
+            sizeValues: {
+                ...prevState.sizeValues,
+                to: value
+            }
+        }));
+    }
+    const handleItemChange = (propertyName, selectedItem) => {
+        setFilterDataProjects(prevState => {
+            const existingItems = prevState[propertyName];
+
+            const itemExists = existingItems.includes(selectedItem);
+
+            const updatedItems = itemExists
+                ? existingItems.filter(item => item !== selectedItem)
+                : [...existingItems, selectedItem];
+
+            return {
+                ...prevState,
+                [propertyName]: updatedItems
+            };
+        });
+    }
+    const [filterVisible,setFilterVisible] = useState(null)
+    const typeOptions = [t("Plots"), t("Town-house"), t("Villa"), t("Apartments")]
+
+    const completionOptions =[t("ready"), t("any"),t("Off-plan")]
+    const handleSearchChange = (value) => {
+        setFilterDataProjects(prevState => ({
+            ...prevState,
+            search: value
+        }));
+    }
     return (<div className={"phone-home"}>
         <div className="main-banner" style={{
             backgroundImage: `url(${bannerData[activeBanner].img}), linear-gradient(180deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.33) 25.9%, rgba(0, 0, 0, 0.70) 63.4%, rgba(0, 0, 0, 0.70) 100%)`,
@@ -239,72 +430,240 @@ const HomePage = () => {
                                     d="M12.0208 11.5782L14.8762 14.4328L13.9328 15.3762L11.0782 12.5208C10.016 13.3723 8.69483 13.8354 7.3335 13.8335C4.0215 13.8335 1.3335 11.1455 1.3335 7.8335C1.3335 4.5215 4.0215 1.8335 7.3335 1.8335C10.6455 1.8335 13.3335 4.5215 13.3335 7.8335C13.3354 9.19483 12.8723 10.516 12.0208 11.5782ZM10.6835 11.0835C11.5296 10.2134 12.0021 9.04712 12.0002 7.8335C12.0002 5.25483 9.9115 3.16683 7.3335 3.16683C4.75483 3.16683 2.66683 5.25483 2.66683 7.8335C2.66683 10.4115 4.75483 12.5002 7.3335 12.5002C8.54712 12.5021 9.71342 12.0296 10.5835 11.1835L10.6835 11.0835Z"
                                     fill="white"/>
                             </svg>
-                            <input type="text" placeholder={"Project name"}/>
+                            <input value={filterDataProjects.search} onChange={(e)=>handleSearchChange(e.target.value)} type="text" placeholder={"Project name"}/>
                         </div>
                     </div>
                     <div className="multi-row">
-                        <div className="filter-input">
+                        <div  className="dropdown">
+                            <div onClick={()=>{
+                                if(filterVisible===0){
+                                    setFilterVisible(null)
+                                }
+                                else {
+                                    setFilterVisible(0)
+                                }
+                            }} className="container">
+                                Price from
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                     fill="none">
+                                    <path d="M8 10.6665L4 6.6665H12L8 10.6665Z" fill="white"/>
+                                </svg>
+                            </div>
+                            {filterVisible===0&&   <div className="menu">
+                                {priceData.map((data,index)=>(
+                                    <div onClick={()=>handlePriceFromChange(data.value)} className={`option ${filterDataProjects.priceValues.from===data.value?"active":""}`}>
+                                        {data.label}
+                                    </div>
 
-                            <input type="text" placeholder={"Price from"}/>
+                                ))}
+
+                            </div>}
                         </div>
-                        <div className="filter-input">
+                        <div className="dropdown">
+                            <div onClick={()=>{
+                                if(filterVisible===1){
+                                    setFilterVisible(null)
+                                }
+                                else {
+                                    setFilterVisible(1)
+                                }
+                            }} className="container">
+                                Price to
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                     fill="none">
+                                    <path d="M8 10.6665L4 6.6665H12L8 10.6665Z" fill="white"/>
+                                </svg>
+                            </div>
+                            {filterVisible === 1&&   <div className="menu">
+                                {priceData.map((data,index)=>(
+                                    <div onClick={()=>handlePriceToChange(data.value)} className={`option ${filterDataProjects.priceValues.to===data.value?"active":""}`}>
+                                        {data.label}
+                                    </div>
 
-                            <input type="text" placeholder={"Price to"}/>
-                        </div>
-                    </div>
-                    <div className="multi-row">
-                        <div className="filter-input">
+                                ))}
 
-                            <input type="text" placeholder={"Size from"}/>
-                        </div>
-                        <div className="filter-input">
-
-                            <input type="text" placeholder={"Size to"}/>
+                            </div>}
                         </div>
                     </div>
                     <div className="multi-row">
                         <div className="dropdown">
-                            <div className="container">
+                            <div onClick={()=>{
+                                if(filterVisible===2){
+                                    setFilterVisible(null)
+                                }
+                                else {
+                                    setFilterVisible(2)
+                                }
+                            }} className="container">
+                                Size from
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                     fill="none">
+                                    <path d="M8 10.6665L4 6.6665H12L8 10.6665Z" fill="white"/>
+                                </svg>
+                            </div>
+                            {filterVisible === 2&&   <div className="menu">
+                                {sizeData.map((data,index)=>(
+                                    <div onClick={()=>handleSizeFromChange(data.value)} className={`option ${filterDataProjects.sizeValues.from===data.value?"active":""}`}>
+                                        {data.label}
+                                    </div>
+
+                                ))}
+
+                            </div>}
+                        </div>
+                        <div className="dropdown">
+                            <div onClick={()=>{
+                                if(filterVisible===3){
+                                    setFilterVisible(null)
+                                }
+                                else {
+                                    setFilterVisible(3)
+                                }
+                            }} className="container">
+                                Size to
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                     fill="none">
+                                    <path d="M8 10.6665L4 6.6665H12L8 10.6665Z" fill="white"/>
+                                </svg>
+                            </div>
+                            {filterVisible === 3&&   <div className="menu">
+                                {sizeData.map((data,index)=>(
+                                    <div onClick={()=>handleSizeToChange(data.value)} className={`option ${filterDataProjects.sizeValues.to===data.value?"active":""}`}>
+                                        {data.label}
+                                    </div>
+
+                                ))}
+
+                            </div>}
+                        </div>
+                    </div>
+                    <div className="multi-row">
+                        <div className="dropdown">
+                            <div onClick={()=>{
+                                if(filterVisible===4){
+                                    setFilterVisible(null)
+                                }
+                                else {
+                                    setFilterVisible(4)
+                                }
+                            }} className="container">
                                 Bedrooms
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
                                      fill="none">
                                     <path d="M8 10.6665L4 6.6665H12L8 10.6665Z" fill="white"/>
                                 </svg>
                             </div>
+                            {filterVisible === 4&& <div className="menu">
+                                {bedroomOptions.map((option,index)=>(
+                                    <div onClick={()=>handleItemChange("bedrooms",option)} className={`option ${filterDataProjects.bedrooms.includes(option)?"active":""}`}>
+                                        {filterDataProjects.bedrooms.includes(option)?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z" fill="#C29773"/>
+                                            </svg>:
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12Z" stroke="#B6B6B6" stroke-width="1.5"/>
+                                            </svg>
+                                        }
+                                        {option}</div>
+
+                                ))}
+                            </div>}
                         </div>
                         <div className="dropdown">
-                            <div className="container">
+                            <div onClick={()=>{
+                                if(filterVisible===5){
+                                    setFilterVisible(null)
+                                }
+                                else {
+                                    setFilterVisible(5)
+                                }
+                            }} className="container">
                                 Location
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
                                      fill="none">
                                     <path d="M8 10.6665L4 6.6665H12L8 10.6665Z" fill="white"/>
                                 </svg>
                             </div>
+                            {filterVisible === 5&&   <div className="menu">
+                                {values.map((option,index)=>(
+                                    <div onClick={()=>handleItemChange("location",option.label)} className={`option ${filterDataProjects.location.includes(option.label)?"active":""}`}>
+                                        {filterDataProjects.location.includes(option.value)?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z" fill="#C29773"/>
+                                            </svg>:
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12Z" stroke="#B6B6B6" stroke-width="1.5"/>
+                                            </svg>
+                                        }
+                                        {option.value.length > 10 ? option.value.slice(0, 10) + '...' : option.value}</div>
+
+                                ))}
+                            </div>}
                         </div>
                     </div>
                     <div className="multi-row">
                         <div className="dropdown">
-                            <div className="container">
+                            <div onClick={()=>{
+                                if(filterVisible===6){
+                                    setFilterVisible(null)
+                                }
+                                else {
+                                    setFilterVisible(6)
+                                }
+                            }} className="container">
                                 Completion
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
                                      fill="none">
                                     <path d="M8 10.6665L4 6.6665H12L8 10.6665Z" fill="white"/>
                                 </svg>
                             </div>
+                            {filterVisible === 6&&  <div className="menu">
+                                {completionOptions.map((option,index)=>(
+                                    <div onClick={()=>handleItemChange("completion",option)} className={`option ${filterDataProjects.completion.includes(option)?"active":""}`}>
+                                        {filterDataProjects.completion.includes(option)?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z" fill="#C29773"/>
+                                            </svg>:
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12Z" stroke="#B6B6B6" stroke-width="1.5"/>
+                                            </svg>
+                                        }
+                                        {option}</div>
+
+                                ))}
+                            </div>}
                         </div>
                         <div className="dropdown">
-                            <div className="container">
+                            <div onClick={()=>{
+                                if(filterVisible===7){
+                                    setFilterVisible(null)
+                                }
+                                else {
+                                    setFilterVisible(7)
+                                }
+                            }}  className="container">
                                 Property type
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
                                      fill="none">
                                     <path d="M8 10.6665L4 6.6665H12L8 10.6665Z" fill="white"/>
                                 </svg>
                             </div>
+                            {filterVisible === 7&&  <div className="menu">
+                                {typeOptions.map((option,index)=>(
+                                    <div onClick={()=>handleItemChange("propertyType",option)} className={`option ${filterDataProjects.propertyType.includes(option)?"active":""}`}>
+                                        {filterDataProjects.propertyType.includes(option)?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z" fill="#C29773"/>
+                                            </svg>:
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12Z" stroke="#B6B6B6" stroke-width="1.5"/>
+                                            </svg>
+                                        }
+                                        {option}</div>
+
+                                ))}
+                            </div>}
                         </div>
                     </div>
-                    <div className="button">
+                    <Link to="/phone/projects" state={{ filter: filterDataProjects }} ><div className="button">
                         Find
-                    </div>
+                    </div></Link>
 
                 </div>
             </div>
@@ -620,7 +979,7 @@ const HomePage = () => {
         <div className="team">
             <div className="prompt">
                 <div className="tittle">Our team</div>
-                <div className="see-more">See more</div>
+                <div onClick={()=>setVisibleTeam(9)} className="see-more">See more</div>
             </div>
             <div className="content">
                 {team.slice(0,visibleTeam).map((team,index)=>(

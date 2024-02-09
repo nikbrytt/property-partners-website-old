@@ -6,7 +6,7 @@ import {APIProvider, ControlPosition, MapControl,Map} from "@vis.gl/react-google
 import React, {useState} from "react";
 import projects from "../data/response.json"
 import Project from "../../components/Project.jsx";
-import Marker from "../../components/Marker.jsx";
+import Marker from "../components/Marker.jsx";
 const PhoneMap = () => {
     const [mapZoom, setMapZoom] = useState(10);
     const [currnetIndex, setCurrentIndex] = useState(null)

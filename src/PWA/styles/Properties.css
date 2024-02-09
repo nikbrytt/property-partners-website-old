@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  min-height: 100vh;
 }
 .Properties .project-content {
   display: flex;
@@ -56,6 +57,247 @@
 }
 .Properties .project-content .option .content::-webkit-scrollbar {
   display: none;
+}
+.Properties .filter-prop {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: white;
+  animation: myAnim 1s ease 0s 1 normal forwards;
+  z-index: 100000000000000000000;
+  border-radius: 40px 40px 0px 0px;
+  padding: 10px 20px 5px 20px;
+  height: 70vh !important;
+  max-height: 70vh;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+@keyframes myAnim {
+  0% {
+    transform: translateY(250px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.Properties .filter-prop::-webkit-scrollbar {
+  display: none;
+}
+.Properties .filter-prop .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Properties .filter-prop .header .name {
+  color: var(--ProPart-Blue, #191C38);
+  text-align: center;
+  font-family: Onest, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 21.6px */
+}
+.Properties .filter-prop .header .clear {
+  color: #C29773;
+  text-align: center;
+  font-family: Onest, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 16.8px */
+}
+.Properties .filter-prop .content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-top: 10px;
+}
+.Properties .filter-prop .content .apply {
+  display: flex;
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid #E9E9E9;
+  background: #C29773;
+  display: flex;
+  padding: 12px 19px 12px 18px;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  text-align: center;
+  font-family: Onest, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 16.8px */
+}
+.Properties .filter-prop .content .selection {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.Properties .filter-prop .content .selection .tittle {
+  color: #000;
+  font-family: Onest, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 19.2px */
+}
+.Properties .filter-prop .content .selection .options {
+  display: flex;
+  gap: 11px;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.Properties .filter-prop .content .selection .options::-webkit-scrollbar {
+  display: none;
+}
+.Properties .filter-prop .content .selection .options .option {
+  display: flex;
+  padding: 12px 19px 12px 18px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid #E9E9E9;
+  background: #FDFDFD;
+  color: #000;
+  text-align: center;
+  font-family: Onest, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 16.8px */
+}
+.Properties .filter-prop .content .selection .options .option.active {
+  border-radius: 20px;
+  border: 1px solid #C29773;
+  background: #C29773;
+  color: #FFF;
+  text-align: center;
+  font-family: Onest, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 16.8px */
+}
+.Properties .filter-prop .content .delimeter {
+  background: #E9E9E9;
+  height: 1px;
+  width: 100%;
+}
+.Properties .filter-prop .content .selection-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.Properties .filter-prop .content .selection-icons .tittle {
+  color: #000;
+  font-family: Onest, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 19.2px */
+}
+.Properties .filter-prop .content .selection-icons .options {
+  display: flex;
+  gap: 11px;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.Properties .filter-prop .content .selection-icons .options::-webkit-scrollbar {
+  display: none;
+}
+.Properties .filter-prop .content .selection-icons .options .option {
+  display: flex;
+  width: 104px;
+  height: 100px;
+  padding: 15px 13px;
+  align-items: flex-start;
+  align-content: space-between;
+  column-gap: 40px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  border: 1px solid #E9E9E9;
+  background: #FDFDFD;
+  color: #000;
+  text-align: center;
+  font-family: Onest, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 16.8px */
+}
+.Properties .filter-prop .content .selection-icons .options .option.active {
+  border-radius: 20px;
+  border: 1px solid #C29773;
+  background: #C29773;
+  color: #FFF;
+  text-align: center;
+  font-family: Onest, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 16.8px */
+}
+.Properties .filter-prop .content .areas {
+  width: 100%;
+  padding: 8.5px 10px;
+  background: white;
+  border-radius: 15px;
+  border: 1px solid #E9E9E9;
+}
+.Properties .filter-prop .content .areas .main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #000;
+  font-family: Onest, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 19.2px */
+}
+.Properties .filter-prop .content .areas .main .open {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px solid #E9E9E9;
+  background: #FDFDFD;
+}
+.Properties .filter-prop .content .areas .choise {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.Properties .filter-prop .content .areas .choise::-webkit-scrollbar {
+  display: none;
+}
+.Properties .filter-prop .content .areas .choise.visible {
+  overflow: auto;
+  opacity: 1;
+  max-height: 200px;
+}
+.Properties .filter-prop .content .areas .choise .option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #000;
+  font-family: Onest, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px; /* 135.714% */
 }
 .Properties .footer {
   position: fixed;

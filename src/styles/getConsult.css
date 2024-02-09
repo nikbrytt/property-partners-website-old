@@ -35,6 +35,7 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  width: 100%;
 }
 .get-consult .get-consult-form .contact-us-form .texts-form .texts {
   display: flex;
@@ -82,6 +83,17 @@
 .get-consult .get-consult-form .contact-us-form .texts-form .form .form-input input:focus {
   outline: none;
 }
+.get-consult .get-consult-form .contact-us-form .texts-form .form .fade-out {
+  animation: fadeOut 2s ease forwards;
+}
+@keyframes fadeOut {
+  from {
+    background: #C29773;
+  }
+  to {
+    background: #191C38;
+  }
+}
 .get-consult .get-consult-form .contact-us-form .texts-form .form .form-button {
   cursor: pointer;
   display: flex;
@@ -96,6 +108,9 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+.get-consult .get-consult-form .contact-us-form .texts-form .form .form-button:hover {
+  background: #21254B;
 }
 .get-consult .get-consult-form .contact-us-form .agree-terms {
   width: 80%;
@@ -166,7 +181,7 @@
     flex-direction: column;
     gap: 16px;
     width: 100%;
-    padding: 16px;
+    padding: 0px 16px 16px 16px;
   }
   .get-consult .get-consult-form .contact-us-form .texts-form .texts {
     display: flex;
@@ -260,7 +275,7 @@
 }
 @media (max-width: 830px) {
   .get-consult {
-    padding: 16px;
+    padding: 0px;
     height: auto;
   }
   .get-consult .image {

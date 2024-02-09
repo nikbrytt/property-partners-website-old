@@ -53,7 +53,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 48px;
+  gap: 16px;
   flex-shrink: 0;
   width: 88%;
 }
@@ -62,6 +62,14 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+.help-orange .free-consult-form .contact-us-form .form .get-in-touch {
+  color: #191C38;
+  font-family: Onest;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 .help-orange .free-consult-form .contact-us-form .form .form-input {
   border: 1px solid #CACACA;
@@ -89,6 +97,17 @@
 .help-orange .free-consult-form .contact-us-form .form .form-input input:focus {
   outline: none;
 }
+.help-orange .free-consult-form .contact-us-form .form .fade-out {
+  animation: fadeOut 2s ease forwards;
+}
+@keyframes fadeOut {
+  from {
+    background: #C29773;
+  }
+  to {
+    background: #191C38;
+  }
+}
 .help-orange .free-consult-form .contact-us-form .form .form-button {
   cursor: pointer;
   display: flex;
@@ -96,13 +115,16 @@
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
-  background: #C29773 !important;
+  background: #C29773;
   color: #FFF;
-  font-family: HelveticaBold, serif;
+  font-family: Onest, serif;
   font-size: 16px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   line-height: normal;
+}
+.help-orange .free-consult-form .contact-us-form .form .form-button:hover {
+  background: #B78F6D;
 }
 .help-orange .free-consult-form .contact-us-form .agree-terms {
   width: 80%;
@@ -170,8 +192,9 @@
 @media (max-width: 830px) {
   .help-orange {
     flex-direction: column;
-    gap: 8px;
+    gap: 0px;
     height: auto;
+    padding: 0;
   }
   .help-orange .help-content {
     width: 100%;

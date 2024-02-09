@@ -6,10 +6,11 @@ import projects from "../data/response.json"
 import Modal from "react-modal";
 import {useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
+import {useLocation} from "react-router-dom";
 const Projects = () => {
-
+    let { state } = useLocation();
     const { t } = useTranslation();
-    const [filterDataProjects, setFilterDataProjects] = useState({
+    const defaultFilterData = {
         search: "",
         priceValues: { from: "", to: "" },
         sizeValues: { from: "", to: "" },
@@ -17,7 +18,11 @@ const Projects = () => {
         location: [],
         completion: [],
         propertyType: []
-    })
+    };
+
+    const [filterDataProjects, setFilterDataProjects] = useState(
+        state && state.filter ? state.filter : defaultFilterData
+    );
     const [visibleArea, setVisibleArea] = useState(false)
     const bedroomOptions = [t("studio"), "1", "2", "3", "4", "5", "6", "7"];
     const priceData = [
@@ -287,17 +292,6 @@ const Projects = () => {
 
     return(<div className={"projects"}>
         <MenuProjectFilter setFilterOpen={setFilterOpen} />
-        <div className="projects-data">
-            <div className="tittle">All projects</div>
-            <div className="content">
-                {filteredProjects.map((project,index)=>(
-                    <ProjectBig key={index} projectData={project}/>
-                ))}
-
-
-
-            </div>
-        </div>
         {filterOpen===true&&<div className="filter">
             <div className="header">
                 <svg onClick={()=>setFilterOpen(false)}  xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
@@ -458,6 +452,18 @@ const Projects = () => {
                 </div>
             </div>
         </div>}
+        <div className="projects-data">
+            <div className="tittle">All projects</div>
+            <div className="content">
+                {filteredProjects.map((project,index)=>(
+                    <ProjectBig key={index} projectData={project}/>
+                ))}
+
+
+
+            </div>
+        </div>
+
         <Footer active={"Properties"}/>
     </div>)
 }

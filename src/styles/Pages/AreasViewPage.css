@@ -1,0 +1,450 @@
+.areas-view-page {
+  display: flex;
+  flex-direction: column;
+}
+.areas-view-page .areas-container .path {
+  display: flex;
+  gap: 8px;
+  padding: 23px 64px 10px 64px;
+}
+.areas-view-page .areas-container .path div {
+  color: #8F8F8F;
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.areas-view-page .areas-container .path a {
+  color: #8F8F8F;
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.areas-view-page .areas-container .area-baner {
+  padding: 10px 64px 32px 64px;
+}
+.areas-view-page .areas-container .area-baner .image-content {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+}
+.areas-view-page .areas-container .area-baner .image-content .image {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.areas-view-page .areas-container .area-baner .image-content .content {
+  position: absolute;
+  padding: 46px 36px;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  background: rgba(25, 28, 56, 0.9);
+  max-width: 35%;
+  height: 100%;
+  justify-content: space-between;
+}
+.areas-view-page .areas-container .area-baner .image-content .content .title {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.areas-view-page .areas-container .area-baner .image-content .content .title > div:first-child {
+  color: #FFF;
+  font-family: Onest;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  /* 64.8px */
+}
+.areas-view-page .areas-container .area-baner .image-content .content .title > div {
+  color: #D1D1D1;
+  font-family: Onest;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  /* 175% */
+}
+.areas-view-page .areas-container .area-baner .image-content .content .advantages {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.areas-view-page .areas-container .area-baner .image-content .content .advantages .advantage {
+  display: flex;
+  padding: 5px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #FFF;
+  font-family: Onest;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  /* 175% */
+  border-radius: 2px;
+  background: #C29773;
+}
+.areas-view-page .areas-container .baner-info {
+  display: none;
+}
+.areas-view-page .areas-container .location-features {
+  display: flex;
+  gap: 54px;
+  padding: 32px 64px 29px 64px;
+}
+.areas-view-page .areas-container .location-features.active {
+  display: none;
+}
+.areas-view-page .areas-container .location-features .content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 20px;
+  background: #fff;
+  width: 100%;
+}
+.areas-view-page .areas-container .location-features .content .title {
+  color: #191C38;
+  font-family: Helvetica;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+.areas-view-page .areas-container .location-features .content .description {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: space-between;
+  height: 100%;
+}
+.areas-view-page .areas-container .location-features .content .description div {
+  color: #575757;
+  font-family: Onest;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  /* 175% */
+}
+.areas-view-page .areas-container .location-features .image {
+  width: 100%;
+  padding: 15px;
+  background: #fff;
+}
+.areas-view-page .areas-container .location-features .image img {
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+.areas-view-page .areas-container .infrastructure {
+  padding: 29px 64px 28px 64px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 38px;
+}
+.areas-view-page .areas-container .infrastructure .block {
+  display: flex;
+  min-height: 294px;
+  padding: 25px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  justify-content: space-between;
+  height: 100%;
+  border-radius: 2px;
+  background: #FFF;
+  box-shadow: 0px 2px 60px 0px rgba(0, 0, 0, 0.05);
+}
+.areas-view-page .areas-container .infrastructure .block .info {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+}
+.areas-view-page .areas-container .infrastructure .block .info div:first-child {
+  color: #191C38;
+  font-family: Onest;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  /* 43.2px */
+}
+.areas-view-page .areas-container .infrastructure .block .info div:last-child {
+  overflow: hidden;
+  color: #575757;
+  text-overflow: ellipsis;
+  font-family: Onest;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  /* 155.556% */
+}
+.areas-view-page .areas-container .infrastructure .block .read-more {
+  overflow: hidden;
+  color: #C29773;
+  text-overflow: ellipsis;
+  font-family: Onest;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.64px;
+}
+.areas-view-page .areas-container .gallery {
+  padding: 29px 64px 28px 64px;
+  gap: 44px;
+  display: flex;
+}
+.areas-view-page .areas-container .gallery .image {
+  width: 100%;
+}
+.areas-view-page .areas-container .gallery .image img {
+  width: 100%;
+}
+.areas-view-page .areas-container .property {
+  padding: 28px 64px 29px 64px;
+}
+.areas-view-page .areas-container .property .content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: #fff;
+  padding: 25px 20px;
+}
+.areas-view-page .areas-container .property .content > div:first-child {
+  color: #191C38;
+  font-family: Helvetica;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  /* 43.2px */
+}
+.areas-view-page .areas-container .property .content .description {
+  display: flex;
+  flex-direction: column;
+}
+.areas-view-page .areas-container .property .content .description div {
+  color: #575757;
+  font-family: Onest;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 37px;
+  /* 205.556% */
+}
+.areas-view-page .areas-container .map-container {
+  padding: 30px 64px 30px 64px;
+}
+.areas-view-page .areas-container .map-container .content {
+  height: 70vh;
+  width: 100%;
+}
+.areas-view-page .areas-container .map-container .content .map {
+  width: 100%;
+  height: 100%;
+}
+.areas-view-page .areas-container .areas-cards {
+  padding: 28px 64px 64px 64px;
+}
+.areas-view-page .areas-container .consolt-box {
+  padding: 64px 0px 29px 0px;
+}
+
+@media (max-width: 1300px) {
+  .areas-view-page .areas-container .path {
+    padding: 16px 16px 8px 16px;
+  }
+  .areas-view-page .areas-container .area-baner {
+    padding: 8px 16px 16px 16px;
+  }
+  .areas-view-page .areas-container .area-baner .image-content {
+    height: 60vh;
+  }
+  .areas-view-page .areas-container .area-baner .image-content .content {
+    padding: 24px;
+  }
+  .areas-view-page .areas-container .area-baner .image-content .content .title {
+    gap: 10px;
+  }
+  .areas-view-page .areas-container .area-baner .image-content .content .title > div:first-child {
+    font-size: 24px;
+  }
+  .areas-view-page .areas-container .area-baner .image-content .content .title > div {
+    font-size: 12px;
+  }
+  .areas-view-page .areas-container .area-baner .image-content .content .advantages .advantage {
+    padding: 2px 8px;
+    font-size: 16px;
+  }
+  .areas-view-page .areas-container .location-features {
+    padding: 16px 16px 16px 16px;
+    gap: 16px;
+    display: none;
+    flex-wrap: wrap;
+  }
+  .areas-view-page .areas-container .location-features.active {
+    display: flex;
+  }
+  .areas-view-page .areas-container .location-features .content {
+    width: calc(50% - 8px);
+  }
+  .areas-view-page .areas-container .location-features .content:last-child {
+    width: 100%;
+  }
+  .areas-view-page .areas-container .location-features .content .title {
+    font-size: 24px;
+  }
+  .areas-view-page .areas-container .location-features .content .description {
+    justify-content: unset;
+  }
+  .areas-view-page .areas-container .location-features .content .description div {
+    font-size: 16px;
+  }
+  .areas-view-page .areas-container .location-features .image {
+    width: calc(50% - 8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .areas-view-page .areas-container .infrastructure {
+    padding: 16px 16px 16px 16px;
+    gap: 16px;
+  }
+  .areas-view-page .areas-container .infrastructure .block {
+    min-height: 260px;
+  }
+  .areas-view-page .areas-container .infrastructure .block .info div:first-child {
+    font-size: 24px;
+  }
+  .areas-view-page .areas-container .infrastructure .block .info div:last-child {
+    font-size: 16px;
+  }
+  .areas-view-page .areas-container .gallery {
+    padding: 16px 16px 16px 16px;
+    gap: 16px;
+  }
+  .areas-view-page .areas-container .property {
+    padding: 8px 16px 16px 16px;
+  }
+  .areas-view-page .areas-container .property .content > div:first-child {
+    font-size: 24px;
+  }
+  .areas-view-page .areas-container .property .content .description div {
+    font-size: 16px;
+  }
+  .areas-view-page .areas-container .map-container {
+    padding: 8px 16px 16px 16px;
+  }
+  .areas-view-page .areas-container .areas-cards {
+    padding: 8px 16px 16px 16px;
+  }
+}
+@media (max-width: 876px) {
+  .areas-view-page .areas-container .path {
+    display: none;
+  }
+  .areas-view-page .areas-container .area-baner .image-content .content {
+    top: unset;
+    bottom: 0;
+    max-width: 100%;
+    width: 100%;
+    height: fit-content;
+    padding: 15px;
+  }
+  .areas-view-page .areas-container .area-baner .image-content .content .title > div:first-child {
+    display: flex;
+    font-size: 36px;
+  }
+  .areas-view-page .areas-container .area-baner .image-content .content .title > div {
+    display: none;
+  }
+  .areas-view-page .areas-container .area-baner .image-content .content .advantages .advantage {
+    display: none;
+  }
+  .areas-view-page .areas-container .baner-info {
+    display: flex;
+    padding: 16px;
+  }
+  .areas-view-page .areas-container .baner-info.active {
+    display: flex;
+  }
+  .areas-view-page .areas-container .baner-info .content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(25, 28, 56, 0.9);
+    max-width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    gap: 20px;
+    background: #fff;
+  }
+  .areas-view-page .areas-container .baner-info .content .title {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .areas-view-page .areas-container .baner-info .content .title > div:first-child {
+    display: none;
+  }
+  .areas-view-page .areas-container .baner-info .content .title > div {
+    color: #848484;
+    font-family: Onest;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    /* 200% */
+  }
+  .areas-view-page .areas-container .baner-info .content .advantages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .areas-view-page .areas-container .baner-info .content .advantages .advantage {
+    padding: 5px 10px;
+    color: #FFF;
+    font-family: Onest;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    /* 200% */
+    width: fit-content;
+    border-radius: 2px;
+    background: #C29773;
+  }
+  .areas-view-page .areas-container .location-features .content {
+    width: 100%;
+  }
+  .areas-view-page .areas-container .location-features .image {
+    width: 100%;
+  }
+  .areas-view-page .areas-container .infrastructure {
+    display: flex;
+    flex-direction: column;
+  }
+  .areas-view-page .areas-container .gallery {
+    display: flex;
+    flex-direction: column;
+  }
+  .areas-view-page .areas-container .consolt-box {
+    padding: 13px 0px 29px 0px;
+  }
+}
+
+/*# sourceMappingURL=AreasViewPage.css.map */

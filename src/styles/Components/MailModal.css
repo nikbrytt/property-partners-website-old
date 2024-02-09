@@ -1,0 +1,220 @@
+.ReactModal__Content {
+  overflow: unset !important;
+}
+
+.mail-modal-content {
+  width: 698px;
+  height: 331px;
+  position: relative;
+}
+.mail-modal-content .content-form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.mail-modal-content .content-form .text-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(180deg, #191C38 45.32%, #0E1024 100%);
+  justify-content: space-between;
+  padding: 32px 20px 32px 30px;
+  gap: 58px;
+}
+.mail-modal-content .content-form .text-content .logo {
+  height: 51px;
+  width: 51px;
+  position: relative;
+}
+.mail-modal-content .content-form .text-content .logo svg {
+  position: absolute;
+  top: -40px;
+  left: -40px;
+}
+.mail-modal-content .content-form .text-content .text {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.mail-modal-content .content-form .text-content .text .title {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.mail-modal-content .content-form .text-content .text .title div {
+  color: #FFF;
+  font-family: Onest;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+}
+.mail-modal-content .content-form .text-content .text > div:last-child {
+  color: #FFF;
+  font-family: Onest;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+}
+.mail-modal-content .content-form .text-content .text > div:last-child span {
+  color: #FFF;
+  font-family: Onest;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+.mail-modal-content .content-form .form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 37px;
+}
+.mail-modal-content .content-form .form .content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+}
+.mail-modal-content .content-form .form .content .form-button {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2vh;
+}
+.mail-modal-content .content-form .form .content .form-button .form-input {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.mail-modal-content .content-form .form .content .form-button .form-input .input {
+  padding: 0px 16px;
+  display: flex;
+  border: 1px solid #CACACA;
+  gap: 24px;
+  height: 48px;
+  align-items: center;
+}
+.mail-modal-content .content-form .form .content .form-button .form-input .input input {
+  outline: none;
+  border: 0;
+  width: 100%;
+  color: #8F8F8F;
+  font-family: Onest;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.56px;
+}
+.mail-modal-content .content-form .form .content .form-button .button-no-spam {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.mail-modal-content .content-form .form .content .form-button .button-no-spam .fade-out {
+  animation: fadeOut 2s ease forwards;
+}
+@keyframes fadeOut {
+  from {
+    background: #191C38;
+  }
+  to {
+    background: #C29773;
+  }
+}
+.mail-modal-content .content-form .form .content .form-button .button-no-spam .button {
+  display: flex;
+  width: 127px;
+  padding: 12px 16px 10px 16px;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  font-family: Onest;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  cursor: pointer;
+  border-radius: 2px;
+  background: linear-gradient(180deg, #1D213F 0%, #0F1330 100%);
+}
+.mail-modal-content .content-form .form .content .form-button .button-no-spam .button:hover {
+  background: #21254B;
+}
+.mail-modal-content .content-form .form .content .form-button .button-no-spam .no-spam {
+  color: #8F8F8F;
+  font-family: Onest;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.mail-modal-content .content-form .form .content .not-interested {
+  color: #8F8F8F;
+  font-family: Onest;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+.mail-modal-content .content-form .form .content .not-interested:hover {
+  color: #d0d0d0;
+}
+.mail-modal-content .close {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  cursor: pointer;
+}
+
+@media (max-width: 1300px) {
+  .ReactModal__Content {
+    overflow: unset !important;
+  }
+  .mail-modal-content {
+    width: 644px;
+    height: 288px;
+  }
+  .mail-modal-content .content-form .text-content {
+    padding: 32px 25px;
+  }
+  .mail-modal-content .content-form .text-content .logo {
+    width: 35px;
+    height: 35px;
+  }
+  .mail-modal-content .content-form .text-content .logo svg {
+    top: -50px;
+    left: -50px;
+    transform: scale(0.7);
+  }
+  .mail-modal-content .content-form .text-content .text {
+    gap: 15px;
+  }
+  .mail-modal-content .content-form .text-content .text .title div {
+    font-size: 22px;
+  }
+  .mail-modal-content .content-form .text-content .text > div:last-child {
+    font-size: 14px;
+  }
+  .mail-modal-content .content-form .text-content .text > div:last-child span {
+    font-size: 14px;
+  }
+  .mail-modal-content .content-form .form .content .form-button .form-input .input input {
+    height: 38px;
+    font-size: 12px;
+  }
+  .mail-modal-content .content-form .form .content .form-button .button-no-spam .button {
+    font-size: 10px;
+  }
+  .mail-modal-content .content-form .form .content .form-button .button-no-spam .no-spam {
+    font-size: 8px;
+  }
+  .mail-modal-content .content-form .form .content .not-interested {
+    font-size: 12px;
+  }
+}
+
+/*# sourceMappingURL=MailModal.css.map */

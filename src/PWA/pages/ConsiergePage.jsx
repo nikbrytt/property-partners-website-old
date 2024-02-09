@@ -8,20 +8,14 @@ import servicesPerson from '../../assets/sevicPwa.png'
 import Footer from "../components/Footer.jsx";
 import {Pagination} from "swiper/modules";
 import {Swiper, SwiperSlide} from "swiper/react";
-import Offers from "../components/Offers.jsx";
 
 const ConiergePage = () => {
     const [activeFocus, setActiveFocus] = useState([false, false, false, false]);
     const [showMore, setShowMore] = useState(false);
-    const [showServices, setShowServices] = useState(false)
     const handleReadMoreClick = () => {
         setShowMore(!showMore);
     };
     const [services, setServices] = useState(4)
-
-    const HandleServices = ({servic}) => {
-        setServices(servic)
-    }
 
     const services1 = [
         {
@@ -202,7 +196,7 @@ const ConiergePage = () => {
                             <div className="business-services">
                                 <div className="title">Services for life</div>
                                 <div className="servic-container">
-                                    {services2.slice(0, services === 3 ? services1.length : 3).map((service, index) => (
+                                    {services3.slice(0, services === 3 ? services1.length : 3).map((service, index) => (
                                         <div key={index}
                                              className="servic"
                                         >

@@ -1,4 +1,4 @@
-import "../styles/HomePage.css"
+import "../styles/HomePage.scss"
 import Menu from "../components/Menu.jsx";
 import main1 from "../../assets/pwa/main1.png"
 import main2 from "../../assets/pwa/main2.png"
@@ -12,11 +12,11 @@ import collection3 from "../../assets/collection3.jpg";
 import collection4 from "../../assets/collection4.jpg";
 import {Autoplay, Pagination} from "swiper/modules";
 import whyDubai from "../../assets/whyDubai.jpg"
+import consultPoslugy from "../../assets/consult-poslugy.png"
 import 'swiper/css';
 import 'swiper/css/pagination';
 import Offers from "../components/Offers.jsx";
 import KindProjects from "../components/KindProjects.jsx";
-import palm from "../../assets/palm.png"
 import alexLogachevName from "../../assets/teams/alex-logachev-min.jpg";
 import qrAlex from "../../assets/teams/qr/qr-alex.svg";
 import alekseiShyianName from "../../assets/teams/aleksei-shyian-min.jpg";
@@ -681,16 +681,16 @@ const HomePage = () => {
 
                 >
                     <SwiperSlide>
-                        <Collection img={collection1} type={"For rent"} projects={"4"} price={"$190,000"}/>
+                        <Collection img={collection1} type={"For rent"} projects={"4"} price={"$190,000"} pdf={'https://propart-pdfs.s3.me-south-1.amazonaws.com/TOP+5+rental.pdf'}/>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Collection img={collection2} type={"For families"} projects={"13"} price={"$170,000"}/>
+                        <Collection img={collection2} type={"For families"} projects={"13"} price={"$170,000"} pdf={'https://propart-pdfs.s3.me-south-1.amazonaws.com/%D0%A2%D0%BE%D0%BF+5+%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%D1%96%D0%B2+%D0%B4%D0%BB%D1%8F+%D1%81%D1%96%D0%BC%D0%B5%D0%B9.pdf'}/>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Collection img={collection3} type={"Selection of villas"} projects={"5"} price={"$2,100,000"}/>
+                        <Collection img={collection3} type={"Selection of villas"} projects={"5"} price={"$2,100,000"} pdf={'https://propart-pdfs.s3.me-south-1.amazonaws.com/Top+5+projects.pdf'}/>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Collection img={collection4} type={"For resale"} projects={"6"} price={"$150,000"}/>
+                        <Collection img={collection4} type={"For resale"} projects={"6"} price={"$150,000"} pdf={'https://propart-pdfs.s3.me-south-1.amazonaws.com/PROPERTIES+FOR+RESALE.pdf'}/>
                     </SwiperSlide>
                 </Swiper>
             </div>
@@ -849,10 +849,46 @@ const HomePage = () => {
 
             </div></Link>
         </div>
+
+        <div className="soc-block">
+            <div className="title">
+                <div className="info">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+                        <rect width="42" height="42" rx="21" fill="#191C38"/>
+                        <path
+                            d="M20.4875 31H11V11.2051C11.028 11.0751 11.1319 11.01 11.3115 11.01C17.4891 11.0024 23.6672 10.9991 29.8458 11.0002C29.8867 11.0002 29.9259 11.0175 29.9548 11.0482C29.9838 11.079 30 11.1207 30 11.1641V20.8378C30 20.9482 29.9476 21.0034 29.8427 21.0034L20.5888 20.9886C20.5306 20.9886 20.5016 21.0192 20.5016 21.0804L20.4875 31ZM18.3197 18.7903C18.3197 18.7791 18.3218 18.768 18.3258 18.7577C18.3299 18.7473 18.3359 18.7379 18.3434 18.73C18.3509 18.7221 18.3598 18.7158 18.3697 18.7115C18.3795 18.7072 18.39 18.705 18.4007 18.705H27.7387C27.7602 18.705 27.7808 18.6961 27.796 18.6801C27.8111 18.6641 27.8197 18.6424 27.8197 18.6198V13.3805C27.8197 13.3579 27.8111 13.3362 27.796 13.3202C27.7808 13.3042 27.7602 13.2953 27.7387 13.2953H13.2613C13.2398 13.2953 13.2192 13.3042 13.204 13.3202C13.1889 13.3362 13.1803 13.3579 13.1803 13.3805V28.6197C13.1803 28.6423 13.1889 28.664 13.204 28.68C13.2192 28.696 13.2398 28.7049 13.2613 28.7049H18.2387C18.2602 28.7049 18.2808 28.696 18.296 28.68C18.3111 28.664 18.3197 28.6423 18.3197 28.6197V18.7903Z"
+                            fill="#C29773"/>
+                        <path
+                            d="M29.991 31H22.0181L22 23.2355C22 23.0795 22.0779 23.0015 22.2338 23.0015L29.9532 23C29.9656 23 29.9775 23.0049 29.9863 23.0137C29.9951 23.0225 30 23.0344 30 23.0468L29.991 31ZM27.8899 25.2012C27.8899 25.1775 27.8805 25.1549 27.8638 25.1382C27.8471 25.1215 27.8245 25.1121 27.8009 25.1121H24.2081C24.1845 25.1121 24.1619 25.1215 24.1452 25.1382C24.1285 25.1549 24.1192 25.1775 24.1192 25.2012V28.7973C24.1192 28.8209 24.1285 28.8436 24.1452 28.8603C24.1619 28.877 24.1845 28.8864 24.2081 28.8864H27.8009C27.8245 28.8864 27.8471 28.877 27.8638 28.8603C27.8805 28.8436 27.8899 28.8209 27.8899 28.7973V25.2012Z"
+                            fill="#C29773"/>
+                    </svg>
+                    <div className="names">
+                        <div>pro.part.uae</div>
+                        <div className='place'>Dubai, United Arabian Emirates</div>
+                        <div>1 day ago</div>
+                    </div>
+                </div>
+                <a href='https://www.instagram.com/pro.part.ae?igsh=dzIzYjkycW5wdHMz' className="follow">
+                    follow
+                </a>
+            </div>
+
+            <div className="image">
+                <img src={consultPoslugy} alt=""/>
+            </div>
+
+            <div className="follow-on-instagram">
+                <a href='https://www.instagram.com/pro.part.ae?igsh=dzIzYjkycW5wdHMz' className="button">
+                    Follow on Instagram
+                </a>
+            </div>
+        </div>
         <div className="offers">
             <div className="header">
                 <div className="tittle">Offers</div>
-                <Link to={"/phone/properties"}><div className="see-more">See more</div></Link>
+                <Link to={"/phone/properties"}>
+                    <div className="see-more">See more</div>
+                </Link>
             </div>
             <div className="offer-content">
                 <Swiper slidesPerView={1}
@@ -861,7 +897,7 @@ const HomePage = () => {
                 >
                     {slidesData.map((slide, index) => (
                         <SwiperSlide key={index}>
-                            <Offers img={slide.img} name={slide.name} developer={slide.developer} />
+                            <Offers img={slide.img} name={slide.name} developer={slide.developer}/>
                         </SwiperSlide>
                     ))}
                 </Swiper>

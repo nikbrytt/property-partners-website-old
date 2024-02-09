@@ -189,7 +189,6 @@ const AreasPhone = () => {
         return (<div className="description">
                 <div>
                     {isReadMoreShown ? children : children.substr(0, limit)}
-                    <span onClick={toggleBtn}> {isReadMoreShown ? 'Hide' : 'Read more'}</span>
                 </div>
             </div>
         )

@@ -1,0 +1,42 @@
+.consulting-phone .main-banner .about {
+  padding: 0 16px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.consulting-phone .main-banner .about .tittle {
+  color: #FFF;
+  font-family: Onest, sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 33.6px */
+}
+.consulting-phone .main-banner .about .desc {
+  color: #FFF;
+  font-family: Onest, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.consulting-phone .main-banner .about .button {
+  display: flex;
+  padding: 12px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 4px;
+  background: var(--ProPart-Blue, #191C38);
+  backdrop-filter: blur(13.1999998093px);
+  color: #FFF;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Onest, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19.2px; /* 137.143% */
+}
+
+/*# sourceMappingURL=Consulting.css.map */

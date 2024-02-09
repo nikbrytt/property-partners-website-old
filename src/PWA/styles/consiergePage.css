@@ -1,0 +1,283 @@
+.consierge-page {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.consierge-page .consierge-baner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px 16px 0px 16px;
+}
+.consierge-page .consierge-baner .pwa-menu {
+  padding: 0px 16px 0px 16px;
+}
+.consierge-page .consierge-baner .pwa-menu svg path {
+  fill: black;
+}
+.consierge-page .consierge-baner .pwa-menu .burger-menu svg:last-child path {
+  fill: #C29773;
+}
+.consierge-page .consierge-baner .content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.consierge-page .consierge-baner .content .title {
+  color: #000;
+  font-family: Onest;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 33.6px */
+  max-width: 267px;
+}
+.consierge-page .consierge-baner .content .photo-button {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.consierge-page .consierge-baner .content .photo-button .img {
+  height: 329px;
+  width: 100%;
+  object-fit: cover;
+}
+.consierge-page .consierge-baner .content .photo-button .button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  border-radius: 4px;
+  background: var(--ProPart-Blue, #191C38);
+  backdrop-filter: blur(13.1999998093px);
+  padding: 12px;
+  color: #FFF;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Onest;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19.2px; /* 137.143% */
+}
+.consierge-page .about-us {
+  padding: 0px 16px;
+}
+.consierge-page .about-us .content {
+  border-radius: 8px 8px 0px 0px;
+  background: #fff;
+}
+.consierge-page .about-us .content img {
+  height: 181px;
+  width: 100%;
+  border-radius: 8px 8px 0px 0px;
+}
+.consierge-page .about-us .content .title {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+}
+.consierge-page .about-us .content .title div:first-child {
+  color: #000;
+  font-family: Onest;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 19.2px */
+}
+.consierge-page .about-us .content .title div:last-child {
+  color: #575757;
+  font-family: Onest;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.consierge-page .about-us .content .title div:last-child span {
+  color: var(--ProPart-Beige, #C29773);
+  font-family: Onest;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.consierge-page .what-services {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0px 16px;
+}
+.consierge-page .what-services .services-title {
+  color: var(--ProPart-Blue, #191C38);
+  font-family: Onest, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+.consierge-page .what-services .swiper-pagination {
+  position: unset;
+}
+.consierge-page .what-services .swiper-slide {
+  display: flex;
+  gap: 8px;
+}
+.consierge-page .what-services .swiper {
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.consierge-page .what-services .swiper-pagination-bullet-active {
+  background: var(--ProPart-Blue, #191C38) !important;
+  opacity: unset !important;
+}
+.consierge-page .what-services .swiper-pagination-bullet {
+  border-radius: 4px;
+  border: 1px solid var(--ProPart-Blue, #191C38);
+  opacity: 0.4;
+  background: #FFF;
+}
+.consierge-page .what-services .content {
+  border-radius: 8px 8px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+.consierge-page .what-services .content img {
+  height: 181px;
+  width: 100%;
+  border-radius: 8px 8px 0px 0px;
+}
+.consierge-page .what-services .content .title {
+  color: #000;
+  font-family: Onest;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 19.2px */
+}
+.consierge-page .what-services .content .business-services {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 8px;
+}
+.consierge-page .what-services .content .business-services .servic-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.consierge-page .what-services .content .business-services .servic-container .servic {
+  color: #000;
+  font-family: Onest;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.5px;
+  display: flex;
+  padding: 12px 16px;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid #EAEAEA;
+  background: #FFF;
+}
+.consierge-page .what-services .content .business-services .servic-container .show-all {
+  display: flex;
+  padding: 12px 16px;
+  align-items: center;
+  border-radius: 4px;
+  background: var(--ProPart-Beige, #C29773);
+  color: #FFF;
+  font-family: Onest;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.5px;
+}
+.consierge-page .get-in-touch {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.consierge-page .get-in-touch .prompt {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.consierge-page .get-in-touch .prompt .tittle {
+  color: var(--ProPart-Blue, #191C38);
+  font-family: Onest, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 19.2px */
+}
+.consierge-page .get-in-touch .prompt .description {
+  color: #000;
+  font-family: Onest, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.8;
+}
+.consierge-page .get-in-touch .content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.consierge-page .get-in-touch .content .input {
+  display: flex;
+  padding: 14px var(--Padding-Small, 12px) 14px 16px;
+  align-items: center;
+  gap: 24px;
+  align-self: stretch;
+  border-radius: 4px;
+  border: 1px solid #CACACA;
+}
+.consierge-page .get-in-touch .content .input input {
+  flex: 1;
+  border: none;
+  background: none;
+  outline: none;
+  color: var(--ProPart-Blue, #191C38);
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Onest, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.56px;
+}
+.consierge-page .get-in-touch .content .input.active {
+  border-radius: 4px;
+  border: 2px solid var(--ProPart-Blue, #191C38);
+}
+.consierge-page .get-in-touch .content .input.active svg path {
+  fill: #C29773;
+}
+.consierge-page .get-in-touch .content .send {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px var(--Padding-Small, 12px) 14px 16px;
+  color: #FFF;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Onest, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  align-items: center;
+  flex: 1 0 0;
+  border-radius: 4px;
+  background: var(--ProPart-Blue, #191C38);
+}
+
+/*# sourceMappingURL=consiergePage.css.map */

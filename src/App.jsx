@@ -35,6 +35,7 @@ import Projects from "./PWA/pages/Projects.jsx";
 import AboutUsPhone from "./PWA/pages/AboutUsPhone.jsx";
 import ConsiergePage from './PWA/pages/ConsiergePage.jsx'
 import Consulting from "./PWA/pages/Consulting.jsx";
+import MemberPage from "./PWA/pages/MemberPage.jsx";
 function App() {
   const [isPDFModalOpen, setPDFModalOpen] = useState(false);
 
@@ -85,6 +86,7 @@ function App() {
         <Route path="/phone/about-us" element={<AboutUsPhone />} />
         <Route path="/phone/consierge" element={<ConsiergePage />} />
         <Route path="/phone/consulting" element={<Consulting />} />
+        <Route path="/phone/member" element={<MemberPage />} />
       </Routes>
     </BrowserRouter>)
 }

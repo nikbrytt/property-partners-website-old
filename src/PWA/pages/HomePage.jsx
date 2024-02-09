@@ -435,7 +435,7 @@ const HomePage = () => {
                         </div>
                     </div>
                     <div className="multi-row">
-                        <div  className="dropdown">
+                        <div  className={`dropdown`}>
                             <div onClick={()=>{
                                 if(filterVisible===0){
                                     setFilterVisible(null)
@@ -443,8 +443,8 @@ const HomePage = () => {
                                 else {
                                     setFilterVisible(0)
                                 }
-                            }} className="container">
-                                Price from
+                            }} className={`container ${filterVisible === 0?"active":""}`}>
+                                {filterDataProjects.priceValues.from||"Price from"}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
                                      fill="none">
                                     <path d="M8 10.6665L4 6.6665H12L8 10.6665Z" fill="white"/>
@@ -460,7 +460,7 @@ const HomePage = () => {
 
                             </div>}
                         </div>
-                        <div className="dropdown">
+                        <div className={`dropdown`}>
                             <div onClick={()=>{
                                 if(filterVisible===1){
                                     setFilterVisible(null)
@@ -468,8 +468,8 @@ const HomePage = () => {
                                 else {
                                     setFilterVisible(1)
                                 }
-                            }} className="container">
-                                Price to
+                            }} className={`container ${filterVisible === 1?"active":""}`}>
+                                {filterDataProjects.priceValues.to||"Price to"}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
                                      fill="none">
                                     <path d="M8 10.6665L4 6.6665H12L8 10.6665Z" fill="white"/>
@@ -487,7 +487,7 @@ const HomePage = () => {
                         </div>
                     </div>
                     <div className="multi-row">
-                        <div className="dropdown">
+                        <div className={`dropdown`}>
                             <div onClick={()=>{
                                 if(filterVisible===2){
                                     setFilterVisible(null)
@@ -495,8 +495,8 @@ const HomePage = () => {
                                 else {
                                     setFilterVisible(2)
                                 }
-                            }} className="container">
-                                Size from
+                            }} className={`container ${filterVisible === 2?"active":""}`}>
+                                {filterDataProjects.sizeValues.from||"Size from"}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
                                      fill="none">
                                     <path d="M8 10.6665L4 6.6665H12L8 10.6665Z" fill="white"/>
@@ -512,7 +512,7 @@ const HomePage = () => {
 
                             </div>}
                         </div>
-                        <div className="dropdown">
+                        <div className={`dropdown`}>
                             <div onClick={()=>{
                                 if(filterVisible===3){
                                     setFilterVisible(null)
@@ -520,8 +520,8 @@ const HomePage = () => {
                                 else {
                                     setFilterVisible(3)
                                 }
-                            }} className="container">
-                                Size to
+                            }} className={`container ${filterVisible === 3?"active":""}`}>
+                                {filterDataProjects.sizeValues.to||"Size to"}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
                                      fill="none">
                                     <path d="M8 10.6665L4 6.6665H12L8 10.6665Z" fill="white"/>
@@ -539,7 +539,7 @@ const HomePage = () => {
                         </div>
                     </div>
                     <div className="multi-row">
-                        <div className="dropdown">
+                        <div className={`dropdown`}>
                             <div onClick={()=>{
                                 if(filterVisible===4){
                                     setFilterVisible(null)
@@ -547,7 +547,7 @@ const HomePage = () => {
                                 else {
                                     setFilterVisible(4)
                                 }
-                            }} className="container">
+                            }} className={`container ${filterVisible === 4?"active":""}`}>
                                 Bedrooms
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
                                      fill="none">
@@ -569,7 +569,7 @@ const HomePage = () => {
                                 ))}
                             </div>}
                         </div>
-                        <div className="dropdown">
+                        <div className={`dropdown`}>
                             <div onClick={()=>{
                                 if(filterVisible===5){
                                     setFilterVisible(null)
@@ -577,7 +577,7 @@ const HomePage = () => {
                                 else {
                                     setFilterVisible(5)
                                 }
-                            }} className="container">
+                            }} className={`container ${filterVisible === 5?"active":""}`}>
                                 Location
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
                                      fill="none">
@@ -601,7 +601,7 @@ const HomePage = () => {
                         </div>
                     </div>
                     <div className="multi-row">
-                        <div className="dropdown">
+                        <div className={`dropdown`}>
                             <div onClick={()=>{
                                 if(filterVisible===6){
                                     setFilterVisible(null)
@@ -609,7 +609,7 @@ const HomePage = () => {
                                 else {
                                     setFilterVisible(6)
                                 }
-                            }} className="container">
+                            }} className={`container ${filterVisible === 6?"active":""}`}>
                                 Completion
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
                                      fill="none">
@@ -631,7 +631,7 @@ const HomePage = () => {
                                 ))}
                             </div>}
                         </div>
-                        <div className="dropdown">
+                        <div className={`dropdown`}>
                             <div onClick={()=>{
                                 if(filterVisible===7){
                                     setFilterVisible(null)
@@ -639,7 +639,7 @@ const HomePage = () => {
                                 else {
                                     setFilterVisible(7)
                                 }
-                            }}  className="container">
+                            }}  className={`container ${filterVisible === 7?"active":""}`}>
                                 Property type
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
                                      fill="none">
@@ -984,7 +984,7 @@ const HomePage = () => {
             </div>
             <div className="content">
                 {team.slice(0,visibleTeam).map((team,index)=>(
-                    <div className={"member"}>
+                    <Link to="/phone/member" state={{ member: team,from:"/phone" }} >  <div className={"member"}>
                         <div className="image-container">
                             <img src={team.image}/>
                         </div>
@@ -997,7 +997,7 @@ const HomePage = () => {
                                 600: 15,
                             }}/></div>
                         </div>
-                    </div>
+                    </div></Link>
                 ))}
             </div>
         </div>

@@ -146,6 +146,9 @@
   font-weight: 400;
   line-height: 19.2px; /* 137.143% */
 }
+.phone-home .main-banner .filter .filter-form .multi-row .dropdown .container.active {
+  border: 1px solid white;
+}
 .phone-home .main-banner .filter .filter-form .multi-row .dropdown .menu {
   position: absolute;
   left: 0;
@@ -165,6 +168,7 @@
   backdrop-filter: blur(23px);
 }
 .phone-home .main-banner .filter .filter-form .multi-row .dropdown .menu .option {
+  width: 100%;
   display: flex;
   gap: 10px;
   align-items: center;

@@ -10,6 +10,10 @@
   flex-direction: column;
   gap: 32px;
   padding-bottom: 100px;
+  position: relative;
+}
+.Properties .project-content.block {
+  overflow: hidden;
 }
 .Properties .project-content .option {
   padding: 0 16px;
@@ -58,18 +62,17 @@
 .Properties .project-content .option .content::-webkit-scrollbar {
   display: none;
 }
-.Properties .filter-prop {
+.Properties .project-content .filter-prop {
   position: fixed;
-  bottom: 0;
+  overflow: auto;
+  bottom: 80px;
   width: 100%;
   background: white;
   animation: myAnim 1s ease 0s 1 normal forwards;
-  z-index: 100000000000000000000;
+  z-index: 999;
   border-radius: 40px 40px 0px 0px;
   padding: 10px 20px 5px 20px;
-  height: 70vh !important;
-  max-height: 70vh;
-  overflow: auto;
+  max-height: 60vh;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -81,15 +84,15 @@
     transform: translateY(0);
   }
 }
-.Properties .filter-prop::-webkit-scrollbar {
+.Properties .project-content .filter-prop::-webkit-scrollbar {
   display: none;
 }
-.Properties .filter-prop .header {
+.Properties .project-content .filter-prop .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.Properties .filter-prop .header .name {
+.Properties .project-content .filter-prop .header .name {
   color: var(--ProPart-Blue, #191C38);
   text-align: center;
   font-family: Onest, sans-serif;
@@ -98,7 +101,7 @@
   font-weight: 700;
   line-height: 120%; /* 21.6px */
 }
-.Properties .filter-prop .header .clear {
+.Properties .project-content .filter-prop .header .clear {
   color: #C29773;
   text-align: center;
   font-family: Onest, sans-serif;
@@ -107,13 +110,13 @@
   font-weight: 600;
   line-height: 120%; /* 16.8px */
 }
-.Properties .filter-prop .content {
+.Properties .project-content .filter-prop .content {
   display: flex;
   flex-direction: column;
   gap: 25px;
   padding-top: 10px;
 }
-.Properties .filter-prop .content .apply {
+.Properties .project-content .filter-prop .content .apply {
   display: flex;
   width: 100%;
   border-radius: 20px;
@@ -131,12 +134,12 @@
   font-weight: 500;
   line-height: 120%; /* 16.8px */
 }
-.Properties .filter-prop .content .selection {
+.Properties .project-content .filter-prop .content .selection {
   display: flex;
   flex-direction: column;
   gap: 11px;
 }
-.Properties .filter-prop .content .selection .tittle {
+.Properties .project-content .filter-prop .content .selection .tittle {
   color: #000;
   font-family: Onest, sans-serif;
   font-size: 16px;
@@ -144,17 +147,17 @@
   font-weight: 500;
   line-height: 120%; /* 19.2px */
 }
-.Properties .filter-prop .content .selection .options {
+.Properties .project-content .filter-prop .content .selection .options {
   display: flex;
   gap: 11px;
   overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-.Properties .filter-prop .content .selection .options::-webkit-scrollbar {
+.Properties .project-content .filter-prop .content .selection .options::-webkit-scrollbar {
   display: none;
 }
-.Properties .filter-prop .content .selection .options .option {
+.Properties .project-content .filter-prop .content .selection .options .option {
   display: flex;
   padding: 12px 19px 12px 18px;
   justify-content: center;
@@ -170,7 +173,7 @@
   font-weight: 500;
   line-height: 120%; /* 16.8px */
 }
-.Properties .filter-prop .content .selection .options .option.active {
+.Properties .project-content .filter-prop .content .selection .options .option.active {
   border-radius: 20px;
   border: 1px solid #C29773;
   background: #C29773;
@@ -182,17 +185,17 @@
   font-weight: 500;
   line-height: 120%; /* 16.8px */
 }
-.Properties .filter-prop .content .delimeter {
+.Properties .project-content .filter-prop .content .delimeter {
   background: #E9E9E9;
   height: 1px;
   width: 100%;
 }
-.Properties .filter-prop .content .selection-icons {
+.Properties .project-content .filter-prop .content .selection-icons {
   display: flex;
   flex-direction: column;
   gap: 11px;
 }
-.Properties .filter-prop .content .selection-icons .tittle {
+.Properties .project-content .filter-prop .content .selection-icons .tittle {
   color: #000;
   font-family: Onest, sans-serif;
   font-size: 16px;
@@ -200,17 +203,17 @@
   font-weight: 500;
   line-height: 120%; /* 19.2px */
 }
-.Properties .filter-prop .content .selection-icons .options {
+.Properties .project-content .filter-prop .content .selection-icons .options {
   display: flex;
   gap: 11px;
   overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-.Properties .filter-prop .content .selection-icons .options::-webkit-scrollbar {
+.Properties .project-content .filter-prop .content .selection-icons .options::-webkit-scrollbar {
   display: none;
 }
-.Properties .filter-prop .content .selection-icons .options .option {
+.Properties .project-content .filter-prop .content .selection-icons .options .option {
   display: flex;
   width: 104px;
   height: 100px;
@@ -231,7 +234,7 @@
   font-weight: 500;
   line-height: 120%; /* 16.8px */
 }
-.Properties .filter-prop .content .selection-icons .options .option.active {
+.Properties .project-content .filter-prop .content .selection-icons .options .option.active {
   border-radius: 20px;
   border: 1px solid #C29773;
   background: #C29773;
@@ -243,14 +246,14 @@
   font-weight: 500;
   line-height: 120%; /* 16.8px */
 }
-.Properties .filter-prop .content .areas {
+.Properties .project-content .filter-prop .content .areas {
   width: 100%;
   padding: 8.5px 10px;
   background: white;
   border-radius: 15px;
   border: 1px solid #E9E9E9;
 }
-.Properties .filter-prop .content .areas .main {
+.Properties .project-content .filter-prop .content .areas .main {
   width: 100%;
   display: flex;
   align-items: center;
@@ -262,7 +265,7 @@
   font-weight: 500;
   line-height: 120%; /* 19.2px */
 }
-.Properties .filter-prop .content .areas .main .open {
+.Properties .project-content .filter-prop .content .areas .main .open {
   width: 28px;
   height: 28px;
   display: flex;
@@ -272,7 +275,7 @@
   border: 1px solid #E9E9E9;
   background: #FDFDFD;
 }
-.Properties .filter-prop .content .areas .choise {
+.Properties .project-content .filter-prop .content .areas .choise {
   opacity: 0;
   max-height: 0;
   overflow: hidden;
@@ -280,15 +283,15 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-.Properties .filter-prop .content .areas .choise::-webkit-scrollbar {
+.Properties .project-content .filter-prop .content .areas .choise::-webkit-scrollbar {
   display: none;
 }
-.Properties .filter-prop .content .areas .choise.visible {
+.Properties .project-content .filter-prop .content .areas .choise.visible {
   overflow: auto;
   opacity: 1;
   max-height: 200px;
 }
-.Properties .filter-prop .content .areas .choise .option {
+.Properties .project-content .filter-prop .content .areas .choise .option {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -303,6 +306,7 @@
   position: fixed;
   width: 100%;
   bottom: 0;
+  z-index: 99999999;
 }
 
 /*# sourceMappingURL=Properties.css.map */

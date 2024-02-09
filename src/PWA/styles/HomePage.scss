@@ -158,6 +158,9 @@
               font-style: normal;
               font-weight: 400;
               line-height: 19.2px; /* 137.143% */
+              &.active{
+                border: 1px solid white;
+              }
             }
             .menu{
               position: absolute;
@@ -177,6 +180,7 @@
               background: #151515;
               backdrop-filter: blur(23px);
               .option{
+                width: 100%;
                 display: flex;
                 gap: 10px;
                 align-items: center;

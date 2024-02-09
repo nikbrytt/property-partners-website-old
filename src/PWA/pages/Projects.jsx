@@ -452,7 +452,7 @@ const Projects = () => {
                 </div>
             </div>
         </div>}
-        <div className="projects-data">
+        <div className={`projects-data ${filterOpen===true?"block":""}`}>
             <div className="tittle">All projects</div>
             <div className="content">
                 {filteredProjects.map((project,index)=>(

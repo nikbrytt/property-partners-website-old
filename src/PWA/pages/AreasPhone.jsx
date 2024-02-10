@@ -95,7 +95,7 @@ const ReadMoreLess = ({children, limit}) => {
     )
 }
 
-const AreasPhone = () => {
+const AreasPhone = ({handleMenuToggle}) => {
     const [activeFocus, setActiveFocus] = useState([false, false, false, false]);
     const cardInfo = AreasCardsInfo();
 
@@ -254,7 +254,7 @@ const AreasPhone = () => {
         <div className="areas-phone">
             <div className="baner-filter">
                 <div className="area-baner">
-                    <Menu/>
+                    <Menu handleMenuToggle={handleMenuToggle}/>
                 </div>
 
                 <div className="filter-menu">

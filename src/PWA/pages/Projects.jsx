@@ -7,7 +7,7 @@ import Modal from "react-modal";
 import {useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
 import {useLocation} from "react-router-dom";
-const Projects = () => {
+const Projects = ({handleMenuToggle}) => {
     let { state } = useLocation();
     const { t } = useTranslation();
     const defaultFilterData = {
@@ -291,7 +291,7 @@ const Projects = () => {
     }, [filterDataProjects,projects,setFilterDataProjects]);
 
     return(<div className={"projects"}>
-        <MenuProjectFilter setFilterOpen={setFilterOpen} />
+        <MenuProjectFilter setFilterOpen={setFilterOpen} handleMenuToggle={handleMenuToggle} />
         {filterOpen===true&&<div className="filter">
             <div className="header">
                 <svg onClick={()=>setFilterOpen(false)}  xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">

@@ -8,7 +8,7 @@ import {shuffle} from "lodash";
 import {Link} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 
-const Properties = () => {
+const Properties = ({handleMenuToggle}) => {
     const { t } = useTranslation();
     const [filterDataProjects, setFilterDataProjects]=useState({
         search: "",
@@ -233,7 +233,7 @@ const Properties = () => {
     }
     const [filterOpen, setFilterOpen] = useState(false);
     return(<div className={"Properties"}>
-        <MenuProjectFilter setFilterOpen={setFilterOpen} />
+        <MenuProjectFilter setFilterOpen={setFilterOpen} handleMenuToggle={handleMenuToggle} />
         <div className={`project-content ${filterOpen===true?"block":""}`}>
 
             <div className="option">

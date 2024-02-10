@@ -45,7 +45,7 @@ import business from "../../assets/pwa/Areas/bigAreaCard2.png"
 import marina from "../../assets/pwa/Areas/bigAreaCard3.png"
 import hils from "../../assets/pwa/Areas/bigAreaCard4.png"
 
-const HomePage = () => {
+const HomePage = ({handleMenuToggle}) => {
     const [activeBanner, setActiveBanner] = useState(1)
     const {t} = useTranslation();
     const team = [
@@ -398,7 +398,7 @@ const HomePage = () => {
             backgroundColor: "lightgray",
             backgroundBlendMode: "multiply"
         }}>
-            <Menu/>
+            <Menu handleMenuToggle={handleMenuToggle}/>
             <div className="suggested-projects">
                 <div className="description">{bannerData[activeBanner].description}</div>
                 <div className="data">

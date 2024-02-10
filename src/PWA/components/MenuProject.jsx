@@ -1,12 +1,12 @@
 import "../styles/MenuProject.css"
-const MenuProject = () => {
+const MenuProject = ({handleMenuToggle}) => {
 
     return(<div className={"menu-project"}>
         <div className="content">
             <div className="logo">
-                {/*<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">*/}
-                {/*    <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z" fill="black"/>*/}
-                {/*</svg>*/}
+                <svg onClick={()=>handleMenuToggle()} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z" fill="black"/>
+                </svg>
                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="24" viewBox="0 0 60 24" fill="none">
                     <g clip-path="url(#clip0_1_2109)">
                         <path d="M53.3462 0H54.5096C55.6147 0.0962602 56.5923 0.440325 57.4423 1.0322C58.318 1.64228 58.9583 2.42341 59.3635 3.37561C60.0769 5.05561 60.0385 7.37366 59.2712 9.0439C58.2346 11.3034 56.0904 12.3571 53.6154 12.2673C50.1346 12.1424 47.9635 9.56488 47.9808 6.16195C47.9885 4.48 48.4558 2.90732 49.6096 1.71317C50.5801 0.706341 51.8256 0.135285 53.3462 0ZM56.7096 7.96878C57.0865 6.94634 57.134 5.87252 56.8519 4.74732C56.4327 3.07512 54.9904 2.18341 53.3115 2.4761C51.0404 2.87024 50.5096 5.64098 51.0038 7.47707C51.3897 8.91577 52.2718 9.70537 53.65 9.84585C54.9904 9.98244 56.2404 9.24098 56.7096 7.96878Z" fill="#C29773"/>

@@ -7,12 +7,12 @@ import React, {useState} from "react";
 import projects from "../data/response.json"
 import Project from "../../components/Project.jsx";
 import Marker from "../components/Marker.jsx";
-const PhoneMap = () => {
+const PhoneMap = ({handleMenuToggle}) => {
     const [mapZoom, setMapZoom] = useState(10);
     const [currnetIndex, setCurrentIndex] = useState(null)
 
     return(<div className={"phone-map"}>
-        <MenuProject/>
+        <MenuProject handleMenuToggle={handleMenuToggle}/>
         <div className="map">
             <APIProvider apiKey={"AIzaSyAbaX7Vb6ERFTrWR4espV48g25lFRGGjIc"}>
                 <Map

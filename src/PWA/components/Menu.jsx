@@ -1,11 +1,14 @@
 import "../styles/Menu.css"
-const Menu = () => {
+import {useState} from "react";
 
+
+const Menu = ({handleMenuToggle}) => {
+    const [menuOpen, setMenuOpen] = useState(false);
     return(<div className={"pwa-menu"}>
             <div className="burger-menu">
-                {/*<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">*/}
-                {/*    <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z" fill="white"/>*/}
-                {/*</svg>*/}
+                <svg onClick={()=>handleMenuToggle()} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z" fill="white"/>
+                </svg>
                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="24" viewBox="0 0 60 24" fill="none">
                     <g clip-path="url(#clip0_3225_3055)">
                         <path d="M53.346 0H54.5094C55.6145 0.0962602 56.5921 0.440325 57.4421 1.0322C58.3178 1.64228 58.9581 2.42341 59.3633 3.37561C60.0767 5.05561 60.0383 7.37366 59.271 9.0439C58.2344 11.3034 56.0902 12.3571 53.6152 12.2673C50.1344 12.1424 47.9633 9.56488 47.9806 6.16195C47.9883 4.48 48.4556 2.90732 49.6094 1.71317C50.5799 0.706341 51.8254 0.135285 53.346 0ZM56.7094 7.96878C57.0863 6.94634 57.1338 5.87252 56.8517 4.74732C56.4325 3.07512 54.9902 2.18341 53.3113 2.4761C51.0402 2.87024 50.5094 5.64098 51.0036 7.47707C51.3895 8.91577 52.2716 9.70537 53.6498 9.84585C54.9902 9.98244 56.2402 9.24098 56.7094 7.96878Z" fill="white"/>

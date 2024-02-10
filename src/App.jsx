@@ -36,8 +36,15 @@ import AboutUsPhone from "./PWA/pages/AboutUsPhone.jsx";
 import ConsiergePage from './PWA/pages/ConsiergePage.jsx'
 import Consulting from "./PWA/pages/Consulting.jsx";
 import MemberPage from "./PWA/pages/MemberPage.jsx";
+import Burger from "./PWA/components/Burger.jsx";
 function App() {
   const [isPDFModalOpen, setPDFModalOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleMenuToggle = () => {
+    setMenuOpen(prevMenuOpen => !prevMenuOpen);
+    document.body.classList.toggle('menu-open');
+  };
 
   const openPDFModal = () => {
     setPDFModalOpen(true);
@@ -50,6 +57,7 @@ function App() {
     <BrowserRouter>
       <ScrollToTop />
       <SupportChat />
+      <Burger menuOpen={menuOpen} handleMenuToggle={handleMenuToggle}/>
       <ContactUsModal />
       <PDFmodal closeModal={closePDFModal} showModal={isPDFModalOpen} />
       <Routes >
@@ -77,12 +85,12 @@ function App() {
         <Route path="/developers" element={<Developers />} />
         <Route path="/developer/:id" element={<Developer />} />
 
-        <Route path="/phone" element={<HomePage />} />
-        <Route path="/phone/map" element={<PhoneMap />} />
-        <Route path="/phone/properties" element={<Properties />} />
+        <Route path="/phone" element={<HomePage handleMenuToggle={handleMenuToggle} />} />
+        <Route path="/phone/map" element={<PhoneMap handleMenuToggle={handleMenuToggle} />} />
+        <Route path="/phone/properties" element={<Properties handleMenuToggle={handleMenuToggle} />} />
         <Route path="/phone/project" element={<ProjectInfo />} />
-        <Route path="/phone/areas" element={<AreasPhone />} />
-        <Route path="/phone/projects" element={<Projects />} />
+        <Route path="/phone/areas" element={<AreasPhone handleMenuToggle={handleMenuToggle} />} />
+        <Route path="/phone/projects" element={<Projects handleMenuToggle={handleMenuToggle} />} />
         <Route path="/phone/about-us" element={<AboutUsPhone />} />
         <Route path="/phone/consierge" element={<ConsiergePage />} />
         <Route path="/phone/consulting" element={<Consulting />} />

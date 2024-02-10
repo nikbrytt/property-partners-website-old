@@ -8,6 +8,8 @@
 
   .burger-menu-content{
     width: 80vw;
+    transition: transform 0.3s ease; /* Example transition, adjust as needed */
+
     padding-top: 30px;
     background: #F3F3F3;
     position: absolute;

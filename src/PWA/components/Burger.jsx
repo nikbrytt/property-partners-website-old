@@ -1,21 +1,53 @@
-import React, { useState } from 'react';
+import React, {useRef, useState} from 'react';
 import "../styles/BurgerMenu.css";
 
 
 const Burger = ({menuOpen,handleMenuToggle}) => {
-
+    const menuRef = useRef(null);
+    const menuRefContent = useRef(null);
+    const startXRef = useRef(null);
 
     const handleMenu = (event) => {
         if (event.target.classList.contains('burger-menu-menu')) {
             handleMenuToggle()
         }
     };
+    const handleTouchStart = (event) => {
+        startXRef.current = event.touches[0].clientX;
+    };
+
+    const handleTouchMove = (event) => {
+        if (!menuOpen) return;
+        const currentX = event.touches[0].clientX;
+        const diff = currentX - startXRef.current;
+
+        console.log("Diff:", diff); // Check diff value
+        console.log("Menu Ref Content:", menuRefContent.current); // Check if menuRefContent is defined and correct
+
+        menuRefContent.current.style.left = `${diff}px`;
+
+        if (diff < -150) {
+            handleMenuToggle();
+        }
+    };
+
+
+    const handleTouchEnd = () => {
+        if (menuRefContent.current) {
+            menuRefContent.current.style.left = '0';
+        }
+    };
 
     return (
         <>
             {menuOpen && (
-                <div className={"burger-menu-menu"} onClick={handleMenu}>
-                    <div className="burger-menu-content">
+                <div className={"burger-menu-menu"} onClick={handleMenu}
+                     ref={menuRef}
+                     onTouchStart={handleTouchStart}
+                     onTouchMove={handleTouchMove}
+                     onTouchEnd={handleTouchEnd}
+                >
+                    <div className="burger-menu-content" ref={menuRefContent}>
                        <div className="content">
                            <div className="header">Menu</div>
 

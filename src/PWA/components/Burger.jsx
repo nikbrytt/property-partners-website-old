@@ -21,8 +21,7 @@ const Burger = ({menuOpen,handleMenuToggle}) => {
         const currentX = event.touches[0].clientX;
         const diff = currentX - startXRef.current;
 
-        console.log("Diff:", diff); // Check diff value
-        console.log("Menu Ref Content:", menuRefContent.current); // Check if menuRefContent is defined and correct
+
 
         menuRefContent.current.style.left = `${diff}px`;
 

@@ -2,7 +2,6 @@ import '../styles/Pages/aboutAreas.scss'
 import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
 import areaMap from '../assets/Areas/map.png'
-import statisticsGraph from '../assets/Areas/statisticsInfo.png'
 import GetConsult from "../components/GetConsult.jsx";
 import AreaCard from "../components/AreaCard.jsx";
 

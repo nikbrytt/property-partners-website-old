@@ -1,6 +1,6 @@
-import "../styles/MenuProject.css"
+import "../styles/MenuProject.scss"
 
-const MenuProjectFilter = ({ setFilterOpen,handleMenuToggle }) => {
+const MenuProjectFilter = ({ setFilterOpen,handleMenuToggle, handleItemChange }) => {
 
     return(<div className={"menu-project"}>
         <div className="content">
@@ -28,25 +28,21 @@ const MenuProjectFilter = ({ setFilterOpen,handleMenuToggle }) => {
                 </svg>
             </div>
             <div className="additional">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M18.5 10L22.9 21H20.745L19.544 18H15.454L14.255 21H12.101L16.5 10H18.5ZM10 2V4H16V6H14.032C13.2606 8.32208 12.0295 10.465 10.412 12.301C11.1333 12.9446 11.9157 13.5163 12.748 14.008L11.997 15.886C10.9225 15.2766 9.9176 14.552 9 13.725C7.21358 15.3417 5.09804 16.5522 2.799 17.273L2.263 15.344C4.23284 14.7159 6.04802 13.6793 7.59 12.302C6.44869 11.0099 5.49806 9.56127 4.767 8H7.007C7.56435 9.02886 8.23267 9.9936 9 10.877C10.2501 9.4361 11.2353 7.7853 11.91 6.001L2 6V4H8V2H10ZM17.5 12.885L16.253 16H18.745L17.5 12.885Z" fill="black"/>
-                </svg>
                 <svg onClick={()=>window.open('tel:+971521038793')} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M21 16.42V19.956C21.0001 20.2092 20.9042 20.453 20.7316 20.6382C20.559 20.8234 20.3226 20.9363 20.07 20.954C19.633 20.984 19.276 21 19 21C10.163 21 3 13.837 3 5C3 4.724 3.015 4.367 3.046 3.93C3.06372 3.67744 3.17658 3.44101 3.3618 3.26841C3.54703 3.09581 3.79082 2.99989 4.044 3H7.58C7.70404 2.99987 7.8237 3.04586 7.91573 3.12902C8.00776 3.21218 8.0656 3.32658 8.078 3.45C8.101 3.68 8.122 3.863 8.142 4.002C8.34073 5.38892 8.748 6.73783 9.35 8.003C9.445 8.203 9.383 8.442 9.203 8.57L7.045 10.112C8.36445 13.1865 10.8145 15.6365 13.889 16.956L15.429 14.802C15.4919 14.714 15.5838 14.6509 15.6885 14.6237C15.7932 14.5964 15.9042 14.6068 16.002 14.653C17.267 15.2539 18.6156 15.6601 20.002 15.858C20.141 15.878 20.324 15.9 20.552 15.922C20.6752 15.9346 20.7894 15.9926 20.8724 16.0846C20.9553 16.1766 21.0012 16.2961 21.001 16.42H21Z" fill="black"/>
                 </svg>
-                <svg onClick={()=>setFilterOpen(true)} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M10 14L4 5V3H20V5L14 14V20L10 22V14Z" fill="#191C38"/>
-                </svg>
+
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M18.031 16.617L22.314 20.899L20.899 22.314L16.617 18.031C15.0237 19.3082 13.042 20.0029 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20.0029 13.042 19.3082 15.0237 18.031 16.617ZM16.025 15.875C17.2941 14.5699 18.0029 12.8204 18 11C18 7.132 14.867 4 11 4C7.132 4 4 7.132 4 11C4 14.867 7.132 18 11 18C12.8204 18.0029 14.5699 17.2941 15.875 16.025L16.025 15.875Z" fill="#191C38"/>
                 </svg>
             </div>
         </div>
         <div className="content-filter">
-            <div className="option">Plots</div>
-            <div className="option">Town house</div>
-            <div className="option">Villa</div>
-            <div className="option">Apartments</div>
+            <div className="option" onClick={()=>setFilterOpen(true)}>Fiter</div>
+            <div className="option" onClick={()=>handleItemChange("propertyType","Apartments")}>Apartments</div>
+            <div className="option" onClick={()=>handleItemChange("propertyType","Town house")}>Town house</div>
+            <div className="option" onClick={()=>handleItemChange("propertyType","Villa")}>Villa</div>
+            <div className="option" onClick={()=>handleItemChange("propertyType","Plots")}>Plots</div>
         </div>
 
     </div>)

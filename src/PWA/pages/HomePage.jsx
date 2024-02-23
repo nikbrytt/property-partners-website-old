@@ -189,6 +189,7 @@ const HomePage = ({handleMenuToggle}) => {
     useEffect(() => {
         shuffleSlides()
     }, []);
+
     const bedroomOptions = ["Studio", "1", "2", "3", "4", "5", "6", "7"];
     useEffect(() => {
         const interval = setInterval(() => {
@@ -390,6 +391,7 @@ const HomePage = ({handleMenuToggle}) => {
             search: value
         }));
     }
+
     return (<div className={"phone-home"}>
         <div className="main-banner" style={{
             backgroundImage: `url(${bannerData[activeBanner].img}), linear-gradient(180deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.33) 25.9%, rgba(0, 0, 0, 0.70) 63.4%, rgba(0, 0, 0, 0.70) 100%)`,
@@ -450,12 +452,11 @@ const HomePage = ({handleMenuToggle}) => {
                                     <path d="M8 10.6665L4 6.6665H12L8 10.6665Z" fill="white"/>
                                 </svg>
                             </div>
-                            {filterVisible===0&&   <div className="menu">
+                            {filterVisible===0 &&   <div className="menu">
                                 {priceData.map((data,index)=>(
                                     <div onClick={()=>handlePriceFromChange(data.value)} className={`option ${filterDataProjects.priceValues.from===data.value?"active":""}`}>
                                         {data.label}
                                     </div>
-
                                 ))}
 
                             </div>}
@@ -507,7 +508,6 @@ const HomePage = ({handleMenuToggle}) => {
                                     <div onClick={()=>handleSizeFromChange(data.value)} className={`option ${filterDataProjects.sizeValues.from===data.value?"active":""}`}>
                                         {data.label}
                                     </div>
-
                                 ))}
 
                             </div>}
@@ -534,7 +534,6 @@ const HomePage = ({handleMenuToggle}) => {
                                     </div>
 
                                 ))}
-
                             </div>}
                         </div>
                     </div>
@@ -565,7 +564,6 @@ const HomePage = ({handleMenuToggle}) => {
                                             </svg>
                                         }
                                         {option}</div>
-
                                 ))}
                             </div>}
                         </div>

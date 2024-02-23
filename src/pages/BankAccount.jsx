@@ -9,12 +9,6 @@ import GetAdvice from "../components/GetAdvice"
 
 import inflation from "../assets/bank/inflation.png";
 import stable1 from "../assets/bank/stable1.png";
-import stable2 from "../assets/bank/stable2.png";
-
-import blogImage1 from "../assets/bank/blog-image1.png";
-import blogImage2 from "../assets/bank/blog-image2.png";
-import blogImage3 from "../assets/bank/blog-image3.png";
-import blogImage4 from "../assets/bank/blog-image4.png";
 import imageLink from "../assets/bank/image-link.png";
 import forbse from "../assets/bank/forbse.svg";
 

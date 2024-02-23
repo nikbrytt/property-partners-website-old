@@ -270,33 +270,6 @@ const AreasPhone = ({handleMenuToggle}) => {
                         </div>
                     </div>
 
-                    <div className="filter-buttons">
-                        <div className="filter-button">
-                            Type
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                 fill="none">
-                                <path d="M8 10.6667L4 6.66675H12L8 10.6667Z" fill="black"/>
-                            </svg>
-                        </div>
-                        <div className="filter-button">
-                            Budget
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                 fill="none">
-                                <path d="M8 10.6667L4 6.66675H12L8 10.6667Z" fill="black"/>
-                            </svg>
-                        </div>
-                        <div className="filter-button">
-                            Proximity
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                 fill="none">
-                                <path d="M8 10.6667L4 6.66675H12L8 10.6667Z" fill="black"/>
-                            </svg>
-                        </div>
-                    </div>
-
                     <div className="areas-buttons">
                         {cardInfo.map((area, index) => (
                             <div key={index} className="area-button">
@@ -304,6 +277,14 @@ const AreasPhone = ({handleMenuToggle}) => {
                                 <div>{area.price}</div>
                             </div>
                         ))}
+                    </div>
+
+                    <div className="area-prices">
+                        <div className="text">
+                            We use the grading of areas: <br/>
+                            <span>$</span> - regular lifestyle; <span>$$</span> - upper regular lifestyle;<br/>
+                            <span>$$$</span> - premium lifestyle; <span>$$$$</span> - luxurious lifestyle;
+                        </div>
                     </div>
                 </div>
             </div>

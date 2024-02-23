@@ -52,7 +52,7 @@ import MailModal from "../components/MailModal.jsx";
 import axios from "axios";
 import HomePage from "../PWA/pages/HomePage.jsx";
 
-const Home = ({ openModal }) => {
+const Home = ({ openModal, handleMenuToggle}) => {
     const [activeKind, setActiveKind] = useState(null);
     const [visibleMembers, setVisibleMembers] = useState(4);
     const { t } = useTranslation();
@@ -260,7 +260,7 @@ const Home = ({ openModal }) => {
     }
 
     if (isSmallScreen ) {
-        return <HomePage/>
+        return <HomePage handleMenuToggle={handleMenuToggle}/>
     }
     return (<div className={"home-page"}>
         <Header />

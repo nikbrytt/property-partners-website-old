@@ -5,13 +5,13 @@ import {Pagination} from "swiper/modules";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {useState} from "react";
 
-const Consulting = () => {
+const Consulting = ([handleMenuToggle]) => {
     const [showMore, setShowMore] = useState();
     const [activeFocus, setActiveFocus] = useState([false, false, false, false]);
 
     return(<div className={"consulting-phone"}>
         <div className="main-banner">
-            <Menu/>
+            <Menu handleMenuToggle={handleMenuToggle}/>
             <div className="about">
                 <div className="tittle">Company registrationin the UAE, Legaland Accounting Support</div>
                 <div className="desc">Remote business registration and launch of all operational processes</div>

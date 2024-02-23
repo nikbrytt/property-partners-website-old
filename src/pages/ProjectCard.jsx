@@ -79,6 +79,7 @@ const ProjectCard = () => {
             spaceBetween: 50,
         },
     };
+
     useEffect(() => {
         let config = {
             method: 'get',

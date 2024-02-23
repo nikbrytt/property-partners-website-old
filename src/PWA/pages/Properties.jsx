@@ -233,7 +233,7 @@ const Properties = ({handleMenuToggle}) => {
     }
     const [filterOpen, setFilterOpen] = useState(false);
     return(<div className={"Properties"}>
-        <MenuProjectFilter setFilterOpen={setFilterOpen} handleMenuToggle={handleMenuToggle} />
+        <MenuProjectFilter setFilterOpen={setFilterOpen} handleMenuToggle={handleMenuToggle} handleItemChange={handleItemChange} />
         <div className={`project-content ${filterOpen===true?"block":""}`}>
 
             <div className="option">

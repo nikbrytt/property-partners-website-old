@@ -9,7 +9,7 @@ import Footer from "../components/Footer.jsx";
 import {Pagination} from "swiper/modules";
 import {Swiper, SwiperSlide} from "swiper/react";
 
-const ConiergePage = () => {
+const ConiergePage = ({handleMenuToggle}) => {
     const [activeFocus, setActiveFocus] = useState([false, false, false, false]);
     const [showMore, setShowMore] = useState(false);
     const handleReadMoreClick = () => {
@@ -98,7 +98,7 @@ const ConiergePage = () => {
 
     return (<div className="consierge-page">
             <div className="consierge-baner">
-                <Menu/>
+                <Menu handleMenuToggle={handleMenuToggle}/>
                 <div className="content">
                     <div className="title">Your concierge service in Dubai</div>
 

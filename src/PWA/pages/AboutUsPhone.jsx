@@ -15,7 +15,7 @@ import offer3 from "../../assets/offer2.png";
 import offer4 from "../../assets/offer3.png";
 import alla from '../../assets/teams/anna-horshunova-min.jpg'
 import Footer from "../components/Footer.jsx";
-const AboutUsPhone = () => {
+const AboutUsPhone = ({handleMenuToggle}) => {
     const {t} = useTranslation();
 
     const [showMore, setShowMore] = useState(false);
@@ -47,7 +47,7 @@ const AboutUsPhone = () => {
 
     return (<div className="about-us-phone">
         <div className="baner-about">
-            <Menu/>
+            <Menu handleMenuToggle={handleMenuToggle}/>
             <div className="title">
                 <div>Your Space, Your Sanctuary</div>
                 <div>A premier real estate agency based in the vibrant heart of Dubai.</div>

@@ -1,8 +1,6 @@
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import "../styles/Pages/areas.scss"
-import accountaingBaner from "../assets/accounting-main.jpeg";
-
 import apart1 from "../assets/Areas/apart1.png";
 import palm from "../assets/Areas/palm-jumeirah.png";
 import mbr from "../assets/Areas/mbr.png";
@@ -19,7 +17,6 @@ import domacHills from "../assets/Areas/damac-hills.png";
 import dubaiHills from "../assets/Areas/dubai-hills.png";
 import areasMain from "../assets/Areas/areas-main.png";
 import { Link } from "react-router-dom";
-import blueArrow from "../assets/Areas/blue-arrow.svg";
 import { useTranslation } from "react-i18next";
 import React, { useState } from "react";
 import GetConsult from "../components/GetConsult"

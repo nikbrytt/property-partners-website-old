@@ -291,7 +291,7 @@ const Projects = ({handleMenuToggle}) => {
     }, [filterDataProjects,projects,setFilterDataProjects]);
 
     return(<div className={"projects"}>
-        <MenuProjectFilter setFilterOpen={setFilterOpen} handleMenuToggle={handleMenuToggle} />
+        <MenuProjectFilter setFilterOpen={setFilterOpen} handleMenuToggle={handleMenuToggle} handleItemChange={handleItemChange}/>
         {filterOpen===true&&<div className="filter">
             <div className="header">
                 <svg onClick={()=>setFilterOpen(false)}  xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">

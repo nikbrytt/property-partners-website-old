@@ -17,7 +17,8 @@
 }
 .menu-project .content-filter {
   display: flex;
-  justify-content: center;
+  justify-content: left;
+  padding-left: 16px;
   gap: 8px;
   padding-bottom: 16px;
   overflow: auto;
@@ -37,6 +38,10 @@
   font-weight: 600;
   line-height: 19.2px; /* 137.143% */
   white-space: nowrap;
+}
+.menu-project .content-filter .option:first-child {
+  color: #fff;
+  background: #191C38;
 }
 
 /*# sourceMappingURL=MenuProject.css.map */

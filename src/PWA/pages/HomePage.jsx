@@ -328,42 +328,81 @@ const HomePage = ({handleMenuToggle}) => {
     })
 
     const handlePriceFromChange = (value) => {
-        setFilterDataProjects(prevState => ({
-            ...prevState,
-            priceValues: {
-                ...prevState.priceValues,
-                from: value
-            }
-        }));
+        if(filterDataProjects.priceValues.from===value){
+            setFilterDataProjects(prevState => ({
+                ...prevState,
+                priceValues: {
+                    ...prevState.priceValues,
+                    from: ""
+                }
+            }));
+        }
+        else {
+            setFilterDataProjects(prevState => ({
+                ...prevState,
+                priceValues: {
+                    ...prevState.priceValues,
+                    from: value
+                }
+            }));
+        }
+
     }
 
     const handlePriceToChange = (value) => {
-        setFilterDataProjects(prevState => ({
-            ...prevState,
-            priceValues: {
-                ...prevState.priceValues,
-                to: value
-            }
-        }));
+        if(filterDataProjects.priceValues.to===value){
+            setFilterDataProjects(prevState => ({
+                ...prevState,
+                priceValues: {
+                    ...prevState.priceValues,
+                    to: ""
+                }
+            }));
+        }
+        else {
+            setFilterDataProjects(prevState => ({
+                ...prevState,
+                priceValues: {
+                    ...prevState.priceValues,
+                    to: value
+                }
+            }));
+        }
+
     }
     const handleSizeFromChange = (value) => {
-        setFilterDataProjects(prevState => ({
-            ...prevState,
-            sizeValues: {
-                ...prevState.sizeValues,
-                from: value
-            }
-        }));
+        if(filterDataProjects.sizeValues.from===value){
+            setFilterDataProjects(prevState => ({
+                ...prevState,
+                sizeValues: {
+                    ...prevState.sizeValues,
+                    from: ""
+                }
+            }));
+        }
+        else {
+            setFilterDataProjects(prevState => ({
+                ...prevState,
+                sizeValues: {
+                    ...prevState.sizeValues,
+                    from: value
+                }
+            }));
+        }
+
     }
 
     const handleSizeToChange = (value) => {
-        setFilterDataProjects(prevState => ({
-            ...prevState,
-            sizeValues: {
-                ...prevState.sizeValues,
-                to: value
-            }
-        }));
+        if(filterDataProjects.sizeValues.from===value){
+            setFilterDataProjects(prevState => ({
+                ...prevState,
+                sizeValues: {
+                    ...prevState.sizeValues,
+                    to: ""
+                }
+            }));
+        }
+
     }
     const handleItemChange = (propertyName, selectedItem) => {
         setFilterDataProjects(prevState => {

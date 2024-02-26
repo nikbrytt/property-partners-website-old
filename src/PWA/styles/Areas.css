@@ -80,7 +80,7 @@
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 19.2px; /* 137.143% */
+  line-height: 19.2px;
 }
 .areas-phone .baner-filter .filter-menu .filter-buttons .filter-button:first-child {
   min-width: 88px;
@@ -130,6 +130,29 @@
   font-weight: 400;
   line-height: 19px; /* 135.714% */
   white-space: nowrap;
+}
+.areas-phone .baner-filter .filter-menu .area-prices {
+  padding: 16px 16px 8px 16px;
+}
+.areas-phone .baner-filter .filter-menu .area-prices .text {
+  color: #000;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Onest;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19.2px;
+}
+.areas-phone .baner-filter .filter-menu .area-prices .text span {
+  color: #000;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Onest;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19.2px;
 }
 .areas-phone .title-text {
   display: flex;

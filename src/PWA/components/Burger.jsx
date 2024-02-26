@@ -54,24 +54,6 @@ const Burger = ({menuOpen,handleMenuToggle}) => {
                            <div className="header">Menu</div>
 
                            <div className="options">
-                               <Link onClick={() => handleMenuToggle()} to="/phone/about-us" className="option">
-                                   <div className="main">
-                                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none">
-                                           <path
-                                               d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM11 11V17H13V11H11ZM11 7V9H13V7H11Z"
-                                               fill="#C29773"/>
-                                       </svg>
-                                       About us
-                                   </div>
-                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none">
-                                   <path
-                                           d="M16.172 10.9999L10.808 5.63592L12.222 4.22192L20 11.9999L12.222 19.7779L10.808 18.3639L16.172 12.9999H4V10.9999H16.172Z"
-                                           fill="#8C8C8C"/>
-                                   </svg>
-
-                               </Link>
                                <Link onClick={() => handleMenuToggle()} to="/" className="option">
                                    <div className="main">
                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -135,6 +117,24 @@ const Burger = ({menuOpen,handleMenuToggle}) => {
                                                fill="#C29773"/>
                                        </svg>
                                        Concierge service
+                                   </div>
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                       <path
+                                           d="M16.172 10.9999L10.808 5.63592L12.222 4.22192L20 11.9999L12.222 19.7779L10.808 18.3639L16.172 12.9999H4V10.9999H16.172Z"
+                                           fill="#8C8C8C"/>
+                                   </svg>
+
+                               </Link>
+                               <Link onClick={() => handleMenuToggle()} to="/phone/about-us" className="option">
+                                   <div className="main">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                           <path
+                                               d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM11 11V17H13V11H11ZM11 7V9H13V7H11Z"
+                                               fill="#C29773"/>
+                                       </svg>
+                                       About us
                                    </div>
                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none">

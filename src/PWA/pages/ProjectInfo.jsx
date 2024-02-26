@@ -131,8 +131,7 @@ const ProjectInfo = () => {
         }
         return array;
     }
-    const shuffledProjects = shuffleArray(projects);
-    const slicedProjects = shuffledProjects.slice(0, 15);
+
 
     useEffect(() => {
         const likedData = localStorage.getItem("liked");
@@ -175,7 +174,6 @@ const ProjectInfo = () => {
     function formatNumberWithCommas2(value) {
         return value.replace(/,/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
-    console.log(project)
     return(<div className={"project-info"}>
         <div className="images-container">
             <div className="images">
@@ -472,7 +470,7 @@ const ProjectInfo = () => {
                 Similar properties
             </div>
             <div className="content">
-                {slicedProjects.map((likedProject, index) => (
+                {projects.slice(0,15).map((likedProject, index) => (
                     <Project projectData={likedProject} key={index}/>
                 ))}
             </div>

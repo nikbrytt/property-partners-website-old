@@ -51,6 +51,7 @@ import InquireModal from "../components/InquireModal.jsx";
 import MailModal from "../components/MailModal.jsx";
 import axios from "axios";
 import HomePage from "../PWA/pages/HomePage.jsx";
+import { Helmet } from 'react-helmet';
 
 const Home = ({ openModal, handleMenuToggle}) => {
     const [activeKind, setActiveKind] = useState(null);
@@ -263,12 +264,18 @@ const Home = ({ openModal, handleMenuToggle}) => {
         return <HomePage handleMenuToggle={handleMenuToggle}/>
     }
     return (<div className={"home-page"}>
+        <Helmet>
+            <title>ProPart: Your Space, Your Sanctuary | Real Estate in Dubai</title>
+            <meta name="description" content="Discover your dream home with ProPart, offering 15 years of real estate expertise in Dubai. From cozy studios to sprawling estates, explore our diverse selection, legal counseling, and unique data for seamless transactions. Our experts are ready to assist you in finding the perfect property. Explore rentals, family projects, villas, and resale options. Why Dubai? Profitable real estate, tax benefits, dynamic market, and stability. Tailored services include primary & secondary real estate, rentals, commercial real estate, and expert consulting services. Meet our team and be the first to know about sales launches in Dubai. Contact us now!" />
+            <meta name="keywords" content="ProPart, Real Estate Dubai, Dream Home, Legal Counseling, Unique Data, Seamless Transactions, Rental Properties, Family Projects, Villas, Resale, Dubai Real Estate Market, Tax Benefits, Expert Consulting, ProPart Team, Sales Launches, Contact Us" />
+        </Helmet>
         <Header />
         <div className="home-banner">
             <div className="content">
                 <div className="tittle">
-                    <div>{t("title_home1")}</div>
-                    <div>{t("title_home2")}</div>
+                    <div>Your Vision of <br/>Home - Begins Here</div>
+                    <div>Luxury Properties in Dubai - ProPart Real Estate: Waterfront, Exclusive Residences, and Expert
+                        Consulting</div>
                 </div>
                 <div className="advantages">
                     <div className="advantages-wrapper">
@@ -753,7 +760,11 @@ const Home = ({ openModal, handleMenuToggle}) => {
                 </div>
                 <div className="content">
                     <div className="tittle">
+                        <div>
                         {t("block3_title")}
+                            <br/>
+                            We Tailor to You:
+                        </div>
 
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="72" height="90" viewBox="0 0 72 90" fill="none">

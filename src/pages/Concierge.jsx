@@ -19,6 +19,7 @@ import banerPhoto from "../assets/consierge/baner-photo.png"
 import business from "../assets/consierge/business.png"
 import family from "../assets/consierge/family.png"
 import vip from "../assets/consierge/vip.png"
+import {Helmet} from "react-helmet";
 
 const Concierge = () => {
     const { t } = useTranslation();
@@ -28,6 +29,11 @@ const Concierge = () => {
         setShowModal(false);
     };
     return (<div className={"concierge-wrapper"}>
+        <Helmet>
+            <title>Unlock Dubai's Finest with Property Partners - Your Premier Concierge Service</title>
+            <meta name="description" content="Experience Dubai to its fullest, whether for business or leisure, with Property Partners - your premier concierge service. From second citizenship acquisition to real estate management, investment guidance to business event planning, we handle it all. Enjoy personalized life services, VIP treatment, and round-the-clock lifestyle assistance. Let us create lasting memories and ensure every detail is meticulously managed for you." />
+            <meta name="keywords" content="Dubai Concierge Service, Business Concierge, Legal Support, Real Estate Management, Investment Guidance, Bank Account Opening, Business Events Planning, Company Registration UAE, Tourism Services, Shopping Assistance, Rental Accommodation, Lifestyle Management, Private Jet Rentals, VIP Services, Lifestyle Manager, Tours and Entertainment, Real Estate" />
+        </Helmet>
         <Header />
         <div className="consierge-banner">
             <div className="content">

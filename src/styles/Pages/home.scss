@@ -23,12 +23,11 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        max-width: 70%;
 
         div:first-child {
           color: #191C38;
           font-family: Onest;
-          font-size: 48px;
+          font-size: 42px;
           font-style: normal;
           font-weight: 700;
           line-height: 120%; /* 57.6px */
@@ -37,7 +36,7 @@
         div:last-child {
           color: #616161;
           font-family: Onest;
-          font-size: 20px;
+          font-size: 18px;
           font-style: normal;
           font-weight: 400;
           line-height: normal;
@@ -147,7 +146,7 @@
       .description {
         color: #575757;
         font-family: Onest;
-        font-size: 20px;
+        font-size: 18px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;

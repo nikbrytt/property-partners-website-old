@@ -48,6 +48,7 @@ import Table from "../components/Table.jsx"
 import ReliablePartner from "../components/ReliablePartners";
 import Provide from "../components/Provide";
 import NoTaxes from "../components/NoTaxes";
+import {Helmet} from "react-helmet";
 
 function ConsiergeFreezone() {
     const { t } = useTranslation();
@@ -227,6 +228,11 @@ function ConsiergeFreezone() {
     );
 
     return (<div className="cons-free-wrapper">
+            <Helmet>
+                <title>Comprehensive Business Setup Services in the UAE | Expert Remote Registration</title>
+                <meta name="description" content="Embark on your business journey in the UAE with our expert support in company registration, legal compliance, and accounting services. Our streamlined process ensures a prompt and secure launch of all operational processes for your business. Choose from Free Zone or Mainland options, each offering specific advantages. Get started with a free consultation and transparent pricing for business setup in the UAE." />
+                <meta name="keywords" content="Business Setup UAE, Company Registration, Legal Compliance, Accounting Services, Remote Business Registration, UAE Free Zone, UAE Mainland, Investment Options, Silicon Oasis, DIFC, Meydan Free Zone, Transparent Pricing, Discount Offers, Accounting Support, Free Consultation, Remote Business Launch, UAE Business Objectives, Secure Platform, Robust Security Measures, Business Networking, Concierge Service, Bank Interaction, Fund Verification, Short Turnaround Time" />
+            </Helmet>
         <Header />
         <div className="cons-free-container">
             <div className="baner-guide">

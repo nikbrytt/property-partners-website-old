@@ -28,6 +28,7 @@ import React, { useState } from "react";
 import ConsulatingBaner from "../components/ConsulatingBaner"
 import BanerBlocks from "../components/BanerBlocks.jsx"
 import NewConsultBaner from "../components/NewConsultBaner"
+import {Helmet} from "react-helmet";
 
 const Employment = () => {
     const { t } = useTranslation();
@@ -182,6 +183,11 @@ const Employment = () => {
         setShowModal(false);
     };
     return (<div className="accounting-wrapper">
+            <Helmet>
+                <title>Hassle-Free Employee Recruitment and Residence Permit Acquisition in the UAE - [Your Company Name]</title>
+                <meta name="description" content="Embark on a seamless journey of employee recruitment and residence permit acquisition in the UAE with [Your Company Name]. Our services cover document preparation, guidance through all employment stages, rapid residence permit acquisition, and clarifying rights and obligations for a transparent working relationship. The 'Turnkey' package at 7,000 AED includes essential documents like Labour Card, Emirates ID, and Residence Visa. Follow our step-by-step process for a smooth journey. Contact us for a consultation and individual calculation." />
+                <meta name="keywords" content="UAE Employee Recruitment, Residence Permit Acquisition, Hassle-Free Employment Process, Labour Card, Emirates ID, Residence Visa, Transparent Employment Process, Employee Rights and Obligations, Turnkey Package, [Your Company Name], Document Preparation, UAE Recruitment Process, Streamlined Employee Acquisition, Employee Residence in UAE" />
+            </Helmet>
         <Header />
         <div className="accounting-container">
             <div className="accounting-guide">

@@ -90,6 +90,7 @@ import {AdvancedMarker, APIProvider, ControlPosition, Map, MapControl} from "@vi
 import Marker from "../components/Marker.jsx";
 import projecsData from '../data/Areasinfo.jsx'
 import projecs from '../data/response.json'
+import { Helmet } from 'react-helmet';
 
 const Block = ({ title, content }) => {
     const [isExpanded, setIsExpanded] = useState(false);
@@ -163,7 +164,10 @@ function AreasViewPage() {
                 }
             ],
             lat: "25.18326",
-            lng: "55.26808"
+            lng: "55.26808",
+                "Title": "Business Bay Dubai: Where Luxury Living Meets Dynamic Commerce",
+                "MetaDescription": "Discover the epitome of opulence in Business Bay, Dubai's prominent business center. This dynamic hub seamlessly blends commercial and residential spaces, offering a vibrant urban environment. Explore key features such as its strategic location along the Dubai Water Canal, exceptional transport accessibility, and a well-developed infrastructure with five-star hotels, gourmet restaurants, and premium amenities. Delve into the diverse real estate landscape, from compact studios to luxurious penthouses, and experience the investment attractiveness that sets Business Bay apart. Explore the allure of Business Bay, where luxury living and thriving commerce converge seamlessly.",
+                "Keywords": ["Business Bay Dubai", "Luxury Living", "Dynamic Commerce", "Mixed-Use Development", "Strategic Location", "Transport Accessibility", "Infrastructure", "Dubai Water Canal", "Real Estate Landscape", "Premium Amenities", "Investment Attractiveness", "Opulence", "Business Hub", "Residential Cluster"]
         },
         "palm": {
             "title": t("palm.title"),
@@ -204,7 +208,10 @@ function AreasViewPage() {
                 }
             ],
             lat: "25.11426838805843",
-            lng: "55.15544118892634"
+            lng: "55.15544118892634",
+                "Title": "Palm Jumeirah Dubai: A Masterpiece of Luxurious Living on the Iconic Artificial Island",
+                "MetaDescription": "Embark on a life of luxury and sophistication at Palm Jumeirah, Dubai's iconic artificial island shaped like a palm tree. Discover the epitome of opulence with luxurious properties, breathtaking views of the Arabian Gulf, and a captivating blend of residential, commercial, and entertainment spaces. Explore the strategic location, impressive architecture, and attractions, including pristine beaches, water sports, shopping malls, and the renowned Aquaventure Waterpark. Palm Jumeirah is a prestigious residential oasis, offering a beachfront lifestyle with unparalleled views and top-notch amenities. Experience the ultimate in Dubai living at Palm Jumeirah, where every moment is a masterpiece.",
+                "Keywords": ["Palm Jumeirah Dubai", "Luxurious Living", "Artificial Island", "Iconic Landmark", "Residential Oasis", "Strategic Location", "Size and Architecture", "Attractions", "Infrastructure", "Beachfront Lifestyle", "Investment Attractiveness", "Top-notch Amenities", "Masterpiece Living", "Dubai Living"]
         },
         "mbr": {
             "title": t("mbr.title"),
@@ -245,7 +252,10 @@ function AreasViewPage() {
                 }
             ],
             lat: "25.163702361421716",
-            lng: "55.290416067451176"
+            lng: "55.290416067451176",
+                "Title": "MBR City Dubai: Luxurious Living in the Heart of Mohammed Bin Rashid City",
+                "MetaDescription": "Embark on a journey to MBR City, Dubai's premier development named after His Highness Sheikh Mohammed bin Rashid Al Maktoum. This master-planned marvel spans over 54 million square feet, seamlessly blending residential, commercial, and leisure spaces with a focus on luxury, comfort, and sustainability. Explore the strategic location, architectural diversity, world-class amenities, and attractions like Cityland Mall and Meydan One Mall. With connectivity to Downtown Dubai, Business Bay, and Dubai Hills Estate, MBR City offers a wealth of shopping, dining, and entertainment options. Experience a luxurious haven in the making, where every detail is crafted for a life of luxury and comfort.",
+                "Keywords": ["MBR City Dubai", "Luxurious Living", "Mohammed Bin Rashid City", "Master-Planned Community", "Strategic Location", "Architectural Diversity", "World-Class Amenities", "Attractions", "Connectivity", "Kite Beach", "Diverse Properties", "Comfortable Lifestyle", "Upscale Living", "Dubai Premier Development"]
         },
         "creek": {
             "title": t("creek.title"),
@@ -286,7 +296,10 @@ function AreasViewPage() {
                 }
             ],
             lat: "25.195839684347554",
-            lng: "55.36208518670469"
+            lng: "55.36208518670469",
+                "Title": "Dubai Creek Harbour: Luxury Living on the Historic Banks of Dubai Creek",
+                "MetaDescription": "Embark on a journey to Dubai Creek Harbour, a captivating mixed-use development on the historic banks of Dubai Creek, the birthplace of Dubai. Discover a riverside marvel with a master-planned community seamlessly blending residential, commercial, and leisure spaces. Explore the strategic location, architectural splendor, and world-class amenities, including the iconic Dubai Creek Tower. With excellent connectivity to Downtown Dubai, Business Bay, and Dubai Festival City, Dubai Creek Harbour offers a growing oasis of luxury. Experience a sought-after destination with stunning views, diverse properties, and convenient access to key areas. Choose Dubai Creek Harbour for a luxurious lifestyle where comfort meets history.",
+                "Keywords": ["Dubai Creek Harbour", "Luxury Living", "Historic Banks", "Riverside Marvel", "Mixed-Use Development", "Strategic Location", "Architectural Splendor", "World-Class Amenities", "Dubai Creek Tower", "Shopping Destinations", "Connectivity", "Recreational Spaces", "Upscale Living", "Sought-After Destination", "Diverse Properties", "Historic Dubai Creek"]
         },
 
         "marina": {
@@ -328,7 +341,11 @@ function AreasViewPage() {
                 }
             ],
             lat: "25.077882518530753",
-            lng: "55.13167305094422"
+            lng: "55.13167305094422",
+                "Title": "Dubai Marina: A Waterfront Oasis and Vibrant Cosmopolitan Hub",
+                "MetaDescription": "Experience the allure of Dubai Marina, a dynamic waterfront community along the Persian Gulf shoreline in Dubai. Discover a waterfront marvel with mixed-use development seamlessly blending residential, commercial, and recreational spaces. Explore the strategic location, impressive architecture, and world-class amenities like Dubai Marina Mall and outdoor activities along the Marina Promenade. With excellent connectivity to neighboring communities and popular beaches, Dubai Marina offers a vibrant cosmopolitan lifestyle. Whether for residence or investment, Dubai Marina is a harmonious blend of luxury and lifestyle, where the city meets the sea.",
+                "Keywords": ["Dubai Marina", "Waterfront Oasis", "Mixed-Use Development", "Strategic Location", "Impressive Architecture", "Dubai Metro", "Shopping Haven", "Outdoor Activities", "Connectivity", "Beach Access", "Investment Attractiveness", "Cosmopolitan Community", "Luxury Living", "Persian Gulf Shoreline"]
+
         },
         "lagoons": {
             "title": t("lagoons.title"),
@@ -369,7 +386,10 @@ function AreasViewPage() {
                 }
             ],
             lat: "25.011299587780673",
-            lng: "55.240526772734434"
+            lng: "55.240526772734434",
+                "Title": "Damac Lagoons Dubai: A Celebration of Luxury Living in a Waterfront Oasis",
+                "MetaDescription": "Discover Damac Lagoons, a luxurious waterfront residential community in Dubai's International Media Production Zone (IMPZ), crafted by Damac Properties. Explore a mixed-use development where luxury meets tranquility, featuring modern amenities, breathtaking waterfront views, and a range of residential properties from apartments to villas. Enjoy world-class amenities, parks, and a marina, creating a harmonious blend of convenience and leisure. With proximity to landmarks like Dubai Miracle Garden and surrounding communities, Damac Lagoons is your gateway to luxury living. Whether for residence or investment, experience the epitome of Dubai's exclusive lifestyle at Damac Lagoons, where every day is a celebration of luxury and comfort.",
+                "Keywords": ["Damac Lagoons Dubai", "Waterfront Oasis", "Luxury Living", "Mixed-Use Development", "Strategic Location", "Architectural Excellence", "Luxurious Real Estate", "Amenities and Infrastructure", "Retail and Recreation", "Outdoor Activities", "Nearby Communities", "Transportation", "Investment Attractiveness", "Exclusive Lifestyle", "Celebration of Luxury and Comfort"]
         },
         "jlt": {
             "title": t("jlt.title"),
@@ -410,7 +430,10 @@ function AreasViewPage() {
                 }
             ],
             lat: "25.070791373667383",
-            lng: "55.145857689647535"
+            lng: "55.145857689647535",
+                "Title": "Jumeirah Lake Towers (JLT) Dubai: A Dynamic Hub for Vibrant Living",
+                "MetaDescription": "Discover the vibrancy of Jumeirah Lake Towers (JLT), a large mixed-use development in the heart of Dubai. Explore a dynamic urban environment with 80 high-rise towers, man-made lakes, and a mix of residential, commercial, and retail properties. Benefit from JLT's strategic location adjacent to Dubai Marina, offering easy access to landmarks, shopping centers like Dubai Marina Mall, and attractions like Jumeirah Beach. Enjoy a well-rounded living experience with modern amenities, walkways, and green spaces. JLT stands as a dynamic and multicultural area, presenting a vibrant lifestyle for residents and investment opportunities. Explore the possibilities and embrace the dynamic lifestyle that Jumeirah Lake Towers has to offer!",
+                "Keywords": ["Jumeirah Lake Towers Dubai", "Mixed-Use Development", "Vibrant Living", "Strategic Location", "Amenities and Infrastructure", "Shopping Extravaganza", "Nearby Communities", "Beach Access", "Investment Attractiveness", "Dynamic Lifestyle", "Multicultural Community", "Dubai Marina", "Residential Properties", "Investment Opportunities"]
         },
         "mjl": {
             "title": t("mjl.title"),
@@ -451,7 +474,10 @@ function AreasViewPage() {
                 }
             ],
             lat: "25.13421299733816",
-            lng: "55.192893920025064"
+            lng: "55.192893920025064",
+                "Title": "Madinat Jumeirah Living Dubai: Luxurious Residences in the Heart of Jumeirah District",
+                "MetaDescription": "Explore the epitome of luxury at Madinat Jumeirah Living, a premium residential development in Dubai's prestigious Jumeirah district by Dubai Holding. Discover luxurious apartments, townhouses, and villas with high-end finishes and breathtaking views of the iconic Burj Al Arab. Experience a lifestyle of convenience with community facilities, fitness amenities, and healthcare access. Indulge in a shopping extravaganza at Souk Madinat Jumeirah and enjoy proximity to popular areas like Dubai Marina. Madinat Jumeirah Living not only offers a sought-after residence but also presents a promising investment opportunity in the heart of Dubai.",
+                "Keywords": ["Madinat Jumeirah Living Dubai", "Luxurious Residences", "Jumeirah District", "Premium Residential Development", "Iconic Views", "Infrastructure and Amenities", "Shopping Extravaganza", "Nearby Communities", "Investment Attractiveness", "Strategic Location", "Dubai Holding", "Burj Al Arab", "Souk Madinat Jumeirah", "Investment Opportunity"]
         },
 
         "mudon": {
@@ -493,7 +519,10 @@ function AreasViewPage() {
                 }
             ],
             lat: "25.017709497239544",
-            lng: "55.26420037798617"
+            lng: "55.26420037798617",
+                "Title": "Mudon Dubai: Tranquil Living in a Private Oasis by Dubai Properties",
+                "MetaDescription": "Discover Mudon, a private enclave within Dubai's expansive Dubailand, offering a unique blend of serene country life in a low-rise setting. Developed by Dubai Properties, Mudon stands out as a classic low-rise development with diverse living options, including duplexes, townhouses, and villas. Explore the strategic location at the intersection of Al Qudra Road and Emirates Road, providing residents with tranquility and connectivity. Enjoy a green oasis at the expansive Central Park and diverse recreational amenities. With a diverse real estate portfolio, Mudon is an ideal living choice for expats, families, and individuals seeking a tranquil yet well-connected lifestyle in Dubai.",
+                "Keywords": ["Mudon Dubai", "Tranquil Living", "Private Oasis", "Dubai Properties", "Dubailand", "Low-Rise Development", "Strategic Location", "Central Park", "Diverse Living Options", "Recreational Amenities", "Real Estate Portfolio", "Investment Attractiveness", "Quiet Living", "Well-Connected Lifestyle", "Dubai's Real Estate Landscape"]
         },
         "jvc": {
             "title": t("jvc.title"),
@@ -534,7 +563,10 @@ function AreasViewPage() {
                 }
             ],
             lat: "25.05568694551645",
-            lng: "55.210765198471826"
+            lng: "55.210765198471826",
+                "Title": "Jumeirah Village Circle (JVC): Your Gateway to Vibrant Living and Investment Opportunities in Dubai",
+                "MetaDescription": "Explore the charms of Jumeirah Village Circle (JVC), a blossoming community strategically nestled in the heart of Dubai. With a mix of residential options, including apartments, villas, and townhouses, JVC is designed as a self-contained neighborhood. Discover a flourishing oasis of amenities, outdoor activities, and landmarks, including The Circle Mall, Dubai Autodrome, and Dubai Butterfly Garden. JVC's strategic location, excellent amenities, and diverse real estate options make it an attractive destination for expats, young families, and investors looking for a thriving lifestyle in Dubai.",
+                "Keywords": ["Jumeirah Village Circle", "JVC Dubai", "Vibrant Living", "Investment Opportunities", "Self-Contained Neighborhood", "Residential Options", "Amenities", "Outdoor Activities", "Landmarks", "The Circle Mall", "Dubai Autodrome", "Dubai Butterfly Garden", "Strategic Location", "Diverse Real Estate", "Thriving Lifestyle", "Dubai's Real Estate Landscape"]
         },
         "bluewaters": {
             "title": t("bluewaters.title"),
@@ -575,7 +607,10 @@ function AreasViewPage() {
                 }
             ],
             lat: "25.079542367968156",
-            lng: "55.11852342246321"
+            lng: "55.11852342246321",
+            "Title": "Bluewaters Island: Luxury Redefined in Dubai's Coastal Paradise",
+            "MetaDescription": "Explore the allure of Bluewaters Island, an opulent artificial island within Dubai Marina, crafted by Meraas. Discover a harmonious blend of residential, entertainment, beach, shopping, and hotel zones. The iconic Dubai Eye, world's tallest wheel at 210 meters, adds to the island's charm. Bluewaters Island offers low-rise residential complexes, including apartments, penthouses, townhouses, and villas, providing a luxurious lifestyle with premium amenities. Limited availability makes real estate on Bluewaters a highly profitable and exclusive investment opportunity in Dubai.",
+            "Keywords": ["Bluewaters Island", "Dubai Marina", "Luxury Real Estate", "Dubai Eye", "Artificial Island", "Residential Complexes", "Premium Amenities", "Limited Availability", "Investment Opportunity", "Meraas", "Sophisticated Lifestyle", "Coastal Paradise", "Exclusive Destination", "Profitable Investment", "Dubai's Real Estate"]
         },
         "central-park": {
             "title": t("central-park.title"),
@@ -616,7 +651,10 @@ function AreasViewPage() {
                 }
             ],
             lat: "25.205564110864415",
-            lng: "55.26059454555963"
+            lng: "55.26059454555963",
+            "Title": "Central Park: Tranquil Suburban Living in Mohammed bin Rashid City",
+            "MetaDescription": "Explore Central Park, an elite residential community in Mohammed bin Rashid City, offering a tranquil suburban lifestyle. Positioned strategically with easy access to major thoroughfares, Central Park provides a comprehensive living experience with a range of amenities. Discover comfortable townhouses and apartments, showcasing spacious designs and premium features. Ideal for residents seeking serenity without compromising on modern comforts. Central Park's well-developed infrastructure and investment potential make it a tenant's delight for both short-term and long-term rentals in Dubai.",
+            "Keywords": ["Central Park", "Mohammed bin Rashid City", "Tranquil Living", "Suburban Lifestyle", "Strategic Location", "Comprehensive Amenities", "Comfortable Townhouses", "Premium Apartments", "Investment Potential", "Well-developed Infrastructure", "Tenant's Delight", "Short-term Rentals", "Long-term Rentals", "Dubai Real Estate"]
         },
 
         "damac-hills": {
@@ -712,7 +750,7 @@ function AreasViewPage() {
         },
     ]
 
-    const { title, titleText, locationText, infrastructureText, images, blocks, lat, lng } = pageTexy[id];
+    const { title, titleText, locationText, infrastructureText, images, blocks, lat, lng, Title, MetaDescription, Keywords } = pageTexy[id];
 
     const [modalText, setModalText] = useState({
         tittleText: "",
@@ -746,6 +784,11 @@ function AreasViewPage() {
     }
 
     return (<div className="areas-view-page">
+        <Helmet>
+            <title>{Title}</title>
+            <meta name="description" content={MetaDescription} />
+            <meta name="keywords" content={Keywords} />
+        </Helmet>
         <Header/>
         <RequestModal showModal={showModal} closeModal={closeModal} modalText={modalText}
                       image={annaHorshunovaName} />

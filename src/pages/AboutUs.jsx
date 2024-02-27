@@ -38,6 +38,7 @@ import legal from "../assets/freezone/legal.svg";
 import checkBh from "../assets/Registration/check-bh.png";
 import GetAdvice from "../components/GetAdvice.jsx";
 import GetConsult from "../components/GetConsult.jsx";
+import {Helmet} from "react-helmet";
 
 
 function AboutUs() {
@@ -145,6 +146,11 @@ function AboutUs() {
 
     return (
         <div className="about-wrapper">
+            <Helmet>
+                <title>PROPART: Redefining Real Estate in Dubai - Your Premier Real Estate Agency</title>
+                <meta name="description" content="Embark on an exceptional real estate journey with PROPART, your trusted agency in the heart of Dubai. Our seasoned team, led by CEO Lohachov Oleksa, brings a wealth of experience and a personalized approach to redefine your property experiences. From luxurious villas to state-of-the-art apartments, discover a diverse portfolio tailored to your unique needs. Partner with us for expert legal support, hassle-free customs, licensing expertise, and seamless real estate transactions. Your dream property journey begins with PROPART." />
+                <meta name="keywords" content="PROPART, Real Estate Dubai, Dubai Property Market, Real Estate Brokerage, Luxury Villas, Apartments in Dubai, Legal Support, Customs Clearance, Licensing Procedures, Real Estate Transactions, Lohachov Oleksa, CEO, Personalized Approach, Seamless Experiences" />
+            </Helmet>
             <Header />
             <div className="about-container">
                 <div className="banner">

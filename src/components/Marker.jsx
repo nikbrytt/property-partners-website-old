@@ -15,7 +15,6 @@ const Marker = ({ index, mapZoom, project }) => {
     const elementRef = useRef(null);
 
 
-
     function convertPriceToShortFormat(price) {
         price = (Number(price) / 3.16).toFixed(0).toString()
         const suffixes = ['', 'K', 'M', 'B', 'T'];

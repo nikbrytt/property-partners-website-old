@@ -10,6 +10,7 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
 import { Link } from "react-router-dom";
 import AreasCardsInfo from "../data/AreasCardsInfo.jsx";
 import {useTranslation} from "react-i18next";
+import {Helmet} from "react-helmet";
 
 const AboutAreas = () => {
     const staticData = [
@@ -133,6 +134,11 @@ const AboutAreas = () => {
     }
 
     return (<div className='about-areas'>
+            <Helmet>
+                <title>Discover Luxury, Comfort, and Style in Dubai's Premier Areas | Unveiling the Best of Modern Living</title>
+                <meta name="description" content="Explore the opulent blend of modern luxury and traditional charm in Dubai, from iconic landmarks like Burj Khalifa to vibrant areas such as Palm Jumeirah and Downtown Dubai. Uncover the top 5 performing areas in Dubai's thriving property market – Jumeirah Village Circle, Business Bay, Dubai Marina, Dubai Hills, and Jumeirah Lakes Towers. Whether you seek family-friendly living, a professional hub, or waterfront luxury, Dubai offers a spectrum of lifestyles. Embark on a journey through the city's unique charms, where luxury, comfort, and style converge to redefine modern living." />
+                <meta name="keywords" content="Dubai Luxury Living, Modern Charm, Top Areas in Dubai, Property Market, Jumeirah Village Circle, Business Bay, Dubai Marina, Dubai Hills, Jumeirah Lakes Towers, Iconic Landmarks, Waterfront Luxury, Comfortable Living, Dubai Lifestyle, Modern Living Experience" />
+            </Helmet>
             <Header></Header>
             <div className="about-areas-container">
                 <div className="about-dubai">
@@ -140,7 +146,6 @@ const AboutAreas = () => {
                         <div className="title">{t("About Dubai")}</div>
                         <div className="description">
                             <div>{t("About Dubai Descr1")}</div>
-                            <div>{t("About Dubai Descr2")}</div>
                         </div>
                     </div>
                 </div>

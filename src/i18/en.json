@@ -7,7 +7,7 @@
   "header_option5": "About us",
   "header_option6": "Developers",
 
-  "title_home1": "Your Space, Your Sanctuary",
+  "title_home1": "Your Vision of Home - Begins Herey",
   "title_home2": "ProPart - Redefining Home Living",
   "home_box1": "15 years of experience",
   "home_box2": "Legal counseling",
@@ -16,7 +16,7 @@
   "home_box5": "Assistance in processing transactions",
   "home_button": "Learn more",
   "block2_title": "Choose the best from the special collection",
-  "block2_text": "We cater to a diverse range of preferences and budgets, ensuring there's something perfect for everyone. Whether you're searching for a cozy studio or a sprawling estate, our selections are tailored to meet your needs. Once you've selected your ideal property, our dedicated expert will promptly contact you within 5 minutes to assist with any inquiries and guide you through the process.",
+  "block2_text": "Discover the ideal space for you! ProPart, with 15 years of real estate experience, offers legal counseling, an individual approach, and unique data to facilitate seamless transactions. From cozy studios to sprawling estates, our diverse selection caters to every preference and budget",
   "block3_text": "Take advantage of our tailored approach and let us help you find the home of your dreams. Make your selection, and we'll be in touch in no time to start your journey towards the perfect property.",
   "sel_1": "Selection for rent",
   "proj_1": "4 projects",
@@ -30,7 +30,7 @@
   "sel_4": "Selection for resale",
   "proj_4": "6 projects",
   "price_4": "from $150,000",
-  "square1": "Why Dubai?",
+  "square1": "Why Dubai",
   "square2": "Profitable real estate?",
   "square2_1": "Real estate is 50% of Dubai's GDP",
   "square3": "No taxes",
@@ -39,7 +39,7 @@
   "square4_1": "60-65K annual projects, 3-4% growth",
   "square5": "Stability",
   "square5_1": "Recent years saw a 20-25% surge in property prices, ensuring a stable ROI",
-  "block3_title": "What kind of projects we can tailor to the client",
+  "block3_title": "Real Estate Projects ",
 
   "drop_1": "Primary real estate",
   "drop_text1": "Our partners are Dubai's largest real estate developers, which will allow you to get insider information on new projects.",
@@ -94,9 +94,9 @@
   "filter5": "Handover",
   "filter6": "Property type",
   "filter7": "Completion",
-  "About Dubai": "About Dubai areas: luxury, comfort and style",
-  "About Dubai Descr1": "Dubai, a glittering jewel in the United Arab Emirates, is renowned for its blend of modern luxury and traditional allure. The city's diverse areas each tell a unique story of opulence and grandeur, offering a living experience that caters to a range of lifestyles and preferences. From the palm-shaped islands of Palm Jumeirah to the bustling streets of Downtown Dubai, the city is a tapestry of exclusive residential enclaves, commercial hubs, and serene family neighborhoods.",
-  "About Dubai Descr2": "The iconic Burj Khalifa and the dancing Dubai Fountain are just the tip of the iceberg, with each area boasting its own landmarks and luxuries. The upscale marinas, sprawling malls like The Dubai Mall, and lush parks underscore the city's commitment to providing an unmatched urban experience.",
+  "About Dubai": "Explore Luxury, Comfort, and Style in Dubai's Premier Areas",
+  "About Dubai Descr1": "Dubai, a dazzling gem in the heart of the United Arab Emirates, stands as a testament to the \nseamless blend of modern luxury and traditional charm. This vibrant city is a mosaic of diverse \nareas, each narrating a unique tale of opulence and grandeur, offering living experiences \ntailored to a spectrum of lifestyles and preferences. From the iconic palm-shaped islands of \nPalm Jumeirah to the energetic streets of Downtown Dubai, Dubai unfolds as a tapestry of \nexclusive residential enclaves, bustling commercial hubs, and tranquil family neighborhoods.",
+  "About Dubai Descr2": "Seamless blend of modern luxury and traditional charm. This vibrant city is a mosaic of diverse",
 
   "r_but": "Back",
 
@@ -1551,7 +1551,7 @@
     "about-us": {
       "text": "A premier real estate agency based in the vibrant heart of Dubai.",
       "since-inception": {
-        "title": "Since our inception in 2024",
+        "title": "Since our inception in 2023",
         "description": {
           "1": "We have been committed to delivering exceptional real estate experiences to our clients.",
           "2": "Our journey began with a simple yet profound vision: to redefine the standards of real estate brokerage in one of the world's most dynamic property markets.",
@@ -1566,7 +1566,7 @@
     },
     "propart-section": {
       "title": "At ProPart",
-      "description": "We pride ourselves on our deep understanding of the unique Dubai real estate market. Our team of seasoned professionals is adept at navigating its complexities, ensuring that our clients make informed and profitable decisions. Our values of integrity, transparency, and excellence are at the core of everything we do, guiding us in building lasting relationships with our clients."
+      "description": "Our seasoned professionals navigate the Dubai real estate market with integrity, transparency,\nand excellence. Meet our team of experts dedicated to ensuring informed and profitable\ndecisions:"
     },
 
     "company_registration": "Company registration",
@@ -1601,7 +1601,7 @@
 
   "areas-business": {
     "title": "Business Bay",
-    "titleText": ["Business Bay is a well-known business center and a large area combining commercial, residential and business facilities. Skyscrapers, modern architecture, a concentration of luxury and prestige: everything that is associated with Dubai is located here. Initially, Business Bay was conceived as the world's largest business hub, but the popularity of the area among tourists and residents led to the emergence of a developed residential cluster."],
+    "titleText": ["Business Bay stands as Dubai's prominent business center, seamlessly integrating\ncommercial, residential, and business facilities. Boasting skyscrapers, modern architecture,\nand a concentration of luxury and prestige, Business Bay encapsulates everything associated\nwith the opulence of Dubai. Originally envisioned as the world's largest business hub, its\npopularity among tourists and residents has transformed it into a thriving residential cluster."],
     "locationText": ["The Business Bay area has a strategically advantageous location. Covering an area of about 6 square kilometers, it is surrounded on both sides by the famous Dubai Water Canal, and is adjacent to the equally famous central area of Downtown Dubai.",
         "In its atmosphere and arrangement, the area is reminiscent of New York: the special energy of the place, many attractions in the area, and a developed business environment. And most importantly - excellent transport accessibility. Of all the areas in Dubai, Business Bay arguably has the easiest access to other communities and attractions in the emirate.",
         "First of all, it has direct access to the largest highway, Sheikh Zayed Road and Al Khail Road, which run through the whole of Dubai. There are metro stations in the area, which make it easier to leave and travel around the city.",

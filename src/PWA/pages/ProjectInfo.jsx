@@ -114,6 +114,7 @@ const ProjectInfo = () => {
     const [randomNumber, setRandomNumber] = useState(Math.floor(Math.random() * 8));
     const[activePayment,setActivePayment] = useState(null)
     const[activeFloor,setActiveFloor] = useState(null)
+
     useEffect(() => {
         if(project){
             for (const key in project.paymentPlans) {
@@ -174,6 +175,7 @@ const ProjectInfo = () => {
     function formatNumberWithCommas2(value) {
         return value.replace(/,/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
+
     return(<div className={"project-info"}>
         <div className="images-container">
             <div className="images">

@@ -27,6 +27,7 @@ import dmitriyKoltsov from "../assets/teams/qr/dmitriy-koltsov.png";
 import RequestModal from "../components/RequestModal.jsx";
 import ConsulatingBaner from "../components/ConsulatingBaner"
 import NewConsultBaner from "../components/NewConsultBaner"
+import {Helmet} from "react-helmet";
 
 function TradeMark() {
     const { t } = useTranslation();
@@ -107,6 +108,11 @@ function TradeMark() {
     const RegisteringCard = ({ count, title, description, days }) => {
         return (
             <div className="registering-card">
+                <Helmet>
+                    <title>Seamless Business Setup and Trademark Registration in the UAE - Your Gateway to Success</title>
+                    <meta name="description" content="Establish and protect your business in the UAE effortlessly with our comprehensive suite of services. From turnkey business setup to trademark registration, we offer expert guidance at every step. Our specialized trademark registration services ensure the protection of your brand identity. Discover the process, required documents, and interesting facts about the UAE. Choose us for timely filings, high-impact media publication, and a transparent fee structure. Partner with us for a successful business journey in the UAE." />
+                    <meta name="keywords" content="UAE Business Setup, Trademark Registration, Brand Identity Protection, Turnkey Business Support, Consultation Services, Legal Procedures, Media Publication, Comprehensive Business Services, Timely Filings, Transparent Fee Structure, UAE Business Journey, Expert Guidance, Your Gateway to Success" />
+                </Helmet>
                 <div className="title">
                     <div>{count}</div>
                     <div>

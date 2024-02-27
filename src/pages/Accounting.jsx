@@ -35,6 +35,7 @@ import employees from "../assets/minland/employess.png"
 import box from "../assets/minland/box.png"
 import NewConsultBaner from "../components/NewConsultBaner"
 import BanerBlocks from "../components/BanerBlocks.jsx"
+import {Helmet} from "react-helmet";
 function Accounting() {
     const { t } = useTranslation();
     const [randomNumber, setRandomNumber] = useState(Math.floor(Math.random() * 8));
@@ -187,6 +188,11 @@ function Accounting() {
 
     return (
         <div className="auditing-wrapper ">
+            <Helmet>
+                <title>Premium Accounting and Auditing Services in the UAE - ProPart Consulting</title>
+                <meta name="description" content="Optimize your business potential with ProPart Consulting's top-notch accounting and auditing services in the UAE. Our expertise covers reports, tax management, document analysis, job placement, risk assessment, and more. Choose us for comprehensive accounting and VAT support, efficient personnel outsourcing, management accounting systems, quick turnaround, legal support, and advocacy of interests. Additional services include Dubai registration mastery, employee legalization express, and customs compliance. Get a free consultation for your business today!" />
+                <meta name="keywords" content="Accounting Services UAE, Auditing Services UAE, Tax Management, Document Analysis, Job Placement, Risk Assessment, VAT Compliance, Personnel Outsourcing, Management Accounting, Legal Support, Advocacy of Interests, Dubai Registration, Employee Legalization, Customs Compliance, ProPart Consulting, Free Consultation, UAE Business Services" />
+            </Helmet>
             <Header></Header>
             <div className="auditing-container">
                 <div className="auditing-baner-guide">

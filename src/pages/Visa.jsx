@@ -32,6 +32,7 @@ import RequestModal from "../components/RequestModal.jsx";
 import ConsulatingBaner from "../components/ConsulatingBaner"
 import NewConsultBaner from "../components/NewConsultBaner"
 import BanerBlocks from "../components/BanerBlocks.jsx"
+import {Helmet} from "react-helmet";
 
 function Visa() {
     const { t } = useTranslation();
@@ -209,6 +210,11 @@ function Visa() {
 
     return (
         <div className="visa-wrapper ">
+            <Helmet>
+                <title>UAE Resident Visa Services | ProPart Consulting - Your Gateway to Seamless Visa Solutions</title>
+                <meta name="description" content="Embark on a hassle-free journey to obtaining a UAE resident visa with ProPart Consulting. Explore expert guidance for various visa categories, efficient registration processes, and more. Choose from Property Investor, Talent, Start-up, Business, or Employee visas. Get started with a free consultation today!" />
+                <meta name="keywords" content="UAE Resident Visa, Visa Categories UAE, Property Investor Visa, Talent Visa, Start-up Visa, Business Visa, Employee Visa, ProPart Consulting, Visa Services UAE, Efficient Visa Registration, UAE Visa Expertise, Golden Visa, Residence Permit Programs, UAE Visa Renewal, Visa Costs and Renewal Details" />
+            </Helmet>
             <Header></Header>
             <div className="visa-container">
                 <div className="visa-baner-guide">

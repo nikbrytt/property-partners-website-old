@@ -170,7 +170,7 @@ const InquireModal = ({showInquireModal, closeInquireModal}) => {
                             <div>$204K</div>
                             <div>PRICE FROM</div>
                         </div>
-                        <div className={`form-button`}  onClick={() => setInquire(true)}>
+                        <div className='button'  onClick={() => setInquire(true)}>
                             {t("INQUIRE NOW")}
                         </div>
                     </div>

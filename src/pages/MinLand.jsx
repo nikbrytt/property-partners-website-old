@@ -40,6 +40,7 @@ import services from "../assets/minland/services.png"
 import smile from "../assets/minland/smile.png"
 import employees from "../assets/minland/employess.png"
 import box from "../assets/minland/box.png"
+import {Helmet} from "react-helmet";
 
 
 function MinLand() {
@@ -200,6 +201,11 @@ function MinLand() {
     
     return (
         <div className="minland-wrapper ">
+            <Helmet>
+                <title>UAE Business Setup Services - Your Path to Success with ProPart Consulting</title>
+                <meta name="description" content="Unlock the full potential of your business in the UAE with ProPart Consulting's comprehensive business setup services. Navigate Mainland vs. Free Zone distinctions, explore ownership options, and ensure tax planning optimization. Our streamlined stages cover initial approval, Ejari assistance, company setup, visa registration, permits acquisition, and bank account opening. Embark on your UAE business journey confidently. Contact us for a free consultation today!" />
+                <meta name="keywords" content="UAE Business Setup, Business Setup Services, Mainland vs. Free Zone, Ownership Options UAE, Tax Planning, Employee Registration, Regulatory Compliance, Business Setup Stages, Initial Approval, Ejari Assistance, Company Setup, Visa Registration, Regulatory Permits, Bank Account Opening, ProPart Consulting, UAE Business Journey, Free Consultation" />
+            </Helmet>
             <Header></Header>
             <div className="minland-container">
                 <div className="minland-baner-guide">

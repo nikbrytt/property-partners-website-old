@@ -27,6 +27,7 @@ const Project = ({projectData}) => {
             window.removeEventListener("storage", handleStorageChange);
         };
     }, []);
+
     function formatNumberWithCommas(value) {
         value = (Number(value) / 3.16).toFixed(0).toString()
         return value.replace(/,/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -40,8 +41,8 @@ const Project = ({projectData}) => {
             localStorage.setItem("visited", JSON.stringify(visitedList));
             window.dispatchEvent(new Event("storage"));
         }
-
     };
+
     const handleLikeClick = (e) => {
         e.preventDefault();
         e.stopPropagation();
@@ -61,7 +62,7 @@ const Project = ({projectData}) => {
         window.dispatchEvent(new Event("storage"));
     };
     return(<div className={"project"} onClick={handleProjectClick}>
-        <Link to="/phone/project" state={{ project: projectData }} >
+        <Link to="/phone/project/1" state={{ project: projectData }} >
         <div className="image">
             <img src={projectData.imageSrcMain}/>
             <div className="like" onClick={handleLikeClick}>

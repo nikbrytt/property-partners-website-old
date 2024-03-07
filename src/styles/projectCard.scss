@@ -22,7 +22,7 @@
         color: #FFF;
         leading-trim: both;
         text-edge: cap;
-        font-family: HelveticaBold, sans-serif;
+        font-family: Roboto, sans-serif;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -87,7 +87,7 @@
             color: #000;
             leading-trim: both;
             text-edge: cap;
-            font-family: HelveticaBold, sans-serif;
+            font-family: Roboto, sans-serif;
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
@@ -99,7 +99,7 @@
             color: #8F8F8F;
             leading-trim: both;
             text-edge: cap;
-            font-family: Helvetica, sans-serif;
+            font-family: Roboto, sans-serif;
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
@@ -148,7 +148,7 @@
             color: #000;
             leading-trim: both;
             text-edge: cap;
-            font-family: HelveticaBold, sans-serif;
+            font-family: Roboto, sans-serif;
             font-size: 40px;
             font-style: normal;
             font-weight: 700;
@@ -163,7 +163,7 @@
             color: #000;
             leading-trim: both;
             text-edge: cap;
-            font-family: Helvetica, sans-serif;
+            font-family: Roboto, sans-serif;
             font-size: 20px;
             font-style: normal;
             font-weight: 400;
@@ -191,7 +191,7 @@
             color: #000;
             leading-trim: both;
             text-edge: cap;
-            font-family: HelveticaBold,
+            font-family: Roboto,
             sans-serif;
             font-size: 40px;
             font-style: normal;
@@ -207,7 +207,7 @@
             gap: 5px;
             leading-trim: both;
             text-edge: cap;
-            font-family: Helvetica, sans-serif;
+            font-family: Roboto, sans-serif;
             font-size: 20px;
             font-style: normal;
             font-weight: 400;
@@ -239,7 +239,7 @@
               color: #000;
               leading-trim: both;
               text-edge: cap;
-              font-family: Helvetica, sans-serif;
+              font-family: Roboto, sans-serif;
               font-size: 14px;
               font-style: normal;
               font-weight: 400;
@@ -251,7 +251,7 @@
               color: #000;
               leading-trim: both;
               text-edge: cap;
-              font-family: HelveticaBold, sans-serif;
+              font-family: Roboto, sans-serif;
               font-size: 16px;
               font-style: normal;
               font-weight: 400;
@@ -276,7 +276,7 @@
         color: #191C38;
         leading-trim: both;
         text-edge: cap;
-        font-family: HelveticaBold, sans-serif;
+        font-family: Roboto, sans-serif;
         font-size: 32px;
         font-style: normal;
         font-weight: 700;
@@ -286,7 +286,7 @@
 
       .about-project {
         color: black;
-        font-family: Helvetica, sans-serif;
+        font-family: Roboto, sans-serif;
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
@@ -298,7 +298,7 @@
         display: flex;
         justify-content: flex-end;
         color: #191C38;
-        font-family: Helvetica, sans-serif;
+        font-family: Roboto, sans-serif;
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
@@ -352,7 +352,7 @@
 
             div:first-child {
               color: #939393;
-              font-family: Helvetica, sans-serif;
+              font-family: Roboto, sans-serif;
               font-size: 16px;
               font-style: normal;
               font-weight: 400;
@@ -363,7 +363,7 @@
               color: #191C38;
               leading-trim: both;
               text-edge: cap;
-              font-family: HelveticaBold, sans-serif;
+              font-family: Roboto, sans-serif;
               font-size: 24px;
               font-style: normal;
               font-weight: 400;
@@ -376,7 +376,7 @@
             color: #191C38;
             leading-trim: both;
             text-edge: cap;
-            font-family: Helvetica, sans-serif;
+            font-family: Roboto, sans-serif;
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
@@ -401,7 +401,7 @@
               color: #000;
               leading-trim: both;
               text-edge: cap;
-              font-family: HelveticaBold, sans-serif;
+              font-family: Roboto, sans-serif;
               font-size: 16px;
               font-style: normal;
               font-weight: 400;
@@ -422,7 +422,7 @@
               color: #FFF;
               leading-trim: both;
               text-edge: cap;
-              font-family: HelveticaBold, sans-serif;
+              font-family: Roboto, sans-serif;
               font-size: 16px;
               font-style: normal;
               font-weight: 400;
@@ -450,7 +450,7 @@
 
           div:first-child {
             color: #FFF;
-            font-family: HelveticaBold, sans-serif;
+            font-family: Roboto, sans-serif;
             font-size: 35px;
             font-style: normal;
             font-weight: 400;
@@ -469,7 +469,7 @@
 
             color: #FFF;
             text-align: right;
-            font-family: Helvetica,
+            font-family: Roboto,
             sans-serif;
             font-size: 20px;
             font-style: normal;
@@ -486,7 +486,7 @@
             cursor: pointer;
             color: #8F8F8F;
             text-align: center;
-            font-family: Helvetica, sans-serif;
+            font-family: Roboto, sans-serif;
             font-size: 20px;
             font-style: normal;
             font-weight: 400;
@@ -496,7 +496,7 @@
             &.active {
               color: #FFF;
               text-align: center;
-              font-family: Helvetica, sans-serif;
+              font-family: Roboto, sans-serif;
               font-size: 20px;
               font-style: normal;
               font-weight: 400;
@@ -517,7 +517,7 @@
 
             .header {
               color: #939393;
-              font-family: Helvetica, sans-serif;
+              font-family: Roboto, sans-serif;
               font-size: 20px;
               font-style: normal;
               font-weight: 300;
@@ -531,7 +531,7 @@
 
               .value {
                 color: #FFF;
-                font-family: Helvetica, sans-serif;
+                font-family: Roboto, sans-serif;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 400;
@@ -554,7 +554,7 @@
         color: #191C38;
         leading-trim: both;
         text-edge: cap;
-        font-family: HelveticaBold, sans-serif;
+        font-family: Roboto, sans-serif;
         font-size: 32px;
         font-style: normal;
         font-weight: 700;
@@ -584,7 +584,7 @@
             color: #000;
             leading-trim: both;
             text-edge: cap;
-            font-family: Helvetica, sans-serif;
+            font-family: Roboto, sans-serif;
             font-size: 20px;
             font-style: normal;
             font-weight: 400;
@@ -636,7 +636,7 @@
 
       .header {
         color: #191C38;
-        font-family: HelveticaBold, sans-serif;
+        font-family: Roboto, sans-serif;
         font-size: 32px;
         font-style: normal;
         font-weight: 400;
@@ -673,7 +673,7 @@
           color: #191C38;
           leading-trim: both;
           text-edge: cap;
-          font-family: HelveticaBold, sans-serif;
+          font-family: Roboto, sans-serif;
           font-size: 32px;
           font-style: normal;
           font-weight: 400;
@@ -713,7 +713,7 @@
 
     .warning {
       color: #8F8F8F;
-      font-family: Helvetica, sans-serif;
+      font-family: Roboto, sans-serif;
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
@@ -774,7 +774,7 @@
                 font-size: 16px;
                 display: flex;
                 gap: 7px;
-                font-family: Helvetica, sans-serif;
+                font-family: Roboto, sans-serif;
                 align-items: center;
               }
 
@@ -782,7 +782,7 @@
                 align-items: flex-end;
 
                 div:first-child {
-                  font-family: HelveticaBold, sans-serif;
+                  font-family: Roboto, sans-serif;
                   font-size: 24px;
                   line-height: unset;
                 }
@@ -955,7 +955,7 @@
           color: #191C38;
           leading-trim: both;
           text-edge: cap;
-          font-family: HelveticaBold, sans-serif;
+          font-family: Roboto, sans-serif;
           font-size: 32px;
           font-style: normal;
           font-weight: 700;
@@ -965,7 +965,7 @@
 
         .about-project {
           color: black;
-          font-family: Helvetica, sans-serif;
+          font-family: Roboto, sans-serif;
           font-size: 14px;
           font-style: normal;
           font-weight: 400;
@@ -1121,7 +1121,7 @@
           color: #191C38;
           leading-trim: both;
           text-edge: cap;
-          font-family: HelveticaBold, sans-serif;
+          font-family: Roboto, sans-serif;
           font-size: 32px;
           font-style: normal;
           font-weight: 700;
@@ -1131,7 +1131,7 @@
 
         .about-project {
           color: black;
-          font-family: Helvetica, sans-serif;
+          font-family: Roboto, sans-serif;
           font-size: 17px;
           font-style: normal;
           font-weight: 400;

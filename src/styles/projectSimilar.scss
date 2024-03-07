@@ -46,7 +46,7 @@
 
         .price {
           color: var(--D-grey, #F2F2F7);
-          font-family: HelveticaRegular, sans-serif;
+          font-family: RobotoRegular, sans-serif;
           font-size: 14px;
           font-style: normal;
           font-weight: 500;
@@ -67,7 +67,7 @@
 
           .name {
             color: #fff;
-            font-family: HelveticaBold, sans-serif;
+            font-family: RobotoBold, sans-serif;
             font-size: 22px;
             white-space: nowrap;
             font-style: normal;
@@ -78,7 +78,7 @@
 
           .bedrooms {
             color: #fff;
-            font-family: Helvetica, sans-serif;
+            font-family: Roboto, sans-serif;
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
@@ -97,7 +97,7 @@
             color: #FFF;
             padding-top: 2px;
             text-align: right;
-            font-family: HelveticaLight, sans-serif;
+            font-family: RobotoLight, sans-serif;
             font-size: 14px;
             font-style: normal;
             font-weight: 300;
@@ -107,7 +107,7 @@
 
           .price {
             color: #FFF;
-            font-family: Helvetica;
+            font-family: Roboto;
             font-size: 22px;
             font-style: normal;
             font-weight: 700;
@@ -138,14 +138,14 @@
 
             .bedrooms {
               font-size: 18px !important;
-              font-family: HelveticaLight, sans-serif !important;
+              font-family: RobotoLight, sans-serif !important;
               margin: 0;
             }
           }
 
           .price-from {
             .from {
-              font-family: HelveticaLight, sans-serif !important;
+              font-family: RobotoLight, sans-serif !important;
             }
 
             .price {

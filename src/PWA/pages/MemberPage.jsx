@@ -1,13 +1,48 @@
-import "../styles/MemberPage.css"
+import "../styles/MemberPage.scss"
 import {Link, useLocation} from "react-router-dom";
 import {useState} from "react";
 import Footer from "../components/Footer.jsx";
+import axios from "axios";
 
 const MemberPage = () => {
     let { state } = useLocation();
     const member = state.member
     const from = state.from
     const [activeFocus,setActiveFocus] = useState([false,false]);
+    const [name, setName] = useState('')
+    const [phone, setPhone] = useState('')
+    const [mail, setMail] = useState('')
+    const [dataSented, setDataSented] = useState('')
+
+    function sentData() {
+        let data = JSON.stringify({
+            "email": mail,
+            "phone": phone,
+            "name": name,
+            "additional": "Additional information here"
+        });
+
+        let config = {
+            method: 'post',
+            maxBodyLength: Infinity,
+            url: 'https://contact.propart.ae/append-data',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data : data
+        };
+
+        axios.request(config)
+            .then((response) => {
+                setName('')
+                setPhone('')
+                setMail('')
+                setDataSented(true)
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }
 
     return(<div className={"member-page"}>
         <div className="image-container">
@@ -91,12 +126,16 @@ const MemberPage = () => {
                 <div className="description">Text your phone number, our real estate expert will contact you within 5 minutes.</div>
             </div>
             <div className="content">
-                <div className={`input ${activeFocus[0]?"active":""}`}>
+                <div className={`input ${activeFocus[0] ? "active" : ""}`}>
                     <input
                         type="text"
                         placeholder={"Name"}
-                        onFocus={() => setActiveFocus([true,false])}
-                        onBlur={() => setActiveFocus([false,false])}
+                        onFocus={() => setActiveFocus([true, false])}
+                        onBlur={() => setActiveFocus([false, false])}
+                        value={name} onChange={(e) => {
+                        setName(e.target.value)
+                        setDataSented(false)
+                    }}
                     />
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path
@@ -105,12 +144,16 @@ const MemberPage = () => {
                         />
                     </svg>
                 </div>
-                <div  className={`input ${activeFocus[1]?"active":""}`} >
+                <div className={`input ${activeFocus[1] ? "active" : ""}`}>
                     <input
                         type="text"
                         placeholder={"Phone number"}
-                        onFocus={() => setActiveFocus([false,true])}
-                        onBlur={() => setActiveFocus([false,false])}
+                        onFocus={() => setActiveFocus([false, true])}
+                        onBlur={() => setActiveFocus([false, false])}
+                        value={phone} onChange={(e) => {
+                        setPhone(e.target.value)
+                        setDataSented(false)
+                    }}
                     />
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path
@@ -119,10 +162,12 @@ const MemberPage = () => {
                         />
                     </svg>
                 </div>
-                <div className="send">
+                <div className="send" onClick={sentData}>
                     Send
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M10.0002 15.172L19.1922 5.979L20.6072 7.393L10.0002 18L3.63623 11.636L5.05023 10.222L10.0002 15.172Z" fill="white"/>
+                        <path
+                            d="M10.0002 15.172L19.1922 5.979L20.6072 7.393L10.0002 18L3.63623 11.636L5.05023 10.222L10.0002 15.172Z"
+                            fill="white"/>
                     </svg>
                 </div>
             </div>

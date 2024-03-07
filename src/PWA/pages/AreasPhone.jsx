@@ -18,11 +18,12 @@ import collection1 from "../../assets/collection1.jpg";
 import offer2 from "../../assets/offer.png";
 import offer3 from "../../assets/offer2.png";
 import offer4 from "../../assets/offer3.png";
+import axios from "axios";
 
 
 const AreasPhoneCard = ({name, description, price, image, area}) => {
     return (
-        <div className="areas-phone-card">
+        <Link to={`/phone/${area}`} className="areas-phone-card">
             <div className="image">
                 <img src={image} alt="" />
                 <div className="price">{price}</div>
@@ -36,13 +37,13 @@ const AreasPhoneCard = ({name, description, price, image, area}) => {
                     }
                 } /><DynamicTruncatedText/></div>
             </div>
-        </div>
+        </Link>
     );
 };
 
 const BigAreaCard = ({area}) => {
     return (
-        <div className="big-area-card">
+        <Link to={`/phone/area/${area.link}`} className="big-area-card">
             <img src={area.image} alt=""/>
             <div className="content">
                 <div className="top-info">
@@ -76,7 +77,7 @@ const BigAreaCard = ({area}) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 
@@ -145,7 +146,8 @@ const AreasPhone = ({handleMenuToggle}) => {
                 "rank": "1",
                 "image": BigAreaCard1,
                 "name": "JVC",
-                "description": "Jumeirah Village Circle is a popular residential and commercial area consisting mainly of Arabic and Mediterranean style villas and townhouses. "
+                "description": "Jumeirah Village Circle is a popular residential and commercial area consisting mainly of Arabic and Mediterranean style villas and townhouses. ",
+                "link": 'jvc'
             },
             {
                 "saleValue": " 22.7B",
@@ -153,7 +155,8 @@ const AreasPhone = ({handleMenuToggle}) => {
                 "rank": "2",
                 "image": BigAreaCard2,
                 "name": "Business Bay",
-                "description": "The area with the self-explanatory name, Business Bay is the business and commercial center of Dubai."
+                "description": "The area with the self-explanatory name, Business Bay is the business and commercial center of Dubai.",
+                "link": 'business'
             },
             {
                 "saleValue": "40.4B",
@@ -161,7 +164,8 @@ const AreasPhone = ({handleMenuToggle}) => {
                 "rank": "3",
                 "image": BigAreaCard3,
                 "name": "Dubai Marina",
-                "description": "Dubai Marina is a carefully planned community located in the southwest part of the city and developed by Emaar Properties."
+                "description": "Dubai Marina is a carefully planned community located in the southwest part of the city and developed by Emaar Properties.",
+                "link": 'marina'
             },
             {
                 "saleValue": "16.5B",
@@ -169,7 +173,8 @@ const AreasPhone = ({handleMenuToggle}) => {
                 "rank": "4",
                 "image": BigAreaCard4,
                 "name": "Dubai Hills",
-                "description": "Dubai Hills Estate is one of the most popular areas to reside in Dubai, with a mixed-use infrastructure, and great overall amenities."
+                "description": "Dubai Hills Estate is one of the most popular areas to reside in Dubai, with a mixed-use infrastructure, and great overall amenities.",
+                "link": 'dubai-hills'
             },
             {
                 "saleValue": " 7.9B",
@@ -177,7 +182,8 @@ const AreasPhone = ({handleMenuToggle}) => {
                 "rank": "5",
                 "image": BigAreaCard5,
                 "name": "JLT",
-                "description": "The area is built up with 87 towers consisting of apartments, offices and retail outlets, located around three lakes and a park."
+                "description": "The area is built up with 87 towers consisting of apartments, offices and retail outlets, located around three lakes and a park.",
+                "link": 'jlt'
             }
         ]
     const ReadMoreLess = ({children, limit}) => {
@@ -249,6 +255,40 @@ const AreasPhone = ({handleMenuToggle}) => {
 
         return null;
     }
+    const [name, setName] = useState('')
+    const [phone, setPhone] = useState('')
+    const [mail, setMail] = useState('')
+    const [dataSented, setDataSented] = useState('')
+
+    function sentData() {
+        let data = JSON.stringify({
+            "email": mail,
+            "phone": phone,
+            "name": name,
+            "additional": "Additional information here"
+        });
+
+        let config = {
+            method: 'post',
+            maxBodyLength: Infinity,
+            url: 'https://contact.propart.ae/append-data',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data : data
+        };
+
+        axios.request(config)
+            .then((response) => {
+                setName('')
+                setPhone('')
+                setMail('')
+                setDataSented(true)
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }
 
     return (
         <div className="areas-phone">
@@ -272,10 +312,10 @@ const AreasPhone = ({handleMenuToggle}) => {
 
                     <div className="areas-buttons">
                         {cardInfo.map((area, index) => (
-                            <div key={index} className="area-button">
+                            <Link to={`/phone/${area.area}`} key={index} className="area-button">
                                 <div>{area.name}</div>
                                 <div>{area.price}</div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
 
@@ -392,6 +432,10 @@ const AreasPhone = ({handleMenuToggle}) => {
                             placeholder={"Name"}
                             onFocus={() => setActiveFocus([true, false, false, false])}
                             onBlur={() => setActiveFocus([false, false, false, false])}
+                            value={name} onChange={(e) => {
+                            setName(e.target.value)
+                            setDataSented(false)
+                        }}
                         />
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path
@@ -406,6 +450,10 @@ const AreasPhone = ({handleMenuToggle}) => {
                             placeholder={"Phone number"}
                             onFocus={() => setActiveFocus([false, true, false, false])}
                             onBlur={() => setActiveFocus([false, false, false, false])}
+                            value={phone} onChange={(e) => {
+                            setPhone(e.target.value)
+                            setDataSented(false)
+                        }}
                         />
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path
@@ -414,33 +462,7 @@ const AreasPhone = ({handleMenuToggle}) => {
                             />
                         </svg>
                     </div>
-                    <div className={`input ${activeFocus[2] ? "active" : ""}`}>
-                        <input
-                            type="text"
-                            placeholder={"E-mail"}
-                            onFocus={() => setActiveFocus([false, false, true])}
-                            onBlur={() => setActiveFocus([false, false, false])}
-                        />
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path
-                                d="M2.50008 2.5H17.5001C17.7211 2.5 17.9331 2.5878 18.0893 2.74408C18.2456 2.90036 18.3334 3.11232 18.3334 3.33333V16.6667C18.3334 16.8877 18.2456 17.0996 18.0893 17.2559C17.9331 17.4122 17.7211 17.5 17.5001 17.5H2.50008C2.27907 17.5 2.06711 17.4122 1.91083 17.2559C1.75455 17.0996 1.66675 16.8877 1.66675 16.6667V3.33333C1.66675 3.11232 1.75455 2.90036 1.91083 2.74408C2.06711 2.5878 2.27907 2.5 2.50008 2.5V2.5ZM10.0501 9.73583L4.70675 5.19833L3.62758 6.46833L10.0609 11.9308L16.3784 6.46417L15.2884 5.20333L10.0509 9.73583H10.0501Z"
-                                fill="#CACACA"/>
-                        </svg>
-                    </div>
-                    <div className={`input ${activeFocus[3] ? "active" : ""}`}>
-                        <input
-                            type="text"
-                            placeholder={"Number of residence permits"}
-                            onFocus={() => setActiveFocus([false, false, false, true])}
-                            onBlur={() => setActiveFocus([false, false, false, false])}
-                        />
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path
-                                d="M5.37925 15.8333L1.66675 18.75V3.33333C1.66675 3.11232 1.75455 2.90036 1.91083 2.74408C2.06711 2.5878 2.27907 2.5 2.50008 2.5H17.5001C17.7211 2.5 17.9331 2.5878 18.0893 2.74408C18.2456 2.90036 18.3334 3.11232 18.3334 3.33333V15C18.3334 15.221 18.2456 15.433 18.0893 15.5893C17.9331 15.7455 17.7211 15.8333 17.5001 15.8333H5.37925ZM9.16675 11.6667V13.3333H10.8334V11.6667H9.16675ZM7.13925 7.34417L8.77425 7.67167C8.82065 7.43953 8.93201 7.22533 9.09539 7.05401C9.25876 6.88269 9.46743 6.76129 9.6971 6.70392C9.92678 6.64656 10.168 6.65559 10.3928 6.72997C10.6175 6.80436 10.8165 6.94103 10.9666 7.12409C11.1167 7.30715 11.2117 7.52908 11.2406 7.76404C11.2696 7.999 11.2311 8.23734 11.1299 8.45132C11.0286 8.6653 10.8687 8.84614 10.6687 8.97277C10.4687 9.09941 10.2368 9.16665 10.0001 9.16667H9.16675V10.8333H10.0001C10.5524 10.8332 11.0933 10.6762 11.5599 10.3806C12.0265 10.0851 12.3995 9.66316 12.6357 9.16389C12.8719 8.66463 12.9615 8.10857 12.894 7.5604C12.8265 7.01223 12.6048 6.49448 12.2546 6.06738C11.9044 5.64028 11.4402 5.32139 10.9159 5.1478C10.3915 4.97421 9.82872 4.95307 9.29285 5.08682C8.75698 5.22057 8.27011 5.50372 7.88886 5.90334C7.50761 6.30295 7.24766 6.8026 7.13925 7.34417V7.34417Z"
-                                fill="#CACACA"/>
-                        </svg>
-                    </div>
-                    <div className="send">
+                    <div className="send" onClick={sentData}>
                         Send
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path

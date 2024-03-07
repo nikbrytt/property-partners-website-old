@@ -61,7 +61,7 @@ const ProjectBig = ({projectData}) => {
         return value.replace(/,/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
     return(<div className={"project-big"} onClick={handleProjectClick}>
-        <Link to="/phone/project" state={{ project: projectData }} >
+        <Link to="/phone/project/1" state={{ project: projectData }} >
         <div className="img-container"><img src={projectData.imageSrcMain}/>
             <div className="like" onClick={handleLikeClick}>
                 {liked.includes(projectData._id)?

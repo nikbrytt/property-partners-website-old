@@ -44,6 +44,7 @@ import offer4 from "../../assets/offer3.png"
 import business from "../../assets/pwa/Areas/bigAreaCard2.png"
 import marina from "../../assets/pwa/Areas/bigAreaCard3.png"
 import hils from "../../assets/pwa/Areas/bigAreaCard4.png"
+import axios from "axios";
 
 const HomePage = ({handleMenuToggle}) => {
     const [activeBanner, setActiveBanner] = useState(1)
@@ -326,6 +327,42 @@ const HomePage = ({handleMenuToggle}) => {
         completion: [],
         propertyType: []
     })
+
+    const [name, setName] = useState('')
+    const [phone, setPhone] = useState('')
+    const [mail, setMail] = useState('')
+    const [dataSented, setDataSented] = useState('')
+
+    function sentData() {
+        let data = JSON.stringify({
+            "email": mail,
+            "phone": phone,
+            "name": name,
+            "additional": "Additional information here"
+        });
+
+        let config = {
+            method: 'post',
+            maxBodyLength: Infinity,
+            url: 'https://contact.propart.ae/append-data',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data : data
+        };
+
+        axios.request(config)
+            .then((response) => {
+                setName('')
+                setPhone('')
+                setMail('')
+                setDataSented(true)
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }
+
 
     const handlePriceFromChange = (value) => {
         if(filterDataProjects.priceValues.from===value){
@@ -860,27 +897,27 @@ const HomePage = ({handleMenuToggle}) => {
                 Areas in Dubai
             </div>
             <div className="content">
-                <div className="area">
+                <Link to="/phone/area/marina" className="area">
                     <img src={marina}/>
                     <div className="info">
                         <div className="name">Dubai Marina</div>
                         <div className="price">Price from 600,000 AED</div>
                     </div>
-                </div>
-                <div className="area">
+                </Link>
+                <Link to="/phone/area/dubai-hills" className="area">
                     <img src={hils}/>
                     <div className="info">
                         <div className="name">Dubai Hills</div>
                         <div className="price">Price from 860,000 AED</div>
                     </div>
-                </div>
-                <div className="area">
+                </Link>
+                <Link to="/phone/area/business" className="area">
                     <img src={business}/>
                     <div className="info">
                         <div className="name">Business Bay</div>
                         <div className="price">Price from 410,000 AED</div>
                     </div>
-                </div>
+                </Link>
             </div>
            <Link to={"/phone/areas"}> <div className="see-more">See more
 
@@ -1086,6 +1123,10 @@ const HomePage = ({handleMenuToggle}) => {
                              placeholder={"Name"}
                              onFocus={() => setActiveFocus([true,false])}
                              onBlur={() => setActiveFocus([false,false])}
+                             value={name} onChange={(e) => {
+                        setName(e.target.value)
+                        setDataSented(false)
+                    }}
                     />
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path
@@ -1100,6 +1141,10 @@ const HomePage = ({handleMenuToggle}) => {
                         placeholder={"Phone number"}
                         onFocus={() => setActiveFocus([false,true])}
                         onBlur={() => setActiveFocus([false,false])}
+                        value={phone} onChange={(e) => {
+                        setPhone(e.target.value)
+                        setDataSented(false)
+                    }}
                     />
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path
@@ -1108,7 +1153,7 @@ const HomePage = ({handleMenuToggle}) => {
                         />
                     </svg>
                 </div>
-                <div className="send">
+                <div className="send" onClick={sentData}>
                     Send
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M10.0002 15.172L19.1922 5.979L20.6072 7.393L10.0002 18L3.63623 11.636L5.05023 10.222L10.0002 15.172Z" fill="white"/>

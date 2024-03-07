@@ -26,7 +26,7 @@
 
         div:first-child {
           color: #191C38;
-          font-family: Onest;
+          font-family: Roboto;
           font-size: 42px;
           font-style: normal;
           font-weight: 700;
@@ -35,7 +35,7 @@
 
         div:last-child {
           color: #616161;
-          font-family: Onest;
+          font-family: Roboto;
           font-size: 18px;
           font-style: normal;
           font-weight: 400;
@@ -64,7 +64,7 @@
             color: #FFF;
             leading-trim: both;
             text-edge: cap;
-            font-family: Onest, sans-serif;
+            font-family: Roboto, sans-serif;
             font-size: 16px;
             font-style: normal;
             font-weight: 700;
@@ -84,7 +84,7 @@
               flex-shrink: 0;
               border: 1px solid #CACACA;
               color: #191C38;
-              font-family: Onest, sans-serif;
+              font-family: Roboto, sans-serif;
               font-size: 16px;
               font-style: normal;
               font-weight: 700;
@@ -120,6 +120,192 @@
     }
   }
 
+  .home-banner-filter {
+    height: calc(100vh - 96px);
+    background: red;
+
+    &:before {
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 1;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.00) 31.62%), linear-gradient(180deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.26) 78.54%, rgba(0, 0, 0, 0.26) 95.2%);
+    }
+
+    .image {
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        object-fit: cover;
+      }
+    }
+  }
+
+  header {
+    .logo-container {
+      svg:first-child {
+        display: none;
+      }
+      svg:last-child {
+        display: flex;
+      }
+    }
+
+    .main {
+      padding: 28px 64px 0px 64px;
+      background: transparent;
+      .menu-option {
+        font-size: 14px;
+      }
+    }
+
+    .additional {
+      a {
+        .phone {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          .number {
+            display: none;
+          }
+
+          div {
+            display: flex;
+          }
+        }
+      }
+
+      .language {
+        .dropdown-language {
+          .dropdown-visible {
+            color: #FFF;
+            font-family: Roboto;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: uppercase;
+
+            height: 30px;
+
+            border-radius: 4px;
+            border: 1px solid rgba(241, 241, 241, 0.17);
+            background: rgba(53, 53, 53, 0.35);
+            backdrop-filter: blur(11px);
+
+            svg {
+              path {
+                fill: #fff;
+              }
+            }
+          }
+
+          .hiden-element {
+            border-radius: 4px;
+            border: 1px solid rgba(241, 241, 241, 0.17);
+            background: rgba(53, 53, 53, 0.35);
+            backdrop-filter: blur(11px);
+
+            .option {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+
+    .menu {
+      &.menu-ua-ru {
+      }
+
+      .menu-option {
+
+        &:hover {
+        }
+
+        &:nth-child(3) {
+          svg {
+          }
+
+          svg.active {
+          }
+
+          .drop-down {
+            a {
+              .option {
+              }
+
+              &:first-child {
+                .option {
+                }
+              }
+
+              &:last-child {
+                .option {
+                }
+              }
+
+              &:hover {
+                .option {
+                }
+              }
+
+              &:last-child:hover {
+                .option {
+                }
+              }
+            }
+          }
+        }
+
+        &:nth-child(5) {
+          svg {
+          }
+
+          svg.active {
+          }
+
+          .drop-down {
+            a {
+              .option {
+              }
+
+              &:first-child {
+                .option {
+                }
+              }
+
+              &:last-child {
+                .option {
+                }
+              }
+
+
+              &:hover {
+                .option {
+                }
+              }
+
+              &:last-child:hover {
+                .option {
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .more-areas-button {
+      }
+    }
+  }
+
   > .collections {
     padding: 64px 64px 64px 64px;
     display: flex;
@@ -136,7 +322,7 @@
 
       div:first-child {
         color: #191C38;
-        font-family: Onest;
+        font-family: Roboto;
         font-size: 32px;
         font-style: normal;
         font-weight: 700;
@@ -145,7 +331,7 @@
 
       .description {
         color: #575757;
-        font-family: Onest;
+        font-family: Roboto;
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
@@ -213,7 +399,7 @@
             .tittle {
               width: 30%;
               color: #191C38;
-              font-family: Onest;
+              font-family: Roboto;
               font-size: 30px;
               font-style: normal;
               font-weight: 700;
@@ -235,7 +421,7 @@
                 color: #191C38;
                 leading-trim: both;
                 text-edge: cap;
-                font-family: Onest, sans-serif;
+                font-family: Roboto, sans-serif;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
@@ -264,7 +450,7 @@
               align-self: stretch;
               border: 1px solid #CACACA;
               color: #191C38;
-              font-family: Onest, sans-serif;
+              font-family: Roboto, sans-serif;
               font-size: 19px;
               font-style: normal;
               font-weight: 700;
@@ -341,7 +527,7 @@
       gap: 10px;
       flex-shrink: 0;
       color: #FFF;
-      font-family: Onest;
+      font-family: Roboto;
       font-size: 42px;
       font-style: normal;
       font-weight: 700;
@@ -371,7 +557,7 @@
 
       .tittle {
         color: #000;
-        font-family: Onest;
+        font-family: Roboto;
         font-size: 22px;
         font-style: normal;
         font-weight: 700;
@@ -380,7 +566,7 @@
 
       .description {
         color: #575757;
-        font-family: Onest;
+        font-family: Roboto;
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
@@ -399,7 +585,7 @@
 
       .tittle {
         color: #FFF;
-        font-family: Onest;
+        font-family: Roboto;
         font-size: 22px;
         font-style: normal;
         font-weight: 700;
@@ -408,7 +594,7 @@
 
       .description {
         color: #FFF;
-        font-family: Onest;
+        font-family: Roboto;
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
@@ -427,6 +613,7 @@
       background: #fff;
       padding: 24px;
       gap: 20px;
+      width: 100%;
 
       .image {
         width: 40%;
@@ -448,7 +635,7 @@
 
         > .tittle {
           color: #FFF;
-          font-family: Onest;
+          font-family: Roboto;
           font-size: 32px;
           font-style: normal;
           font-weight: 700;
@@ -477,7 +664,7 @@
             flex-direction: column;
             gap: 12px;
             padding: 12px 0 15px;
-            font-family: Onest, sans-serif;
+            font-family: Roboto, sans-serif;
 
             box-shadow: 0px 2px 60px 0px rgba(0, 0, 0, 0.05);
 
@@ -492,7 +679,7 @@
                 color: #575757;
                 leading-trim: both;
                 text-edge: cap;
-                font-family: Onest, sans-serif;
+                font-family: Roboto, sans-serif;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 400;
@@ -527,7 +714,7 @@
 
               .tittle {
                 color: #191C38;
-                font-family: Onest, sans-serif;
+                font-family: Roboto, sans-serif;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 400;
@@ -574,7 +761,7 @@
 
       div:first-child {
         color: #191C38;
-        font-family: Onest;
+        font-family: Roboto;
         font-size: 32px;
         font-style: normal;
         font-weight: 700;
@@ -583,7 +770,7 @@
 
       div:last-child {
         color: #575757;
-        font-family: Onest;
+        font-family: Roboto;
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
@@ -645,7 +832,7 @@
           color: #575757;
           leading-trim: both;
           text-edge: cap;
-          font-family: Onest;
+          font-family: Roboto;
           font-size: 22px;
           font-style: normal;
           font-weight: 400;
@@ -676,7 +863,7 @@
 
       div:first-child {
         color: #191C38;
-        font-family: Onest;
+        font-family: Roboto;
         font-size: 32px;
         font-style: normal;
         font-weight: 700;
@@ -685,7 +872,7 @@
 
       div:last-child {
         color: #818181;
-        font-family: Onest;
+        font-family: Roboto;
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
@@ -742,7 +929,7 @@
                 color: #191C38;
                 leading-trim: both;
                 text-edge: cap;
-                font-family: Onest, sans-serif;
+                font-family: Roboto, sans-serif;
                 font-size: 24px;
                 font-style: normal;
                 font-weight: 700;
@@ -751,7 +938,7 @@
 
               .position {
                 color: #939393;
-                font-family: Onest, sans-serif;
+                font-family: Roboto, sans-serif;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
@@ -789,7 +976,7 @@
         color: #FFF;
         leading-trim: both;
         text-edge: cap;
-        font-family: Onest, sans-serif;
+        font-family: Roboto, sans-serif;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -843,7 +1030,7 @@
         div:first-child {
           color: #191C38;
 
-          font-family: Onest, sans-serif;
+          font-family: Roboto, sans-serif;
           font-size: 26px;
           font-style: normal;
           font-weight: 700;
@@ -853,7 +1040,7 @@
 
         div:last-child {
           color: #575757;
-          font-family: Onest, sans-serif;
+          font-family: Roboto, sans-serif;
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
@@ -879,7 +1066,7 @@
             color: #8F8F8F;
             leading-trim: both;
             text-edge: cap;
-            font-family: Onest, sans-serif;
+            font-family: Roboto, sans-serif;
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
@@ -902,7 +1089,7 @@
           background: #191C38;
           border: 1px solid #191C38;
           color: #FFF;
-          font-family: Onest, sans-serif;
+          font-family: Roboto, sans-serif;
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
@@ -923,7 +1110,7 @@
         .form-text {
           width: 100%;
           color: #9E9E9E;
-          font-family: Onest, sans-serif;
+          font-family: Roboto, sans-serif;
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
@@ -958,7 +1145,7 @@
 
             div:first-child {
               color: #191C38;
-              font-family: Onest, sans-serif;
+              font-family: Roboto, sans-serif;
               font-size: 32px;
               font-style: normal;
               font-weight: 700;
@@ -968,7 +1155,7 @@
 
             div:last-child {
               color: #616161;
-              font-family: Onest, sans-serif;
+              font-family: Roboto, sans-serif;
               font-size: 18px;
               font-style: normal;
               font-weight: 400;
@@ -991,7 +1178,7 @@
               .advantage {
                 padding: 8px 12px 8px 8px;
                 color: #FFF;
-                font-family: Onest, sans-serif;
+                font-family: Roboto, sans-serif;
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 700;
@@ -1354,7 +1541,7 @@
             .advantage {
               padding: 10px;
               font-size: 14px;
-              font-family: Onest, sans-serif;
+              font-family: Roboto, sans-serif;
             }
 
             a {
@@ -1611,7 +1798,7 @@
           div:first-child {
             font-size: 18px;
             font-weight: 700;
-            font-family: Onest;
+            font-family: Roboto;
           }
 
           div:last-child {

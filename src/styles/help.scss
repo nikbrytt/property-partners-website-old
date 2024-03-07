@@ -18,7 +18,7 @@
 
         div:first-child {
             color: #FFF;
-            font-family: Helvetica;
+            font-family: Roboto;
             font-size: 24px;
             font-style: normal;
             font-weight: 400;
@@ -27,7 +27,7 @@
 
         .descr {
             color: #FFF;
-            font-family: Helvetica;
+            font-family: Roboto;
             font-size: 14px;
             font-style: normal;
             font-weight: 400;
@@ -41,7 +41,7 @@
 
             .list-elem {
                 color: #FFF;
-                font-family: Helvetica;
+                font-family: Roboto;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
@@ -87,7 +87,7 @@
                         color: #8F8F8F;
                         leading-trim: both;
                         text-edge: cap;
-                        font-family: Helvetica, sans-serif;
+                        font-family: Roboto, sans-serif;
                         font-size: 16px;
                         font-style: normal;
                         font-weight: 400;
@@ -109,7 +109,7 @@
                     align-self: stretch;
                     background: #191C38;
                     color: #FFF;
-                    font-family: HelveticaBold, serif;
+                    font-family: RobotoBold, serif;
                     font-size: 16px;
                     font-style: normal;
                     font-weight: 400;
@@ -121,7 +121,7 @@
                 width: 80%;
                 color: #9E9E9E;
                 text-align: center;
-                font-family: Helvetica, sans-serif;
+                font-family: Roboto, sans-serif;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
@@ -131,7 +131,7 @@
             .privacy {
                 margin-top: -20px;
                 color: #9E9E9E;
-                font-family: Helvetica, serif;
+                font-family: Roboto, serif;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
@@ -140,7 +140,7 @@
                 span {
                     color: #C29773;
                     text-align: center;
-                    font-family: Helvetica, serif;
+                    font-family: Roboto, serif;
                     font-size: 16px;
                     font-style: normal;
                     font-weight: 400;
@@ -212,12 +212,12 @@
             gap: 50px;
 
             div:first-child {
-                font-family: HelveticaBold, sans-serif;
+                font-family: RobotoBold, sans-serif;
                 font-size: 18px;
             }
 
             div:last-child {
-                font-family: HelveticaLight, sans-serif;
+                font-family: RobotoLight, sans-serif;
                 font-size: 14px;
             }
 

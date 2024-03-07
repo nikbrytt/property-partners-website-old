@@ -1,6 +1,6 @@
+import "../styles/Pages/home.scss"
 import Header from "../components/Header.jsx";
 import homeMain from "../assets/homeMain.png";
-import "../styles/Pages/home.scss"
 import collection1 from "../assets/collection1.jpg";
 import collection2 from "../assets/collection2.jpg";
 import collection3 from "../assets/collection3.jpg";
@@ -12,10 +12,8 @@ import ellington from "../assets/ellington.png";
 import danube from "../assets/danube.png";
 import damac from "../assets/damac.png";
 import sobha from "../assets/sobha.png";
-import conciergeMain from "../assets/conciergeMain.jpg";
 import whyDubai from "../assets/whyDubai.jpg";
 import whyDubaiMain from "../assets/whyDubaiMain.png";
-import kindOfProjects from "../assets/kindOfProjects.jpg"
 import visa from "../assets/visa.jpg"
 import contactHome from "../assets/contactHome.png"
 import { useState } from "react";
@@ -28,7 +26,6 @@ import dmitriyKoltsovName from "../assets/teams/dmitriy-koltsov-min.jpg";
 import kristinaSokolovskayaName from "../assets/teams/kristina-sokolovskaya-min.jpg";
 import pavelDyninName from "../assets/teams/pavel-dynin-min.jpg";
 import tykhovaTatianaName from "../assets/teams/tykhova-tatiana-min.jpg";
-import aleksandraBobrova from "../assets/teams/aleksandra-bobrova.png";
 import ruslanGeisha from "../assets/teams/ruslan-geisha.png";
 import { Link as ScrollLink } from 'react-scroll';
 import { Link } from "react-router-dom";
@@ -41,7 +38,6 @@ import propertyPartnersDynin from '../assets/teams/qr/property-partners-dynin.pn
 import qrAlex from '../assets/teams/qr/qr-alex.svg';
 import tykhovaTatiana from '../assets/teams/qr/tykhova-tatiana.png';
 import React, { useEffect } from "react";
-import MaxLengthText from "../components/MaxLengthText.jsx";
 import { useTranslation } from "react-i18next";
 import PDFmodal from "../components/PDFmodal.jsx";
 import DynamicTruncatedText from "../components/DynamicTruncatedText.jsx";
@@ -52,6 +48,9 @@ import MailModal from "../components/MailModal.jsx";
 import axios from "axios";
 import HomePage from "../PWA/pages/HomePage.jsx";
 import { Helmet } from 'react-helmet';
+import MainFilter from "../components/MainFilter.jsx";
+import imgBaner from "../assets/collection1.jpg"
+
 
 const Home = ({ openModal, handleMenuToggle}) => {
     const [activeKind, setActiveKind] = useState(null);
@@ -231,6 +230,19 @@ const Home = ({ openModal, handleMenuToggle}) => {
     const [name, setName] = useState('')
     const [phone, setPhone] = useState('')
     const [dataSented, setDataSented] = useState('')
+
+
+    const [filterDataProjects, setFilterDataProjects] = useState({
+        bedrooms: [],
+        completion: [],
+        location: [],
+        priceValues: { from: "", to: "" },
+        propertyType: [],
+        search: "",
+        sizeValues: { from: "", to: "" },
+    })
+    const handleFilterButtonClick = () => {};
+
     function sentData() {
         let data = JSON.stringify({
             "name": name,
@@ -270,86 +282,22 @@ const Home = ({ openModal, handleMenuToggle}) => {
             <meta name="keywords" content="ProPart, Real Estate Dubai, Dream Home, Legal Counseling, Unique Data, Seamless Transactions, Rental Properties, Family Projects, Villas, Resale, Dubai Real Estate Market, Tax Benefits, Expert Consulting, ProPart Team, Sales Launches, Contact Us" />
         </Helmet>
         <Header />
-        <div className="home-banner">
-            <div className="content">
-                <div className="tittle">
-                    <div>Your Vision of <br/>Home - Begins Here</div>
-                    <div>Luxury Properties in Dubai - ProPart Real Estate: Waterfront, Exclusive Residences, and Expert
-                        Consulting</div>
-                </div>
-                <div className="advantages">
-                    <div className="advantages-wrapper">
-                        <div className="advantage">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none">
-                                <path
-                                    d="M12 0.5L16.226 6.683L23.413 8.792L18.838 14.722L19.053 22.208L12 19.69L4.94698 22.208L5.16198 14.722L0.586975 8.792L7.77398 6.683L12 0.5ZM9.99998 12H7.99998C7.99996 13.0436 8.40776 14.0458 9.13638 14.7929C9.86499 15.54 10.8567 15.9727 11.8999 15.9988C12.9432 16.0249 13.9553 15.6423 14.7203 14.9326C15.4854 14.2228 15.9428 13.2422 15.995 12.2L16 12H14C14.0023 12.519 13.8028 13.0185 13.4436 13.3932C13.0844 13.7678 12.5937 13.9881 12.075 14.0075C11.5564 14.027 11.0505 13.8441 10.6643 13.4975C10.278 13.1509 10.0416 12.6677 10.005 12.15L9.99998 12Z"
-                                    fill="white" />
-                            </svg>
-                            {t("home_box1")}
-                        </div>
-                        <div className="advantage">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none">
-                                <path
-                                    d="M14 19.9995V21.9995H2V19.9995H14ZM14.586 0.685547L22.364 8.46355L20.95 9.87955L19.89 9.52555L17.413 11.9995L23.07 17.6565L21.656 19.0705L16 13.4135L13.596 15.8175L13.879 16.9495L12.464 18.3635L4.686 10.5855L6.101 9.17155L7.231 9.45355L13.525 3.16055L13.172 2.10055L14.586 0.685547Z"
-                                    fill="white" />
-                            </svg>
-                            {t("home_box2")}
-                        </div>
-                        <div className="advantage">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none">
-                                <path
-                                    d="M15.224 15.5084L13.011 20.1584C12.9691 20.2463 12.9065 20.3227 12.8285 20.381C12.7505 20.4393 12.6594 20.4778 12.5633 20.493C12.4671 20.5083 12.3686 20.4999 12.2764 20.4686C12.1842 20.4373 12.101 20.384 12.034 20.3134L8.49197 16.5744C8.39735 16.4746 8.27131 16.4104 8.13497 16.3924L3.02797 15.7244C2.93149 15.7117 2.83954 15.6757 2.76006 15.6195C2.68058 15.5634 2.61596 15.4887 2.57177 15.402C2.52758 15.3153 2.50514 15.2191 2.5064 15.1218C2.50765 15.0245 2.53256 14.9289 2.57897 14.8434L5.04097 10.3194C5.10642 10.1984 5.12831 10.0586 5.10297 9.9234L4.15997 4.8604C4.14207 4.76456 4.14778 4.66581 4.17662 4.57268C4.20546 4.47956 4.25656 4.39486 4.3255 4.32592C4.39444 4.25699 4.47913 4.20589 4.57226 4.17704C4.66539 4.1482 4.76414 4.14249 4.85997 4.1604L9.92297 5.1034C10.0582 5.12873 10.198 5.10685 10.319 5.0414L14.843 2.5794C14.9286 2.53297 15.0242 2.50808 15.1216 2.50688C15.219 2.50568 15.3152 2.5282 15.4019 2.5725C15.4887 2.61681 15.5633 2.68155 15.6194 2.76115C15.6755 2.84076 15.7114 2.93282 15.724 3.0294L16.392 8.1354C16.4099 8.27174 16.4742 8.39777 16.574 8.4924L20.313 12.0344C20.3836 12.1014 20.4369 12.1846 20.4682 12.2768C20.4995 12.3691 20.5079 12.4675 20.4926 12.5637C20.4774 12.6599 20.4389 12.7509 20.3806 12.8289C20.3223 12.9069 20.2459 12.9695 20.158 13.0114L15.508 15.2244C15.3835 15.2836 15.2832 15.3839 15.224 15.5084ZM16.021 17.4354L17.435 16.0214L21.678 20.2634L20.263 21.6784L16.021 17.4354Z"
-                                    fill="white" />
-                            </svg>
-                            {t("home_box3")}
-                        </div>
-                        <div className="advantage">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none">
-                                <path
-                                    d="M13 21V23H11V21H3C2.73478 21 2.48043 20.8946 2.29289 20.7071C2.10536 20.5196 2 20.2652 2 20V6H22V20C22 20.2652 21.8946 20.5196 21.7071 20.7071C21.5196 20.8946 21.2652 21 21 21H13ZM8 10C7.40666 10 6.82664 10.1759 6.33329 10.5056C5.83994 10.8352 5.45542 11.3038 5.22836 11.8519C5.0013 12.4001 4.94189 13.0033 5.05764 13.5853C5.1734 14.1672 5.45912 14.7018 5.87868 15.1213C6.29824 15.5409 6.83279 15.8266 7.41473 15.9424C7.99667 16.0581 8.59987 15.9987 9.14805 15.7716C9.69623 15.5446 10.1648 15.1601 10.4944 14.6667C10.8241 14.1734 11 13.5933 11 13H8V10ZM13 10V12H19V10H13ZM13 14V16H19V14H13ZM2 3H22V5H2V3Z"
-                                    fill="white" />
-                            </svg>
-                            {t("home_box4")}
-                        </div>
-                        <div className="advantage">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none">
-                                <path
-                                    d="M14.121 10.4799C13.9335 10.2924 13.6792 10.1871 13.414 10.1871C13.1489 10.1871 12.8945 10.2924 12.707 10.4799L12 11.1859C11.8155 11.3769 11.5948 11.5293 11.3508 11.6341C11.1068 11.7389 10.8444 11.7941 10.5788 11.7964C10.3133 11.7987 10.0499 11.7481 9.80411 11.6475C9.55832 11.5469 9.33502 11.3984 9.14723 11.2107C8.95944 11.0229 8.81094 10.7996 8.71038 10.5538C8.60982 10.308 8.55921 10.0446 8.56152 9.77906C8.56383 9.51351 8.619 9.25107 8.72382 9.00706C8.82864 8.76305 8.981 8.54236 9.17202 8.35787L14.802 2.72587C16.1349 2.42269 17.5295 2.54746 18.7875 3.08244C20.0454 3.61742 21.1027 4.53536 21.8089 5.70576C22.5151 6.87615 22.8344 8.23941 22.7213 9.6017C22.6083 10.964 22.0686 12.2559 21.179 13.2939L19.071 15.4289L14.121 10.4789V10.4799ZM3.16102 4.46787C4.19578 3.43324 5.54924 2.77785 7.00258 2.60763C8.45592 2.43742 9.9242 2.76234 11.17 3.52987L7.75702 6.94387C7.01782 7.68159 6.59645 8.67917 6.58296 9.72343C6.56946 10.7677 6.96491 11.7758 7.6848 12.5324C8.40469 13.289 9.39193 13.734 10.4356 13.7724C11.4792 13.8108 12.4965 13.4395 13.27 12.7379L13.414 12.6009L17.657 16.8429L13.414 21.0859C13.039 21.4608 12.5303 21.6714 12 21.6714C11.4697 21.6714 10.9611 21.4608 10.586 21.0859L3.16002 13.6599C1.94115 12.4409 1.25641 10.7877 1.25641 9.06387C1.25641 7.34005 1.94115 5.68684 3.16002 4.46787H3.16102Z"
-                                    fill="white" />
-                            </svg>
-                            {t("home_box5")}
-                        </div>
-                        <ScrollLink
-                            to="collections"
-                            spy={true}
-                            smooth={true}
-                            offset={-40}
-                            duration={1000}
-                        >
-                            <div className="learn-more">
-
-                                {t("home_button")}
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none">
-                                    <path
-                                        d="M16.172 10.9997L10.808 5.63568L12.222 4.22168L20 11.9997L12.222 19.7777L10.808 18.3637L16.172 12.9997H4V10.9997H16.172Z"
-                                        fill="#191C38" />
-                                </svg>
-                            </div>
-                        </ScrollLink>
-                    </div>
-
-                </div>
-            </div>
+        <div className="home-banner-filter">
             <div className="image">
-                <img src={homeMain} />
+                <img src={imgBaner}/>
+
+                <div className="filter-box">
+                    <MainFilter
+                        filterDataProjects={filterDataProjects}
+                        setFilterDataProjects={setFilterDataProjects}
+                        handleFilterButtonClick={handleFilterButtonClick}
+                        isNotHome={false}
+                    />
+                </div>
             </div>
         </div>
+
+
         <div className="home-banner phone">
             <div className="content">
                 <div className="tittle">
@@ -1043,13 +991,13 @@ const Home = ({ openModal, handleMenuToggle}) => {
                                 fill="#C29773" />
                         </svg>
                     </div>
-                    <div className={`form-button ${dataSented ? 'fade-out' : ''}`}onClick={sentData}>{dataSented ? "Your message was received" : t("block6_line3")}
+                    <Link to="./message" className={`form-button ${dataSented ? 'fade-out' : ''}`} onClick={sentData}>{dataSented ? "Your message was received" : t("block6_line3")}
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path
                                 d="M9.99999 15.172L19.192 5.979L20.607 7.393L9.99999 18L3.63599 11.636L5.04999 10.222L9.99999 15.172Z"
                                 fill="white" />
                         </svg>
-                    </div>
+                    </Link>
                     <div className="form-text">
                         {t("block6_text2")}
                     </div>

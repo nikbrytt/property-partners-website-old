@@ -1,7 +1,7 @@
 import "../styles/filter.scss"
 import { useTranslation } from "react-i18next";
 import locations from "../data/Location.jsx";
-import { useState } from "react";
+import {useEffect, useState} from "react";
 
 const Filter = ({ filterDataProjects, setFilterDataProjects }) => {
     const { t } = useTranslation();
@@ -182,6 +182,16 @@ const Filter = ({ filterDataProjects, setFilterDataProjects }) => {
             };
         });
     }
+
+    useEffect(() => {
+        const paramsString = new URLSearchParams(location.search).get('filter');
+        if (paramsString) {
+            const parsedParams = JSON.parse(decodeURIComponent(paramsString));
+            setFilterDataProjects(parsedParams);
+        }
+    }, [location.search])
+
+    console.log(filterDataProjects)
 
     const [showFilter, setShowFilter] = useState()
 
@@ -369,7 +379,7 @@ const Filter = ({ filterDataProjects, setFilterDataProjects }) => {
                         completionOptions.map((option, index) => (
                             <div className='dropdown-option' key={index} onClick={()=>handleItemChange("completion",option)}>
                                 <div>
-                                    {filterDataProjects.completion.includes(option)?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    {filterDataProjects?.completion.includes(option)?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z" fill="#C29773"/>
                                         </svg>:
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">

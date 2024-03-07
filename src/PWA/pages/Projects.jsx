@@ -290,6 +290,7 @@ const Projects = ({handleMenuToggle}) => {
 
     }, [filterDataProjects,projects,setFilterDataProjects]);
 
+
     return(<div className={"projects"}>
         <MenuProjectFilter setFilterOpen={setFilterOpen} handleMenuToggle={handleMenuToggle} handleItemChange={handleItemChange}/>
         {filterOpen===true&&<div className="filter">

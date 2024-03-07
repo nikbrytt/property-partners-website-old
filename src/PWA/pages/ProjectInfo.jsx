@@ -1,6 +1,6 @@
-import {Link, useLocation} from "react-router-dom";
+import {Link, useLocation, useParams} from "react-router-dom";
 import {Swiper, SwiperSlide} from "swiper/react";
-import "../styles/ProjectInfo.css"
+import "../styles/ProjectInfo.scss"
 import {Autoplay, Pagination} from "swiper/modules";
 import React, {useEffect, useState} from "react";
 import alexLogachevName from "../../assets/teams/alex-logachev-min.jpg";
@@ -23,11 +23,25 @@ import {APIProvider, ControlPosition, Map, MapControl} from "@vis.gl/react-googl
 import projects from "../data/response.json";
 import Marker from "../../components/Marker.jsx";
 import Project from "../components/Project.jsx";
+
 const ProjectInfo = () => {
+    let {id} = useParams()
+    console.log(id)
+
+
+
     let { state } = useLocation();
     const [mapZoom, setMapZoom] = useState(10);
     const [currnetIndex, setCurrentIndex] = useState(null)
-    const project = state.project
+    let project;
+
+    if (state !== null && state.project !== undefined) {
+        project = state.project;
+    } else {
+        project = projects.find(project => project._id === id);
+    }
+
+
     const [liked, setLiked] = useState([]);
     const team = [
         {
@@ -335,12 +349,11 @@ const ProjectInfo = () => {
                         <div className="desc">Off-plan properties, Investments, Mortgage</div>
                     </div>
                     <div className="buttons">
-                        <div className="contact">Contact</div>
-                        <div className="request">Request</div>
-                    </div>
-
+                        <a href="tel:+971521038793" className="contact">Contact</a>
                 </div>
+
             </div>
+        </div>
 
         </div>
         {activePayment!=null&& <div className="payment-plan">

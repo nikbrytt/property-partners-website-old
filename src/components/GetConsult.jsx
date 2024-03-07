@@ -18,6 +18,7 @@ import alexLogachevName from "../assets/teams/alex-logachev-min.jpg";
 import { useState } from "react";
 import qrAlex from "../assets/teams/qr/qr-alex.svg";
 import axios from "axios";
+import {Link} from "react-router-dom";
 
 function GetConsult() {
     const { t } = useTranslation();
@@ -168,7 +169,7 @@ function GetConsult() {
                                 </svg>
                             </div>
 
-                            <div className={`form-button ${dataSented ? 'fade-out' : ''}`} onClick={sentData}>
+                            <Link to="/message" className={`form-button ${dataSented ? 'fade-out' : ''}`} onClick={sentData}>
                                 {dataSented ? "Your message was received" : t("j_title46")}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                      fill="none">
@@ -176,7 +177,7 @@ function GetConsult() {
                                         d="M10.0002 15.172L19.1922 5.979L20.6072 7.393L10.0002 18L3.63623 11.636L5.05023 10.222L10.0002 15.172Z"
                                         fill="white"/>
                                 </svg>
-                            </div>
+                            </Link>
                         </div>
                     </div>
                     <div className="agree-terms">

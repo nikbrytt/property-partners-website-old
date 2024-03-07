@@ -90,7 +90,7 @@
         gap: 12px;
         .name{
           color: var(--ProPart-Blue, #191C38);
-          font-family: Onest,sans-serif;
+          font-family: Roboto,sans-serif;
           font-size: 18px;
           font-style: normal;
           font-weight: 700;
@@ -98,7 +98,7 @@
         }
         .location{
           color: #575757;
-          font-family: Onest,sans-serif;
+          font-family: Roboto,sans-serif;
           font-size: 14px;
           font-style: normal;
           font-weight: 400;
@@ -107,14 +107,14 @@
       }
       .price{
         color: var(--ProPart-Blue, #575757);
-        font-family: Onest,sans-serif;
+        font-family: Roboto,sans-serif;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
         line-height: 19.2px; /* 137.143% */
         span{
           color: var(--ProPart-Blue, #191C38);
-          font-family: Onest,sans-serif;
+          font-family: Roboto,sans-serif;
           font-size: 20px;
           font-style: normal;
           font-weight: 700;
@@ -139,7 +139,7 @@
           border: 1px solid #EAEAEA;
           background: #FFF;
           color: var(--ProPart-Blue, #191C38);
-          font-family: Onest,sans-serif;
+          font-family: Roboto,sans-serif;
           font-size: 14px;
           font-style: normal;
           font-weight: 400;
@@ -147,7 +147,7 @@
           letter-spacing: -0.5px;
           span{
             color: var(--ProPart-Blue, #191C38);
-            font-family: Onest,sans-serif;
+            font-family: Roboto,sans-serif;
             font-size: 14px;
             font-style: normal;
             font-weight: 700;
@@ -165,7 +165,7 @@
     gap: 8px;
     .header{
       color: #000;
-      font-family: Onest,sans-serif;
+      font-family: Roboto,sans-serif;
       font-size: 16px;
       font-style: normal;
       font-weight: 700;
@@ -226,7 +226,7 @@
             gap: 8px;
             .position{
               color: #939393;
-              font-family: Onest,sans-serif;
+              font-family: Roboto,sans-serif;
               font-size: 14px;
               font-style: normal;
               font-weight: 400;
@@ -236,7 +236,7 @@
               color: var(--ProPart-Blue, #191C38);
               leading-trim: both;
               text-edge: cap;
-              font-family: Onest,sans-serif;
+              font-family: Roboto,sans-serif;
               font-size: 18px;
               font-style: normal;
               font-weight: 600;
@@ -245,7 +245,7 @@
           }
           .desc{
             color: #939393;
-            font-family: Onest,sans-serif;
+            font-family: Roboto,sans-serif;
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
@@ -268,14 +268,15 @@
             gap: 24px;
             flex: 1 0 0;
             border-radius: 4px;
-            border: 1px solid #CACACA;
-            color: #000;
-            font-family: Onest,sans-serif;
+            border: 1px solid #C29773;
+            color: #fff;
+            font-family: Roboto,sans-serif;
             font-size: 14px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
             letter-spacing: 0.56px;
+            background: #C29773;
           }
           .request{
             display: flex;
@@ -287,7 +288,7 @@
             border-radius: 4px;
             background: var(--ProPart-Beige, #C29773);
             color: #FFF;
-            font-family: Onest,sans-serif;
+            font-family: Roboto,sans-serif;
             font-size: 14px;
             font-style: normal;
             font-weight: 400;
@@ -320,7 +321,7 @@
           align-items: center;
           .name{
             color: var(--ProPart-Blue, #191C38);
-            font-family: Onest, sans-serif;
+            font-family: Roboto, sans-serif;
             font-size: 16px;
             font-style: normal;
             font-weight: 600;
@@ -330,7 +331,7 @@
             color: var(--ProPart-Blue, #191C38);
             leading-trim: both;
             text-edge: cap;
-            font-family: Onest, sans-serif;
+            font-family: Roboto, sans-serif;
             font-size: 14px;
             font-style: normal;
             font-weight: 400;
@@ -356,7 +357,7 @@
             background: #FFF;
             color: var(--ProPart-Blue, #191C38);
             text-align: center;
-            font-family: Onest,sans-serif;
+            font-family: Roboto,sans-serif;
             font-size: 16px;
             font-style: normal;
             font-weight: 700;
@@ -367,7 +368,7 @@
               background: #C19773;
               color: #FFF;
               text-align: center;
-              font-family: Onest,sans-serif;
+              font-family: Roboto,sans-serif;
               font-size: 16px;
               font-style: normal;
               font-weight: 700;
@@ -386,7 +387,7 @@
           gap: 12px;
           .header{
             color: #575757;
-            font-family: Onest,sans-serif;
+            font-family: Roboto,sans-serif;
             font-size: 14px;
             font-style: normal;
             font-weight: 400;
@@ -398,7 +399,7 @@
             gap: 16px;
             .data-data{
               color: #000;
-              font-family: Onest,sans-serif;
+              font-family: Roboto,sans-serif;
               font-size: 14px;
               font-style: normal;
               font-weight: 400;
@@ -420,7 +421,7 @@
       gap: 12px;
       .tittle{
         color: var(--ProPart-Blue, #191C38);
-        font-family: Onest, sans-serif;
+        font-family: Roboto, sans-serif;
         font-size: 16px;
         font-style: normal;
         font-weight: 600;
@@ -444,7 +445,7 @@
           background: #FFF;
           color: var(--ProPart-Blue, #191C38);
           text-align: center;
-          font-family: Onest,sans-serif;
+          font-family: Roboto,sans-serif;
           font-size: 16px;
           font-style: normal;
           font-weight: 700;
@@ -455,7 +456,7 @@
             background: #C19773;
             color: #FFF;
             text-align: center;
-            font-family: Onest,sans-serif;
+            font-family: Roboto,sans-serif;
             font-size: 16px;
             font-style: normal;
             font-weight: 700;
@@ -500,7 +501,7 @@
           align-items: center;
           .price{
             color: var(--ProPart-Blue, #191C38);
-            font-family: Onest,sans-serif;
+            font-family: Roboto,sans-serif;
             font-size: 12px;
             font-style: normal;
             font-weight: 700;
@@ -509,7 +510,7 @@
           }
           .type{
             color: var(--ProPart-Blue, #191C38);
-            font-family: Onest,sans-serif;
+            font-family: Roboto,sans-serif;
             font-size: 12px;
             font-style: normal;
             font-weight: 500;
@@ -518,7 +519,7 @@
           }
           .size{
             color: var(--ProPart-Blue, #191C38);
-            font-family: Onest,sans-serif;
+            font-family: Roboto,sans-serif;
             font-size: 12px;
             font-style: normal;
             font-weight: 700;
@@ -526,7 +527,7 @@
             letter-spacing: -0.5px;
             span{
               color: var(--ProPart-Blue, #191C38);
-              font-family: Onest,sans-serif;
+              font-family: Roboto,sans-serif;
               font-size: 12px;
               font-style: normal;
               font-weight: 400;
@@ -547,7 +548,7 @@
     gap: 16px;
     .header{
       color: var(--ProPart-Blue, #191C38);
-      font-family: Onest, sans-serif;
+      font-family: Roboto, sans-serif;
       font-size: 16px;
       font-style: normal;
       font-weight: 600;
@@ -565,7 +566,7 @@
     gap: 16px;
     .header{
       color: var(--ProPart-Blue, #191C38);
-      font-family: Onest, sans-serif;
+      font-family: Roboto, sans-serif;
       font-size: 16px;
       font-style: normal;
       font-weight: 600;
@@ -602,7 +603,7 @@
       color: #FFF;
       leading-trim: both;
       text-edge: cap;
-      font-family: Onest, sans-serif;
+      font-family: Roboto, sans-serif;
       font-size: 16px;
       font-style: normal;
       font-weight: 700;

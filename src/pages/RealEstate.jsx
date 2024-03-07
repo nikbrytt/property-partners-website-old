@@ -1,17 +1,9 @@
 import "../styles/Pages/realEstate.scss"
 import Header from "../components/Header.jsx";
-import {
-    APIProvider,
-    ControlPosition,
-    Map,
-    MapControl
-} from '@vis.gl/react-google-maps';
 import {useEffect, useRef, useState} from "react";
 import Filter from "../components/Filter.jsx";
 import Project from "../components/Project.jsx";
 import Footer from "../components/Footer.jsx";
-import Marker from "../components/Marker.jsx";
-import axios from "axios";
 import { useTranslation } from "react-i18next";
 
 import GetConsult from "../components/GetConsult.jsx";
@@ -20,14 +12,14 @@ import AreasCardsInfo from "../data/AreasCardsInfo.jsx";
 import AreaCard from "../components/AreaCard.jsx";
 import Response from "../data/response.json"
 import mapboxgl from "mapbox-gl";
-import projects from "../PWA/data/response.json";
+
 const RealEstate = () => {
     const [mapZoom, setMapZoom] = useState(10);
     const [projects, setProjects] = useState(Response)
     const [visibleProjects, setVisibleProjects] = useState([])
     const { t } = useTranslation();
     const [projectPerView, setprojectsPerView] = useState(10)
-
+    const [filteredProjects, setFilteredProjects] = useState([]);
     const mapContainer = useRef(null);
 
     const map = useRef(null);
@@ -46,26 +38,17 @@ const RealEstate = () => {
             map.current.addControl(new mapboxgl.NavigationControl(), 'top-right');
         }
 
-
-        const geojson = {
-            type: "FeatureCollection",
-            features: projects.map(project => ({
-                type: "Feature",
-                properties: {},
-                geometry: {
-                    type: "Point",
-                    coordinates: [Number(project.lng), Number(project.lat)]
-                }
-            }))
-        };
-
-        map.current.on('load', function () {
+        map.current.on('idle', function () {
             map.current.addSource('projects', {
                 type: 'geojson',
-                data: geojson,
+                data: {
+                    type: "FeatureCollection",
+                    features: []
+                },
                 cluster: true,
                 clusterMaxZoom: 14,
-                clusterRadius: 50
+                clusterRadius: 50,
+
             });
 
             map.current.addLayer({
@@ -77,12 +60,14 @@ const RealEstate = () => {
                     'circle-color': [
                         'step',
                         ['get', 'point_count'],
-                        '#fff',
+                        'rgba(255,255,255,0.49)',
                         100,
-                        '#fff',
+                        'rgba(255,255,255,0.51)',
                         750,
-                        '#fff'
+                        'rgba(255,255,255,0.24)'
                     ],
+                    'circle-stroke-color': '#191c38',
+                    'circle-stroke-width': 3,
                     'circle-radius': [
                         'step',
                         ['get', 'point_count'],
@@ -113,14 +98,57 @@ const RealEstate = () => {
                 source: 'projects',
                 filter: ['!', ['has', 'point_count']],
                 paint: {
-                    'circle-color': '#fff',
+                    'circle-color': '#191c38',
                     'circle-radius': 5,
                     'circle-stroke-width': 1,
-                    'circle-stroke-color': '#fff'
+                    'circle-stroke-color': '#191c38'
                 }
             });
+
+            map.current.on('click', 'unclustered-point', function(e) {
+                let coordinates = e.features[0].geometry.coordinates.slice();
+                let lng = parseFloat(coordinates[0].toFixed(3)); // Округлюємо lat до трьох знаків після коми
+                let lat = parseFloat(coordinates[1].toFixed(3)); // Округлюємо lng до трьох знаків після коми
+
+
+                let id;
+                console.log(lat)
+                for (let i = 0; i < projects.length; i++) {
+                    let project = projects[i];
+                    if (parseFloat(project.lng).toFixed(3) == lng && parseFloat(project.lat).toFixed(3) == lat) {
+                        id = project._id;
+                        console.log(project)
+                        window.location.href = `/phone/project/${id}`
+                    }
+                }
+
+                console.log(id);
+            });
         });
-    }, [lng, lat, zoom, projects]);
+    }, [lng, lat, zoom]);
+
+
+    useEffect(() => {
+        const timeoutId = setTimeout(() => {
+            if (filteredProjects.length > 0 && map.current && map.current.isStyleLoaded() && map.current.getSource('projects')) {
+                const geojson = {
+                    type: "FeatureCollection",
+                    features: filteredProjects.map(project => ({
+                        type: "Feature",
+                        properties: {},
+                        geometry: {
+                            type: "Point",
+                            coordinates: [Number(project.lng), Number(project.lat)]
+                        }
+                    }))
+                };
+                map.current.getSource('projects').setData(geojson);
+            }
+        }, 800);
+
+        return () => clearTimeout(timeoutId);
+
+    }, [filteredProjects]);
 
     useEffect(() => {
         if(visibleProjects.length === 0 && projects !== null) {
@@ -193,7 +221,7 @@ const RealEstate = () => {
         completion: [],
         propertyType: []
     })
-    const [filteredProjects, setFilteredProjects] = useState([]);
+
 
     useEffect(() => {
         if(projects!=null){
@@ -253,11 +281,11 @@ const RealEstate = () => {
                 };
 
                 const isCompletionMatch = () => {
-                    if (filterDataProjects.completion.length === 0) {
+                    if (filterDataProjects?.completion?.length === 0) {
                         return true;
                     }
 
-                    return filterDataProjects.completion.includes(project.selectedStatus);
+                    return filterDataProjects.completion?.includes(project.selectedStatus);
                 };
 
                 const isPropertyTypeMatch = () => {

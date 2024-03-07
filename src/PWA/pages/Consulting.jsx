@@ -1,11 +1,10 @@
 import Menu from "../components/Menu.jsx";
 import "../styles/Consulting.scss";
-import banerConsulting from '../../assets/Registration/baner-photo.jpg'
 import {Pagination} from "swiper/modules";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {useState} from "react";
 
-const Consulting = ([handleMenuToggle]) => {
+const Consulting = ({handleMenuToggle}) => {
     const [showMore, setShowMore] = useState();
     const [activeFocus, setActiveFocus] = useState([false, false, false, false]);
 

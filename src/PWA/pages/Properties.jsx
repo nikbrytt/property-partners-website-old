@@ -1,6 +1,6 @@
 import MenuProjectFilter from "../components/MenuProjectFilter.jsx";
 import Footer from "../components/Footer.jsx";
-import "../styles/Properties.css"
+import "../styles/Properties.scss"
 import Project from "../components/Project.jsx";
 import projects from "../data/response.json";
 import {useEffect, useState} from "react";
@@ -46,6 +46,9 @@ const Properties = ({handleMenuToggle}) => {
             window.removeEventListener("storage", handleStorageChange);
         };
     }, []);
+
+
+
     const [visibleArea, setVisibleArea] = useState(false)
     const bedroomOptions = [t("studio"), "1", "2", "3", "4", "5", "6", "7"];
     const priceData = [

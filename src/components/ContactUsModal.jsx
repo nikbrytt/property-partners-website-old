@@ -50,9 +50,9 @@ const ContactUsModal = () => {
 
     function sentData() {
         let data = JSON.stringify({
-            "email": name,
+            "email": mail,
             "phone": phone,
-            "name": mail,
+            "name": name,
             "additional": "Additional information here"
         });
 

@@ -40,7 +40,7 @@
         border: 1px solid #EAEAEA;
         background: #FFF;
         color: var(--ProPart-Blue, #191C38);
-        font-family: Onest;
+        font-family: Roboto;
         font-size: 12px;
         font-style: normal;
         font-weight: 700;
@@ -62,7 +62,7 @@
       gap: 8px;
       .name{
         color: var(--ProPart-Blue, #191C38);
-        font-family: Onest, sans-serif;
+        font-family: Roboto, sans-serif;
         font-size: 16px;
         font-style: normal;
         font-weight: 600;
@@ -70,7 +70,7 @@
       }
       .location{
         color: #575757;
-        font-family: Onest, sans-serif;
+        font-family: Roboto, sans-serif;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -80,14 +80,14 @@
 
     .price{
       color: var(--ProPart-Blue, #575757);
-      font-family: Onest,sans-serif;
+      font-family: Roboto,sans-serif;
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
       line-height: 19.2px; /* 120% */
       span{
         color: var(--ProPart-Blue, #191C38);
-        font-family: Onest,sans-serif;
+        font-family: Roboto,sans-serif;
         font-size: 24px;
         font-style: normal;
         font-weight: 700;

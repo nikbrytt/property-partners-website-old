@@ -37,6 +37,8 @@ import ConsiergePage from './PWA/pages/ConsiergePage.jsx'
 import Consulting from "./PWA/pages/Consulting.jsx";
 import MemberPage from "./PWA/pages/MemberPage.jsx";
 import Burger from "./PWA/components/Burger.jsx";
+import MessageReceived from "./pages/MessageReceived.jsx";
+import AreaPhone from "./PWA/pages/AreaPhone.jsx";
 function App() {
     const [isPDFModalOpen, setPDFModalOpen] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
@@ -56,7 +58,7 @@ function App() {
     return (
         <BrowserRouter>
             <ScrollToTop />
-            <SupportChat />
+            {/*<SupportChat />*/}
             <Burger menuOpen={menuOpen} handleMenuToggle={handleMenuToggle}/>
             <ContactUsModal />
             <PDFmodal closeModal={closePDFModal} showModal={isPDFModalOpen} />
@@ -75,6 +77,7 @@ function App() {
                 <Route path="/accounting" element={<Accounting />} />
                 <Route path="/trademark-registration" element={<TradeMark />} />
                 <Route path="/about-areas" element={<Areas />} />
+                <Route path="/message" element={<MessageReceived />} />
 
                 <Route path="/area-page/:id" element={<AreaPage />} />
                 <Route path="/area/:id" element={<AreasViewPage />} />
@@ -88,13 +91,14 @@ function App() {
                 <Route path="/phone" element={<HomePage handleMenuToggle={handleMenuToggle} />} />
                 <Route path="/phone/map" element={<PhoneMap handleMenuToggle={handleMenuToggle} />} />
                 <Route path="/phone/properties" element={<Properties handleMenuToggle={handleMenuToggle} />} />
-                <Route path="/phone/project" element={<ProjectInfo />} />
+                <Route path="/phone/project/:id" element={<ProjectInfo />} />
                 <Route path="/phone/areas" element={<AreasPhone handleMenuToggle={handleMenuToggle} />} />
                 <Route path="/phone/projects" element={<Projects handleMenuToggle={handleMenuToggle} />} />
                 <Route path="/phone/about-us" element={<AboutUsPhone handleMenuToggle={handleMenuToggle} />} />
                 <Route path="/phone/consierge" element={<ConsiergePage handleMenuToggle={handleMenuToggle} />} />
-                <Route path="/phone/consulting" element={<Consulting />} />
+                <Route path="/phone/consulting" element={<Consulting handleMenuToggle={handleMenuToggle} />} />
                 <Route path="/phone/member" element={<MemberPage />} />
+                <Route path="/phone/area/:id" element={<AreaPhone handleMenuToggle={handleMenuToggle} />} />
             </Routes>
         </BrowserRouter>)
 }
